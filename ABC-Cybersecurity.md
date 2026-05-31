@@ -6,17 +6,17 @@ C. Carefully check websites domains
 D. Take the time to create secure passwords
 E. Examine all the elements of an email... recognise the alarm bells!
 
-## A update your operating system and install anti-virus 
-software even on your mobile phone
-The first line of defence is vigilance and a bit of wariness, but technology can 
-also help us:
-Always keep your operating system updated...
-...and your browser, too!
+## A update your operating system and install anti-virus software even on your mobile phone
+  The first line of defence is vigilance and a bit of wariness, but technology can also help us:
+
+**Always keep your operating system updated......and your browser, too!**
+
 Windows Explorer, Edge, Firefox and Chrome are automatically updated. 
-For other browsers it’s necessary to verify the updating procedure and make 
-it as automatic as possible. 
+For other browsers it’s necessary to verify the updating procedure and make it as automatic as possible. 
+
 Install anti-virus software on your computer and smartphone!
-Here are some free anti-virus programs:
+
+**Here are some free anti-virus programs:**
 https://www.avg.com also available for Android
 https://www.avast.com also available for Android and iOS
 https://www.avira.com also available for Android and iOS
