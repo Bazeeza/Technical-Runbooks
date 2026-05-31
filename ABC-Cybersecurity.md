@@ -6,7 +6,7 @@ C. Carefully check websites domains
 D. Take the time to create secure passwords
 E. Examine all the elements of an email... recognise the alarm bells!
 
-## A update your operating system and install anti-virus software even on your mobile phone
+### A - Update your operating system and install anti-virus software even on your mobile phone
   The first line of defence is vigilance and a bit of wariness, but technology can also help us:
 
 **Always keep your operating system updated......and your browser, too!**
@@ -22,8 +22,7 @@ https://www.avast.com also available for Android and iOS
 https://www.avira.com also available for Android and iOS
 
 
-
-C carefully check websites domains
+### C - Carefully check websites domains
 Sometimes the extension of a website seems correct, but it actually hides a 
 “trick”. Here are some examples: 
 www.website.com 
