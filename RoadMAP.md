@@ -24,3 +24,4 @@ Step 12: land your dream job after 8 months. Start learning actual stuff using e
 
 You can send me my consulting fee after you land your dream job. Even if it's as a Google Flutter developer, freelance.
 
+
