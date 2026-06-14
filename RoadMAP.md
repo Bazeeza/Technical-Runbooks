@@ -23,4 +23,3 @@ Step 11: Polish up your resume. take some time to look at forums and subreddits 
 Step 12: land your dream job after 8 months. Start learning actual stuff using enterprise grade hardware, cloud and software solutions.
 
 You can send me my consulting fee after you land your dream job. Even if it's as a Google Flutter developer, freelance.
-
