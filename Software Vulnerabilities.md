@@ -1,6 +1,1 @@
 # Software Vulnerabilities
-
-
-
-
-
