@@ -9,6 +9,7 @@ E. Examine all the elements of an email... recognise the alarm bells!
 ### A - Update your operating system and install anti-virus software even on your mobile phone
   The first line of defence is vigilance and a bit of wariness, but technology can also help us:
 
+
 **Always keep your operating system updated......and your browser, too!**
 
 Windows Explorer, Edge, Firefox and Chrome are automatically updated. 
