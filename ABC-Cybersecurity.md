@@ -6,6 +6,7 @@ C. Carefully check websites domains
 D. Take the time to create secure passwords
 E. Examine all the elements of an email... recognise the alarm bells!
 
+
 ### A - Update your operating system and install anti-virus software even on your mobile phone
   The first line of defence is vigilance and a bit of wariness, but technology can also help us:
 
