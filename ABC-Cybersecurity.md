@@ -15,8 +15,6 @@ Cybersecurity is the same idea as having your home door closed and any other sec
 
 
 
-
-
 A. Update your operating system and install anti-virus software even on your smartphone
 B. Block pop-ups and requests from suspicious websites
 C. Carefully check websites domains
