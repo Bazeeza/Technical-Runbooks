@@ -42,6 +42,8 @@ wasn’t created with the necessary care and might conceal
 malicious intent.
 www.website.com/ajion5fhe43 
 Even if there are strange numbers or symbols, the important 
+
+
 thing is that they come after the “/” and not before it. 
 website.com/eng 
 Sites don’t always use “www”, but that doesn’t necessarily mean 
