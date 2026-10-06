@@ -25,7 +25,8 @@ https://www.avast.com also available for Android and iOS
 https://www.avira.com also available for Android and iOS
 
 
-### C - Carefully check websites domains
+### C - Carefully check websites domain
+s
 Sometimes the extension of a website seems correct, but it actually hides a 
 “trick”. Here are some examples: 
 www.website.com 
