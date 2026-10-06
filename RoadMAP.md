@@ -26,3 +26,5 @@ You can send me my consulting fee after you land your dream job. Even if it's as
 
 - Remote Management Server
 - Private VPN Server
+- BAZEEZA AI
+- 
