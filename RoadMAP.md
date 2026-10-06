@@ -26,7 +26,8 @@ You can send me my consulting fee after you land your dream job. Even if it's as
 
 - Remote Management Server
 - Private VPN Server
-- Uptime server (Cluster with tele)
+- Uptime server (Monitoring)
+- Bezeal Server (Disk and Storage)
 - BAZEEZA AI
 - Home Labbing
 - 
