@@ -30,4 +30,3 @@ You can send me my consulting fee after you land your dream job. Even if it's as
 - Bezeal Server (Disk and Storage)
 - BAZEEZA AI
 - Home Labbing
-- 
