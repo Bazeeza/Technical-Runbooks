@@ -4,6 +4,7 @@
 
 - Step 3: Get the basic level MS AD training and Azure certs. If you are a verifiable student I think the certs are now fully FREE. Training has always been free. Feel free to look at AWS certs, Kubernetes and Docker. AT LEAST.. AT THE VERY LEAST know what these are and some basics about spinning up some instances. You don't need to be a pro, but if you don't know anything you won't get past most interviews. Figure out what headless architecture and Serverless architecture are. Don't stop.
 
+
 - Step 4: Learn a scripting language. Python preferred. Dabble with Go and R and see if you can automate some stuff. Learn the very basics of React Native if you have some time and any inclination towards the front end. Reserve these skills for after your first Cert test, to see if you need to brush up or pivot in career path. Don't stop.
 
 - Step 5: Learn ANY Distro of Linux. Sure Kali counts. Learn how to write cheat sheets so you don't LOOK like a noob, but it will come naturally after a while. Use a crappy old laptop, and convert it to really get used to linux. You don't need crazy hardware... yet. Just learn the command line aspects. Don't stop.
