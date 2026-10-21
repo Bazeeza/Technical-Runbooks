@@ -44,16 +44,16 @@ Ask before testing:
 
 ```mermaid
 flowchart TD
-    A[1. Link up?<br/>cable, Wi-Fi] -->|No| A1[Physical layer:<br/>cable, port, Wi-Fi, driver]
-    A -->|Yes| B[2. Valid IP address?<br/>ipconfig /all]
+    A[Step 1: Link up?<br/>cable, Wi-Fi] -->|No| A1[Physical layer:<br/>cable, port, Wi-Fi, driver]
+    A -->|Yes| B[Step 2: Valid IP address?<br/>ipconfig /all]
     B -->|169.254.x.x or none| B1[DHCP problem]
-    B -->|Yes| C[3. Ping the gateway]
+    B -->|Yes| C[Step 3: Ping the gateway]
     C -->|Fails| C1[Local network:<br/>VLAN, switch port, gateway]
-    C -->|OK| D[4. Ping 1.1.1.1]
+    C -->|OK| D[Step 4: Ping 1.1.1.1]
     D -->|Fails| D1[Routing or Internet access:<br/>router, firewall, ISP]
-    D -->|OK| E[5. Resolve a name<br/>nslookup]
+    D -->|OK| E[Step 5: Resolve a name<br/>nslookup]
     E -->|Fails| E1[DNS problem]
-    E -->|OK| F[6. Test the service port<br/>Test-NetConnection]
+    E -->|OK| F[Step 6: Test the service port<br/>Test-NetConnection]
     F -->|Fails| F1[Firewall, proxy or server down]
     F -->|OK| G[Application or browser problem]
 ```
