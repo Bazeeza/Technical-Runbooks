@@ -10,7 +10,13 @@
   <img src="https://img.shields.io/badge/Language-English-2b9dff?style=flat-square" alt="English"/>
   <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20Linux%20%7C%20Cisco-555?style=flat-square" alt="Windows, Linux, Cisco"/>
   <img src="https://img.shields.io/badge/Author-Bariu%20Azeez-c792ea?style=flat-square" alt="Author: Bariu Azeez"/>
+  <br>
+  <a href="https://github.com/Bazeeza/Technical-Runbooks/actions/workflows/markdown.yml"><img src="https://img.shields.io/github/actions/workflow/status/Bazeeza/Technical-Runbooks/markdown.yml?branch=main&style=flat-square&label=Markdown" alt="Markdown CI status"/></a>
+  <a href="https://github.com/Bazeeza/Technical-Runbooks/actions/workflows/powershell.yml"><img src="https://img.shields.io/github/actions/workflow/status/Bazeeza/Technical-Runbooks/powershell.yml?branch=main&style=flat-square&label=PowerShell" alt="PowerShell CI status"/></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-0.1.0-ffb454?style=flat-square" alt="Changelog version 0.1.0"/></a>
 </p>
+
+> **En bref (français) :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.md), avec leur source.
 
 ---
 
@@ -64,6 +70,26 @@ Writing principles:
 2. **Safe**: risky steps carry a warning, data protection and rollback come first.
 3. **Explained**: each command says *why*, not only *how*.
 4. **Sourced**: commands are checked against official vendor documentation.
+
+---
+
+## Quality checks
+
+Every push and pull request is checked automatically by GitHub Actions:
+
+| Check | What it catches |
+|---|---|
+| **markdownlint** | Skipped heading levels, code blocks without a language, trailing spaces, several top-level titles ([rules](.markdownlint-cli2.jsonc)) |
+| **lychee** (offline) | Relative links that point to a missing file |
+| **PSScriptAnalyzer** | PowerShell errors and warnings, such as unapproved verbs or unused variables ([settings](PSScriptAnalyzerSettings.psd1)) |
+| **Windows PowerShell 5.1** | Scripts that would not parse in the default shell of Windows 11 |
+
+## Contributing
+
+Found a wrong command or a broken step? Use the **[Report an error in a runbook](https://github.com/Bazeeza/Technical-Runbooks/issues/new?template=runbook-error.yml)** form, or read the [contributing guide](CONTRIBUTING.md) before opening a pull request. Changes are listed in the [changelog](CHANGELOG.md).
+
+> [!NOTE]
+> The [`archive/`](archive/README.md) folder holds early study notes copied from external sources (TryHackMe, an awareness leaflet, a forum post). They are kept with their source credited and are not part of the runbook series.
 
 ---
 
