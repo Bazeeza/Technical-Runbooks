@@ -1,3 +1,7 @@
+# Intro to LAN (archived study notes)
+
+> [!NOTE]
+> **Not original content.** Study notes copied from the TryHackMe room [Intro to LAN](https://tryhackme.com/room/introtolan) (Pre Security path). Text and diagrams belong to TryHackMe. Kept for reference only; see the [archive README](README.md).
 
 <img width="1121" height="950" alt="image" src="https://github.com/user-attachments/assets/56c873ee-4a0c-4942-81fc-6ff45805be04" />
 Star Topology
