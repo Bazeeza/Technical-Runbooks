@@ -165,4 +165,4 @@ The script [`Install-StandardApps.ps1`](Install-StandardApps.ps1) reads a list o
 
 ---
 
-<sub>Written by Bariu Azeez · Found an error? Open an issue.</sub>
+<sub>Written by Bariu Azeez · Found an error? <a href="https://github.com/Bazeeza/Technical-Runbooks/issues/new?template=runbook-error.yml">Report it here</a>.</sub>
