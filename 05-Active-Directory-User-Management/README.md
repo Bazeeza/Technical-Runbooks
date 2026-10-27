@@ -169,4 +169,4 @@ Search-ADAccount -PasswordNeverExpires -UsersOnly | Select-Object Name          
 
 ---
 
-<sub>Written by bazeeza · Found an error? Open an issue.</sub>
+<sub>Written by bazeeza · Found an error? <a href="https://github.com/Bazeeza/Technical-Runbooks/issues/new?template=runbook-error.yml">Report it here</a>.</sub>
