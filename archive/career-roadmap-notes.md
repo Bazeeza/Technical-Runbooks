@@ -1,3 +1,8 @@
+# Career roadmap notes (archived)
+
+> [!NOTE]
+> **Not original content.** Career advice copied from a public online forum post while studying. The author and the link were not recorded, so it cannot be credited precisely. Kept for reference only; see the [archive README](README.md).
+
 - Step 1: Literally forget about udemy. Do it later, and then only, if it meets a specific roadmap need. Sign up for tryhackme. DO the ENTIRE course catalog. Period. Full Stop. Even the fundamentals. Even the starting stuff. The all in costs is less than $120.
 
 
