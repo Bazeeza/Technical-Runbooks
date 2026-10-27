@@ -1,0 +1,67 @@
+name: Report an error in a runbook
+description: A command, step, link or explanation is wrong, outdated or unclear.
+title: "[Runbook error] "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report this. A precise report lets the runbook be fixed and re-verified quickly.
+        **Do not paste passwords, internal IP addresses, hostnames or any personal data.**
+
+  - type: dropdown
+    id: runbook
+    attributes:
+      label: Runbook
+      options:
+        - 01 PC Boot Process and BIOS / UEFI
+        - 02 Windows 11 Clean Installation
+        - 03 Software Deployment (winget and MSI)
+        - 04 Network Troubleshooting
+        - 05 Active Directory User Management
+        - TEMPLATE.md or README
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of error
+      options:
+        - Command does not work or gives a different result
+        - Step is missing or in the wrong order
+        - Broken or outdated link
+        - Explanation is wrong or unclear
+        - Typo or formatting
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Where
+      description: Section or step number, for example "Procedure, Step 3".
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What the runbook says, and what happened
+      description: Paste the command and the output or error message you got (remove any sensitive value).
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Suggested correction
+      description: What it should say instead, with a link to the official documentation if you have one.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: For example "Windows 11 24H2, PowerShell 5.1" or "Cisco IOS 15.2".

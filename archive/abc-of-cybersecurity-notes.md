@@ -1,4 +1,7 @@
-# The ABC of Cybersecurity
+# The ABC of Cybersecurity (archived notes)
+
+> [!NOTE]
+> **Not original content.** Text copied from a public security awareness leaflet while studying. The original source was not recorded, so it cannot be credited precisely. Kept for reference only; see the [archive README](README.md).
 
 Cybersecurity is the same idea as having your home door closed and any other security mesured in place. — just for the digital version of your life.
 -             Bank account. Your emails. Your photos. Your medical records. Your work documents. Your Netflix login
