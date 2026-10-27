@@ -1,3 +1,8 @@
+# Career roadmap notes (archived)
+
+> [!NOTE]
+> **Not original content.** Career advice copied from a public online forum post while studying. The author and the link were not recorded, so it cannot be credited precisely. Kept for reference only; see the [archive README](README.md).
+
 - Step 1: Literally forget about udemy. Do it later, and then only, if it meets a specific roadmap need. Sign up for tryhackme. DO the ENTIRE course catalog. Period. Full Stop. Even the fundamentals. Even the starting stuff. The all in costs is less than $120.
 
 
@@ -24,10 +29,3 @@
 - Step 12: land your dream job after 8 months. Start learning actual stuff using enterprise grade hardware, cloud and software solutions.
 
 You can send me my consulting fee after you land your dream job. Even if it's as a Google Flutter developer, freelance.
-
-- Remote Management Server
-- Private VPN Server
-- Uptime server (Monitoring)
-- Bezeal Server (Disk and Storage)
-- BAZEEZA AI
-- Home Labbing
