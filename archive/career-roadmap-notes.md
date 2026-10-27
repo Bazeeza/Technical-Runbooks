@@ -24,10 +24,3 @@
 - Step 12: land your dream job after 8 months. Start learning actual stuff using enterprise grade hardware, cloud and software solutions.
 
 You can send me my consulting fee after you land your dream job. Even if it's as a Google Flutter developer, freelance.
-
-- Remote Management Server
-- Private VPN Server
-- Uptime server (Monitoring)
-- Bezeal Server (Disk and Storage)
-- BAZEEZA AI
-- Home Labbing
