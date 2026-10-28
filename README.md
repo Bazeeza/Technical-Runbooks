@@ -2,11 +2,11 @@
 
 <p align="center">
   <b>Step-by-step IT procedures, written to be followed under pressure and reproduced by any technician.</b><br>
-  Help desk · Workstations · Networking · Active Directory
+  Help desk · Workstations · Networking · Active Directory · Printing · Remote support
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Runbooks-5-3fe0a0?style=flat-square" alt="5 runbooks"/>
+  <img src="https://img.shields.io/badge/Runbooks-7-3fe0a0?style=flat-square" alt="7 runbooks"/>
   <img src="https://img.shields.io/badge/Language-English-2b9dff?style=flat-square" alt="English"/>
   <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20Linux%20%7C%20Cisco-555?style=flat-square" alt="Windows, Linux, Cisco"/>
   <img src="https://img.shields.io/badge/Author-Bariu%20Azeez-c792ea?style=flat-square" alt="Author: Bariu Azeez"/>
@@ -33,6 +33,12 @@
 | 04 | [**Network Troubleshooting**](04-Network-Troubleshooting/README.md) | Diagnose "no Internet" layer by layer, from the cable to the port | 🟡 Intermediate | 10–30 min |
 | | ↳ [Command cheat sheet](04-Network-Troubleshooting/COMMAND-CHEATSHEET.md) | Equivalent commands on Windows, Linux and Cisco IOS | 🟢 Beginner | — |
 | 05 | [**Active Directory User Management**](05-Active-Directory-User-Management/README.md) | Unlock, reset, create and disable accounts safely, find lockout sources | 🟡 Intermediate | 5–20 min |
+| 06 | [**Printer Troubleshooting**](06-Printer-Troubleshooting/README.md) | Find the failing link from the device to the spooler, test ports 9100/631, fix the port or driver | 🟡 Intermediate | 10–30 min |
+| | ↳ [`Reset-PrintQueue.ps1`](06-Printer-Troubleshooting/Reset-PrintQueue.ps1) | Clear a stuck queue: stop the spooler, empty the spool folder, restart and verify | 🟢 Beginner | 2 min |
+| | ↳ [Deploying printers with Group Policy](06-Printer-Troubleshooting/GPO-DEPLOYMENT.md) | Connect a shared printer for a department at logon, with targeting and clean removal | 🟡 Intermediate | 20 min |
+| 07 | [**Remote Support with Quick Assist**](07-Remote-Support/README.md) | Choose the right remote tool, connect with consent, work and close the session safely | 🟢 Beginner | 5 min |
+| | ↳ [Remote Desktop with NLA](07-Remote-Support/RDP.md) | Enable RDP on port 3389 with NLA, limit accounts and source addresses | 🟡 Intermediate | 15 min |
+| | ↳ [Security checklist](07-Remote-Support/SECURITY-CHECKLIST.md) | Apply the same consent and record rules to every session, react to a scam | 🟢 Beginner | 2 min |
 
 ---
 
@@ -45,9 +51,13 @@ flowchart LR
     R02 --> R04[04 Network troubleshooting]
     R02 --> R05[05 Active Directory]
     R04 -.->|user cannot log in| R05
+    R04 -.->|printer unreachable| R06[06 Printer troubleshooting]
+    R05 -->|printers by GPO| R06
+    R07[07 Remote support] -.->|used to run| R04
+    R07 -.-> R06
 ```
 
-A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account.
+A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account. Printers come last, often deployed by Group Policy, and remote support is the way most of these procedures are carried out from the help desk.
 
 ---
 
