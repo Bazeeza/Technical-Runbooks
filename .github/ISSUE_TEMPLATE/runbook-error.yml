@@ -19,6 +19,8 @@ body:
         - 03 Software Deployment (winget and MSI)
         - 04 Network Troubleshooting
         - 05 Active Directory User Management
+        - 06 Printer Troubleshooting
+        - 07 Remote Support (Quick Assist and RDP)
         - TEMPLATE.md or README
         - Other
     validations:
