@@ -135,7 +135,9 @@ Test-NetConnection www.microsoft.com -Port 443
 
 `TcpTestSucceeded : True` means the network path and the port are open: the remaining problem is the application (browser, proxy setting, certificate, account). `False` means a firewall blocks the port or the service is down.
 
-Common ports: `80` HTTP · `443` HTTPS · `53` DNS · `22` SSH · `3389` RDP · `445` SMB (file shares) · `5060` SIP (VoIP).
+Common ports: `80` HTTP · `443` HTTPS · `53` DNS · `22` SSH · `3389` RDP · `445` SMB (file shares) · `5060` SIP (VoIP) · `9100` and `631` printing (raw and IPP).
+
+For a printer that does not answer, continue with [06 Printer Troubleshooting](../06-Printer-Troubleshooting/README.md#step-4--network-printer-is-it-reachable-on-its-port). For RDP, see [07 Remote Desktop with NLA](../07-Remote-Support/RDP.md).
 
 ---
 
