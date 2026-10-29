@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="380" viewBox="0 0 860 380" role="img" aria-labelledby="title desc">
+  <title id="title">T568A and T568B pinouts for an RJ45 plug</title>
+  <desc id="desc">Pin 1 to 8, T568A: white-green, green, white-orange, blue, white-blue, orange, white-brown, brown. T568B: white-orange, orange, white-green, blue, white-blue, green, white-brown, brown. The two schemes only swap the green and orange pairs.</desc>
+  <defs>
+    <pattern id="wg" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2f2f2"/><rect width="4" height="10" fill="#2fa84f"/></pattern>
+    <pattern id="wo" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2f2f2"/><rect width="4" height="10" fill="#f28c28"/></pattern>
+    <pattern id="wb" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2f2f2"/><rect width="4" height="10" fill="#2b6fff"/></pattern>
+    <pattern id="wn" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f2f2f2"/><rect width="4" height="10" fill="#8b5a2b"/></pattern>
+  </defs>
+
+  <rect width="860" height="380" rx="14" fill="#070d1c"/>
+
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <!-- T568A panel -->
+    <rect x="20" y="20" width="400" height="300" rx="10" fill="#0d1730" stroke="#3fe0a0" stroke-width="1.5"/>
+    <text x="220" y="55" fill="#3fe0a0" font-size="22" font-weight="700" text-anchor="middle">T568A</text>
+    <g stroke="#070d1c" stroke-width="1">
+      <rect x="60"  y="75" width="28" height="160" rx="4" fill="url(#wg)"/>
+      <rect x="102" y="75" width="28" height="160" rx="4" fill="#2fa84f"/>
+      <rect x="144" y="75" width="28" height="160" rx="4" fill="url(#wo)"/>
+      <rect x="186" y="75" width="28" height="160" rx="4" fill="#2b6fff"/>
+      <rect x="228" y="75" width="28" height="160" rx="4" fill="url(#wb)"/>
+      <rect x="270" y="75" width="28" height="160" rx="4" fill="#f28c28"/>
+      <rect x="312" y="75" width="28" height="160" rx="4" fill="url(#wn)"/>
+      <rect x="354" y="75" width="28" height="160" rx="4" fill="#8b5a2b"/>
+    </g>
+    <g fill="#e6edf7" font-size="16" font-weight="700" text-anchor="middle">
+      <text x="74" y="258">1</text><text x="116" y="258">2</text><text x="158" y="258">3</text><text x="200" y="258">4</text>
+      <text x="242" y="258">5</text><text x="284" y="258">6</text><text x="326" y="258">7</text><text x="368" y="258">8</text>
+    </g>
+    <g fill="#9fb0c8" font-size="12" text-anchor="middle">
+      <text x="74" y="278">W/G</text><text x="116" y="278">G</text><text x="158" y="278">W/O</text><text x="200" y="278">BL</text>
+      <text x="242" y="278">W/BL</text><text x="284" y="278">O</text><text x="326" y="278">W/BR</text><text x="368" y="278">BR</text>
+    </g>
+    <text x="220" y="305" fill="#9fb0c8" font-size="13" text-anchor="middle">Green pair on pins 1-2, orange pair on pins 3-6</text>
+
+    <!-- T568B panel -->
+    <rect x="440" y="20" width="400" height="300" rx="10" fill="#0d1730" stroke="#2b9dff" stroke-width="1.5"/>
+    <text x="640" y="55" fill="#2b9dff" font-size="22" font-weight="700" text-anchor="middle">T568B</text>
+    <g stroke="#070d1c" stroke-width="1">
+      <rect x="480" y="75" width="28" height="160" rx="4" fill="url(#wo)"/>
+      <rect x="522" y="75" width="28" height="160" rx="4" fill="#f28c28"/>
+      <rect x="564" y="75" width="28" height="160" rx="4" fill="url(#wg)"/>
+      <rect x="606" y="75" width="28" height="160" rx="4" fill="#2b6fff"/>
+      <rect x="648" y="75" width="28" height="160" rx="4" fill="url(#wb)"/>
+      <rect x="690" y="75" width="28" height="160" rx="4" fill="#2fa84f"/>
+      <rect x="732" y="75" width="28" height="160" rx="4" fill="url(#wn)"/>
+      <rect x="774" y="75" width="28" height="160" rx="4" fill="#8b5a2b"/>
+    </g>
+    <g fill="#e6edf7" font-size="16" font-weight="700" text-anchor="middle">
+      <text x="494" y="258">1</text><text x="536" y="258">2</text><text x="578" y="258">3</text><text x="620" y="258">4</text>
+      <text x="662" y="258">5</text><text x="704" y="258">6</text><text x="746" y="258">7</text><text x="788" y="258">8</text>
+    </g>
+    <g fill="#9fb0c8" font-size="12" text-anchor="middle">
+      <text x="494" y="278">W/O</text><text x="536" y="278">O</text><text x="578" y="278">W/G</text><text x="620" y="278">BL</text>
+      <text x="662" y="278">W/BL</text><text x="704" y="278">G</text><text x="746" y="278">W/BR</text><text x="788" y="278">BR</text>
+    </g>
+    <text x="640" y="305" fill="#9fb0c8" font-size="13" text-anchor="middle">Orange pair on pins 1-2, green pair on pins 3-6</text>
+
+    <!-- Footer -->
+    <text x="430" y="347" fill="#ffb454" font-size="14" text-anchor="middle">Plug held clip down, contacts up, tip pointing away from you: pin 1 is on the left.</text>
+    <text x="430" y="367" fill="#c792ea" font-size="13" text-anchor="middle">Same scheme on both ends = straight-through. W = white stripe, G green, O orange, BL blue, BR brown.</text>
+  </g>
+</svg>
