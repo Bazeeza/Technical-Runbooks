@@ -21,6 +21,8 @@ body:
         - 05 Active Directory User Management
         - 06 Printer Troubleshooting
         - 07 Remote Support (Quick Assist and RDP)
+        - 08 Network Cabling and Termination
+        - 09 Wi-Fi Troubleshooting
         - TEMPLATE.md or README
         - Other
     validations:
