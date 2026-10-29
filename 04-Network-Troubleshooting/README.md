@@ -71,6 +71,8 @@ Get-NetAdapter | Select-Object Name, Status, LinkSpeed, MacAddress
 
 **Expected result:** the adapter in use shows `Up`. `Disconnected` means a cable, port or Wi-Fi problem. `Disabled` means it was turned off: `Enable-NetAdapter -Name "Ethernet"`.
 
+Check **LinkSpeed** too: a gigabit card linked at `100 Mbps` usually means a damaged pair in the cable, because gigabit needs all four pairs. Go deeper with [08 Network Cabling and Termination](../08-Network-Cabling-and-Termination/README.md) for a wired link, or [09 Wi-Fi Troubleshooting](../09-WiFi-Troubleshooting/README.md) for a wireless one.
+
 ## Step 2 — IP configuration: did the PC get an address?
 
 ```cmd
@@ -157,6 +159,7 @@ Or **Settings → Network & internet → Advanced network settings → Network r
 ```text
 User / PC / location       :
 Wired, Wi-Fi or VPN         :
+Link speed / Wi-Fi Rssi     : e.g. "1 Gbps" or "-72 dBm on 5 GHz"
 Scope                       : this PC only / several users / whole site
 Last successful step        : e.g. "Ping gateway OK, ping 1.1.1.1 fails"
 ipconfig /all output        : (attached)
