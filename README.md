@@ -2,11 +2,11 @@
 
 <p align="center">
   <b>Step-by-step IT procedures, written to be followed under pressure and reproduced by any technician.</b><br>
-  Help desk · Workstations · Networking · Active Directory · Printing · Remote support
+  Help desk · Workstations · Networking · Cabling · Wi-Fi · Active Directory · Printing · Remote support
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Runbooks-7-3fe0a0?style=flat-square" alt="7 runbooks"/>
+  <img src="https://img.shields.io/badge/Runbooks-9-3fe0a0?style=flat-square" alt="9 runbooks"/>
   <img src="https://img.shields.io/badge/Language-English-2b9dff?style=flat-square" alt="English"/>
   <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20Linux%20%7C%20Cisco-555?style=flat-square" alt="Windows, Linux, Cisco"/>
   <img src="https://img.shields.io/badge/Author-Bariu%20Azeez-c792ea?style=flat-square" alt="Author: Bariu Azeez"/>
@@ -39,6 +39,12 @@
 | 07 | [**Remote Support with Quick Assist**](07-Remote-Support/README.md) | Choose the right remote tool, connect with consent, work and close the session safely | 🟢 Beginner | 5 min |
 | | ↳ [Remote Desktop with NLA](07-Remote-Support/RDP.md) | Enable RDP on port 3389 with NLA, limit accounts and source addresses | 🟡 Intermediate | 15 min |
 | | ↳ [Security checklist](07-Remote-Support/SECURITY-CHECKLIST.md) | Apply the same consent and record rules to every session, react to a scam | 🟢 Beginner | 2 min |
+| 08 | [**Network Cabling and Termination**](08-Network-Cabling-and-Termination/README.md) | Crimp an RJ45 cable to T568A or T568B, choose Cat 5e, 6 or 6A, work safely | 🟢 Beginner | 10–15 min |
+| | ↳ [Cable testing and wire map faults](08-Network-Cabling-and-Termination/CABLE-TESTING.md) | Test every cable, read opens, shorts, crossed and split pairs, and fix them | 🟢 Beginner | 2–10 min |
+| | ↳ [Patch panels and labeling](08-Network-Cabling-and-Termination/PATCH-PANEL-AND-LABELING.md) | Punch down a panel or keystone jack and label both ends with a TIA-606 identifier | 🟢 Beginner | 5 min per port |
+| 09 | [**Wi-Fi Troubleshooting**](09-WiFi-Troubleshooting/README.md) | Read band, channel and signal with `netsh wlan`, tell coverage from interference from a PC fault | 🟡 Intermediate | 10–30 min |
+| | ↳ [`Export-WifiDiagnostics.ps1`](09-WiFi-Troubleshooting/Export-WifiDiagnostics.ps1) | Save every Wi-Fi diagnostic output in one folder for the ticket, read-only | 🟢 Beginner | 1 min |
+| | ↳ [Reading the wireless network report](09-WiFi-Troubleshooting/WLAN-REPORT.md) | Turn three days of Wi-Fi history into dated disconnections with a reason | 🟡 Intermediate | 10 min |
 
 ---
 
@@ -55,9 +61,12 @@ flowchart LR
     R05 -->|printers by GPO| R06
     R07[07 Remote support] -.->|used to run| R04
     R07 -.-> R06
+    R08[08 Cabling and termination] -->|physical layer| R04
+    R09[09 Wi-Fi troubleshooting] -->|link is up| R04
+    R07 -.-> R09
 ```
 
-A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account. Printers come last, often deployed by Group Policy, and remote support is the way most of these procedures are carried out from the help desk.
+A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account. Printers come last, often deployed by Group Policy, and remote support is the way most of these procedures are carried out from the help desk. Cabling and Wi-Fi sit underneath the network runbook: when step 1 of runbook 04 finds no link, they are the next stop.
 
 ---
 
