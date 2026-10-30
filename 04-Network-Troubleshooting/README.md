@@ -139,7 +139,7 @@ Test-NetConnection www.microsoft.com -Port 443
 
 Common ports: `80` HTTP · `443` HTTPS · `53` DNS · `22` SSH · `3389` RDP · `445` SMB (file shares) · `5060` SIP (VoIP) · `9100` and `631` printing (raw and IPP).
 
-For a printer that does not answer, continue with [06 Printer Troubleshooting](../06-Printer-Troubleshooting/README.md#step-4--network-printer-is-it-reachable-on-its-port). For RDP, see [07 Remote Desktop with NLA](../07-Remote-Support/RDP.md).
+For a printer that does not answer, continue with [06 Printer Troubleshooting](../06-Printer-Troubleshooting/README.md#step-4--network-printer-is-it-reachable-on-its-port). For RDP, see [07 Remote Desktop with NLA](../07-Remote-Support/RDP.md). For an IP phone that rings but has no audio, SIP on 5060 is not enough: the voice uses a separate range of UDP ports, see [10 VoIP / SIP Phone Troubleshooting](../10-VoIP-SIP-Phone-Troubleshooting/README.md#step-5--no-audio-or-one-way-audio).
 
 ---
 
