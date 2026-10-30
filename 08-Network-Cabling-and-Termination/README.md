@@ -134,7 +134,7 @@ Label both ends with the same identifier. For patch panels and wall jacks, follo
 | Use cable with the fire rating required by the building code (plenum or riser spaces) | A non-rated jacket in an air-handling space spreads fire and toxic smoke |
 | Respect bend radius (4 times the cable diameter) and pulling tension (110 N) | Kinks and over-pulling deform the pairs permanently |
 | Use a stable ladder and check for asbestos or electrical warnings before opening a ceiling | Most cabling accidents are falls |
-| Never cut or re-terminate a cable that powers a device (PoE camera, access point, phone) without disconnecting it at the switch first | Avoids damaging the equipment and confirms you have the right cable |
+| Never cut or re-terminate a cable that powers a device (PoE camera, access point, phone) without disconnecting it at the switch first | Avoids damaging the equipment and confirms you have the right cable (PoE power levels: [voice network readiness](../10-VoIP-SIP-Phone-Troubleshooting/VOICE-NETWORK-READINESS.md#power-over-ethernet)) |
 
 ## Verification
 
