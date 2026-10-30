@@ -28,6 +28,12 @@ Keep one page open during a diagnosis instead of searching for syntax. Use it wi
 | Show ARP table (IP ↔ MAC) | `arp -a` | `ip neigh` | `show arp` |
 | Show MAC address table | — | — | `show mac address-table` |
 | Show VLANs | — | — | `show vlan brief` |
+| Show access, voice VLAN and trunk mode of a port | — | — | `show interfaces <port> switchport` |
+| Show trunks and allowed VLANs | — | — | `show interfaces trunk` |
+| Show blocked ports and the reason | — | — | `show interfaces status err-disabled` |
+| Show PoE power per port | — | — | `show power inline` |
+
+The configuration behind these Cisco commands is explained in [11 Cisco Switch Baseline](../11-Cisco-Switch-Baseline/README.md).
 
 ## Connectivity
 
