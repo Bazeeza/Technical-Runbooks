@@ -2,11 +2,11 @@
 
 <p align="center">
   <b>Step-by-step IT procedures, written to be followed under pressure and reproduced by any technician.</b><br>
-  Help desk · Workstations · Networking · Cabling · Wi-Fi · Active Directory · Printing · Remote support
+  Help desk · Workstations · Networking · Cabling · Wi-Fi · VoIP · Cisco switching · Active Directory · Printing · Remote support
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Runbooks-9-3fe0a0?style=flat-square" alt="9 runbooks"/>
+  <img src="https://img.shields.io/badge/Runbooks-11-3fe0a0?style=flat-square" alt="11 runbooks"/>
   <img src="https://img.shields.io/badge/Language-English-2b9dff?style=flat-square" alt="English"/>
   <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20Linux%20%7C%20Cisco-555?style=flat-square" alt="Windows, Linux, Cisco"/>
   <img src="https://img.shields.io/badge/Author-Bariu%20Azeez-c792ea?style=flat-square" alt="Author: Bariu Azeez"/>
@@ -45,6 +45,12 @@
 | 09 | [**Wi-Fi Troubleshooting**](09-WiFi-Troubleshooting/README.md) | Read band, channel and signal with `netsh wlan`, tell coverage from interference from a PC fault | 🟡 Intermediate | 10–30 min |
 | | ↳ [`Export-WifiDiagnostics.ps1`](09-WiFi-Troubleshooting/Export-WifiDiagnostics.ps1) | Save every Wi-Fi diagnostic output in one folder for the ticket, read-only | 🟢 Beginner | 1 min |
 | | ↳ [Reading the wireless network report](09-WiFi-Troubleshooting/WLAN-REPORT.md) | Turn three days of Wi-Fi history into dated disconnections with a reason | 🟡 Intermediate | 10 min |
+| 10 | [**VoIP / SIP Phone Troubleshooting**](10-VoIP-SIP-Phone-Troubleshooting/README.md) | Walk the chain PoE → voice VLAN → registration → SIP → RTP, fix one-way audio caused by NAT and SIP ALG | 🟡 Intermediate | 10–30 min |
+| | ↳ [Reading a SIP call](10-VoIP-SIP-Phone-Troubleshooting/SIP-CALL-FLOW.md) | Follow a registration and a call, read the SDP and the SIP response codes | 🟡 Intermediate | 15 min |
+| | ↳ [Voice network readiness](10-VoIP-SIP-Phone-Troubleshooting/VOICE-NETWORK-READINESS.md) | Size codec bandwidth, check DSCP EF 46, the voice VLAN and the PoE budget | 🟡 Intermediate | 20 min |
+| 11 | [**Cisco Switch Baseline**](11-Cisco-Switch-Baseline/README.md) | Configure an access switch securely: SSH v2 only, VLANs, port security, portfast, black hole VLAN, restricted trunk | 🟡 Intermediate | 30–45 min |
+| | ↳ [`access-switch-baseline.cfg`](11-Cisco-Switch-Baseline/access-switch-baseline.cfg) | The complete baseline configuration, commented section by section | 🟡 Intermediate | — |
+| | ↳ [Port security and err-disabled ports](11-Cisco-Switch-Baseline/PORT-SECURITY-AND-ERR-DISABLED.md) | Find why a user port is blocked, identify the device and recover the port safely | 🟡 Intermediate | 5–15 min |
 
 ---
 
@@ -64,9 +70,13 @@ flowchart LR
     R08[08 Cabling and termination] -->|physical layer| R04
     R09[09 Wi-Fi troubleshooting] -->|link is up| R04
     R07 -.-> R09
+    R11[11 Cisco switch baseline] -->|access ports and VLANs| R04
+    R08 -->|PoE and jacks| R10[10 VoIP and SIP phones]
+    R11 -->|voice VLAN and PoE| R10
+    R09 -.->|softphone on Wi-Fi| R10
 ```
 
-A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account. Printers come last, often deployed by Group Policy, and remote support is the way most of these procedures are carried out from the help desk. Cabling and Wi-Fi sit underneath the network runbook: when step 1 of runbook 04 finds no link, they are the next stop.
+A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account. Printers come last, often deployed by Group Policy, and remote support is the way most of these procedures are carried out from the help desk. Cabling and Wi-Fi sit underneath the network runbook: when step 1 of runbook 04 finds no link, they are the next stop. The switch baseline defines the access ports and VLANs that every wired device, including the IP phones of runbook 10, depends on.
 
 ---
 
