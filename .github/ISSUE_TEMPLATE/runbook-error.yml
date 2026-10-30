@@ -23,6 +23,8 @@ body:
         - 07 Remote Support (Quick Assist and RDP)
         - 08 Network Cabling and Termination
         - 09 Wi-Fi Troubleshooting
+        - 10 VoIP / SIP Phone Troubleshooting
+        - 11 Cisco Switch Baseline
         - TEMPLATE.md or README
         - Other
     validations:
