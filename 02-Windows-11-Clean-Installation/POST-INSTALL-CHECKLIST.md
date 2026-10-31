@@ -86,7 +86,8 @@ manage-bde -status C:
 
 - [ ] Install the standard applications: see [runbook 03 — Software Deployment](../03-Software-Deployment/README.md).
 - [ ] Printers, mapped drives and VPN as required by the user's department.
-- [ ] Restore the user's data from the backup, then let the user confirm their files are there.
+- [ ] Restore the user's data from the backup, then let the user confirm their files are there (to prove the restore file by file, see [runbook 13 — Backup and Restore](../13-Backup-and-Restore/README.md#step-5--test-the-restore-mandatory)).
+- [ ] Turn on the workstation's own backup (File History or the site's tool): see [Windows backups](../13-Backup-and-Restore/WINDOWS-BACKUP.md#option-a--file-history-workstation).
 
 ## 6. Final verification
 
