@@ -25,6 +25,8 @@ body:
         - 09 Wi-Fi Troubleshooting
         - 10 VoIP / SIP Phone Troubleshooting
         - 11 Cisco Switch Baseline
+        - 12 Linux Server Hardening Basics
+        - 13 Backup and Restore
         - TEMPLATE.md or README
         - Other
     validations:
@@ -70,4 +72,4 @@ body:
     id: environment
     attributes:
       label: Environment
-      description: For example "Windows 11 24H2, PowerShell 5.1" or "Cisco IOS 15.2".
+      description: For example "Windows 11 24H2, PowerShell 5.1", "Cisco IOS 15.2" or "Ubuntu 24.04, OpenSSH 9.6".

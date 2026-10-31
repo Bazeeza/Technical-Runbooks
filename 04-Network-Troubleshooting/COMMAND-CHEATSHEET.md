@@ -62,6 +62,11 @@ The configuration behind these Cisco commands is explained in [11 Cisco Switch B
 | Listening ports + process | `netstat -ano` or `Get-NetTCPConnection -State Listen` | `sudo ss -tulpn` | `show control-plane host open-ports` |
 | Find the process for a PID | `tasklist /fi "PID eq 1234"` | `ps -p 1234 -o comm=` | — |
 | Firewall state | `Get-NetFirewallProfile` | `sudo ufw status verbose` | `show access-lists` |
+| Test a TCP port from another machine | `Test-NetConnection <host> -Port 22` | `nc -zv <host> 22` | `telnet <host> 22` |
+| Ports published by containers | — | `docker ps --format 'table {{.Names}}\t{{.Ports}}'` | — |
+
+> [!TIP]
+> On a Linux server, a container port listed on `0.0.0.0` by `ss` is reachable even when `ufw` denies it: see [Docker ports and the firewall](../12-Linux-Server-Hardening/DOCKER-PORT-BINDING.md).
 
 ## Capture
 
