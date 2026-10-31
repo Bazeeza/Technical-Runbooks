@@ -1,0 +1,37 @@
+# /etc/fail2ban/jail.local
+#
+# fail2ban settings for an SSH server (Debian 12, Ubuntu 22.04 / 24.04).
+# Runbook: 12-Linux-Server-Hardening/README.md (step 5)
+#
+# Never edit jail.conf: package updates overwrite it. jail.local is read
+# after it and only needs the values you change.
+#
+# Apply and check:
+#   sudo fail2ban-client -t                 (test the configuration)
+#   sudo systemctl restart fail2ban
+#   sudo fail2ban-client status sshd
+
+[DEFAULT]
+# Addresses that are never banned: loopback, plus your management network.
+# Replace the example range with the subnet your administrators connect from,
+# or you can lock yourself out after a few typing mistakes.
+ignoreip = 127.0.0.1/8 ::1 192.168.99.0/24
+
+# 5 failures within 10 minutes = banned for 1 hour.
+findtime = 10m
+maxretry = 5
+bantime  = 1h
+
+# Repeat offenders are banned longer each time (1 h, 2 h, 4 h ...), up to 1 week.
+bantime.increment = true
+bantime.maxtime   = 1w
+
+# Ban through ufw, so the bans appear in "ufw status" next to your own rules.
+banaction = ufw
+
+[sshd]
+enabled = true
+# Read the SSH log from the systemd journal. Debian 12 has no
+# /var/log/auth.log by default, and the jail does not start without a log.
+# Needs the python3-systemd package.
+backend = systemd
