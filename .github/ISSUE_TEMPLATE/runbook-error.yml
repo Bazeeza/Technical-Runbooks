@@ -27,6 +27,8 @@ body:
         - 11 Cisco Switch Baseline
         - 12 Linux Server Hardening Basics
         - 13 Backup and Restore
+        - 14 Phishing Report and First Response
+        - 15 Microsoft 365 and Outlook Basics
         - TEMPLATE.md or README
         - Other
     validations:
@@ -72,4 +74,4 @@ body:
     id: environment
     attributes:
       label: Environment
-      description: For example "Windows 11 24H2, PowerShell 5.1", "Cisco IOS 15.2" or "Ubuntu 24.04, OpenSSH 9.6".
+      description: For example "Windows 11 24H2, PowerShell 5.1", "Cisco IOS 15.2", "Ubuntu 24.04, OpenSSH 9.6" or "Classic Outlook, Microsoft 365 Apps Current Channel".
