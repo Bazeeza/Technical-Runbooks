@@ -101,6 +101,9 @@ Unlock-ADAccount -Identity jdoe
 - The temporary password follows the policy, is **unique**, and is given through a secure channel (never by email to the account being reset).
 - `ChangePasswordAtLogon` makes sure only the user knows the final password.
 
+> [!WARNING]
+> If the reset is needed because the user typed the password on a phishing page, a reset alone is not enough: for an account synchronized to Microsoft 365, Microsoft recommends resetting it **twice** in Active Directory, then revoking the user's sessions and checking the mailbox rules. Follow [runbook 14, list C](../14-Phishing-Report-and-First-Response/FIRST-RESPONSE-CHECKLIST.md#list-c--typed-a-password-or-approved-an-unexpected-mfa-prompt).
+
 ## Case 3 — New employee
 
 ```powershell
@@ -144,7 +147,7 @@ Get-ADPrincipalGroupMembership jdoe | Where-Object Name -ne 'Domain Users' |
 Move-ADObject -Identity (Get-ADUser jdoe).DistinguishedName -TargetPath 'OU=Disabled,DC=corp,DC=example,DC=com'
 ```
 
-Then follow the organization's process: mailbox, files, devices returned, deletion after the retention period.
+Then follow the organization's process: mailbox, files, devices returned, deletion after the retention period. Remove the user's permissions on shared mailboxes the same day ([runbook 15](../15-Microsoft-365-Outlook-Basics/SHARED-MAILBOXES-AND-PERMISSIONS.md#step-4--remove-access-when-it-is-no-longer-needed)).
 
 ---
 

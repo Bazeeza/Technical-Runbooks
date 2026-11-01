@@ -69,7 +69,7 @@ This applies when a user reports a session they did not request, or when the tec
 1. **Disconnect** the network (unplug the cable, turn off Wi-Fi) to stop the remote access.
 2. Do not delete anything: the evidence helps the security team.
 3. **Escalate to the security team** with the time, the tool name and what the user saw or typed.
-4. Have the user's passwords changed **from another, clean device**, starting with e-mail and banking if personal accounts were used.
+4. Have the user's passwords changed **from another, clean device**, starting with e-mail and banking if personal accounts were used. For a work account, also revoke its sessions and check its mailbox rules, as in [runbook 14, list C](../14-Phishing-Report-and-First-Response/FIRST-RESPONSE-CHECKLIST.md#list-c--typed-a-password-or-approved-an-unexpected-mfa-prompt).
 5. Help the user report it: in Canada, to the [Canadian Anti-Fraud Centre](https://antifraudcentre-centreantifraude.ca/); for scams using Microsoft's name, through the [Microsoft tech support scam form](https://support.microsoft.com/windows/cfa4609a-92cc-4808-95e8-392b4ffd0753).
 
 ---
