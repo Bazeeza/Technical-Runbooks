@@ -2,11 +2,11 @@
 
 <p align="center">
   <b>Step-by-step IT procedures, written to be followed under pressure and reproduced by any technician.</b><br>
-  Help desk · Workstations · Networking · Cabling · Wi-Fi · VoIP · Cisco switching · Linux servers · Backup · Active Directory · Printing · Remote support
+  Help desk · Workstations · Networking · Cabling · Wi-Fi · VoIP · Cisco switching · Linux servers · Backup · Active Directory · Microsoft 365 · Phishing response · Printing · Remote support
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Runbooks-13-3fe0a0?style=flat-square" alt="13 runbooks"/>
+  <img src="https://img.shields.io/badge/Runbooks-15-3fe0a0?style=flat-square" alt="15 runbooks"/>
   <img src="https://img.shields.io/badge/Language-English-2b9dff?style=flat-square" alt="English"/>
   <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20Linux%20%7C%20Cisco-555?style=flat-square" alt="Windows, Linux, Cisco"/>
   <img src="https://img.shields.io/badge/Author-bazeeza%20Bazeeza-c792ea?style=flat-square" alt="Author: bazeeza"/>
@@ -58,6 +58,13 @@
 | | ↳ [Windows backups](13-Backup-and-Restore/WINDOWS-BACKUP.md) | File History, Windows Server Backup (`wbadmin`) and robocopy, with restores to a separate folder | 🟡 Intermediate | 20–40 min |
 | | ↳ [Linux backups with restic](13-Backup-and-Restore/RESTIC-LINUX.md) | Encrypted snapshots on a systemd timer, retention, repository checks and restores | 🟡 Intermediate | 30–45 min |
 | | ↳ [`Test-RestoredFiles.ps1`](13-Backup-and-Restore/Test-RestoredFiles.ps1) | Prove a restore: compare every file with the original by SHA-256, save a CSV report | 🟢 Beginner | 2 min |
+| 14 | [**Phishing Report and First Response**](14-Phishing-Report-and-First-Response/README.md) | Recognize a phishing e-mail, have it reported with the Outlook **Report** button, contain according to what the user did, escalate and record | 🟢 Beginner | 10–30 min |
+| | ↳ [First response checklist](14-Phishing-Report-and-First-Response/FIRST-RESPONSE-CHECKLIST.md) | Reset the password, revoke sessions, review MFA methods, find forwarding rules, isolate the device | 🟢 Beginner | 5–30 min |
+| | ↳ [Reading e-mail headers](14-Phishing-Report-and-First-Response/READING-EMAIL-HEADERS.md) and [`Get-EmailHeaderSummary.ps1`](14-Phishing-Report-and-First-Response/Get-EmailHeaderSummary.ps1) | Read From, Reply-To, Return-Path, SPF, DKIM, DMARC and the Received chain, with a read-only summary script | 🟡 Intermediate | 10 min |
+| 15 | [**Microsoft 365 and Outlook Basics**](15-Microsoft-365-Outlook-Basics/README.md) | Check sign-in, license, mailbox and MFA in order, then the Outlook client, then shared mailbox access | 🟢 Beginner | 10–45 min |
+| | ↳ [Outlook profiles and Cached Exchange Mode](15-Microsoft-365-Outlook-Basics/OUTLOOK-PROFILE-AND-CACHE.md) | Start in safe mode, create a clean profile, set the offline period, rebuild an `.ost` file safely | 🟢 Beginner | 15–45 min |
+| | ↳ [Shared mailboxes and permissions](15-Microsoft-365-Outlook-Basics/SHARED-MAILBOXES-AND-PERMISSIONS.md) | Grant, verify and remove Full Access, Send As and Send on Behalf, control auto-mapping | 🟡 Intermediate | 10–20 min |
+| | ↳ [`Get-OutlookClientInfo.ps1`](15-Microsoft-365-Outlook-Basics/Get-OutlookClientInfo.ps1) | Report the Outlook clients, profiles, data files and free space for the ticket, read-only | 🟢 Beginner | 1 min |
 
 ---
 
@@ -84,9 +91,14 @@ flowchart LR
     R12[12 Linux server hardening] -->|backup account and SSH keys| R13[13 Backup and restore]
     R13 -->|user data back| R02
     R07 -.->|admin access to servers| R12
+    R15[15 Microsoft 365 and Outlook] -->|account, MFA, mailbox| R14[14 Phishing first response]
+    R05 -->|synced password reset| R14
+    R07 -.->|scam call, same reflexes| R14
+    R02 --> R15
+    R04 -.->|Outlook offline| R15
 ```
 
-A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account. Printers come last, often deployed by Group Policy, and remote support is the way most of these procedures are carried out from the help desk. Cabling and Wi-Fi sit underneath the network runbook: when step 1 of runbook 04 finds no link, they are the next stop. The switch baseline defines the access ports and VLANs that every wired device, including the IP phones of runbook 10, depends on. On the server side, runbook 12 hardens a Linux server before it hosts anything, and runbook 13 makes sure every machine in the chain, workstation or server, has a backup that has really been restored.
+A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account. Printers come last, often deployed by Group Policy, and remote support is the way most of these procedures are carried out from the help desk. Cabling and Wi-Fi sit underneath the network runbook: when step 1 of runbook 04 finds no link, they are the next stop. The switch baseline defines the access ports and VLANs that every wired device, including the IP phones of runbook 10, depends on. On the server side, runbook 12 hardens a Linux server before it hosts anything, and runbook 13 makes sure every machine in the chain, workstation or server, has a backup that has really been restored. On the user side, runbook 15 covers the Microsoft 365 account, MFA and Outlook that every new workstation needs, and runbook 14 reuses the same admin centers when a password has been stolen by a phishing e-mail.
 
 ---
 
