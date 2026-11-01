@@ -15,6 +15,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - 11 Cisco Switch Baseline: a complete, commented access switch configuration (type 9 secrets, banner, SSH version 2 only, management VLAN and ACL, port security, portfast and BPDU guard, black hole VLAN, restricted trunk with an unused native VLAN), with a port security and err-disabled recovery guide.
 - 12 Linux Server Hardening Basics: Ed25519 SSH keys, an `sshd_config.d` drop-in (`PasswordAuthentication no`, `PermitRootLogin no`, `AllowUsers`), ufw with default deny and `limit` on SSH, a fail2ban jail with incremental bans, unattended security upgrades, and a guide explaining why Docker published ports bypass ufw and how to bind them to `127.0.0.1`.
 - 13 Backup and Restore: RPO and RTO inventory, the 3-2-1 rule, a mandatory and recorded restore test, a Windows guide (File History, `wbadmin`, robocopy and its exit codes), a Linux guide (restic with a systemd timer, retention and `restic check`, rsync as a mirror), and `Test-RestoredFiles.ps1` to compare a restored folder with the original by SHA-256.
+- 14 Phishing Report and First Response: recognize, report with the built-in Outlook **Report** button, contain according to what the user did, escalate and record; a first response checklist (password reset, `Revoke-MgUserSignInSession`, MFA method review, forwarding and `Get-InboxRule -IncludeHidden` checks, device isolation), a guide to reading SPF, DKIM, DMARC, compauth and the Received chain, and `Get-EmailHeaderSummary.ps1` with a fictional sample.
+- 15 Microsoft 365 and Outlook Basics: account checks in order (sign-in, license with `Get-MgUserLicenseDetail`, mailbox, MFA with an identity check before any reset), a guide to Outlook profiles, Cached Exchange Mode and `.ost` rebuilds, a guide to shared mailboxes (Full Access, Send As, Send on Behalf, auto-mapping), and `Get-OutlookClientInfo.ps1`.
 - Continuous integration: markdownlint, relative link check, PSScriptAnalyzer, and a Windows PowerShell 5.1 parse check of every script.
 - `CONTRIBUTING.md` with the writing rules, the script rules and the local checks.
 - Issue form **Report an error in a runbook**.
@@ -24,7 +26,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 - 04 Network Troubleshooting: printing ports added to the common port list, with links to runbooks 06 and 07; the physical layer step links to runbooks 08 and 09; the port check links to runbook 10, and the cheat sheet gains Cisco switchport, trunk, err-disabled and PoE commands with a link to runbook 11; it also gains a TCP port test and a container port command, with a link to runbook 12.
 - 02 Windows 11 Clean Installation: the post-installation checklist links to the restore test and to File History.
-- README index, connection diagram and error report form list runbooks 06 to 13.
+- 05 Active Directory User Management and the 07 remote support security checklist link to the phishing first response (runbook 14); account departures link to removing shared mailbox permissions (runbook 15).
+- README index, connection diagram and error report form list runbooks 06 to 15.
 - Copied study notes (`LAN.md`, `ABC-Cybersecurity.md`, `RoadMAP.md`) moved to [`archive/`](archive/README.md), each with a note that credits its source. They are no longer presented as original runbooks.
 
 ### Removed
