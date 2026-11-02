@@ -49,6 +49,7 @@ Every pull request runs the same checks as the `main` branch:
 |---|---|
 | [Markdown](.github/workflows/markdown.yml) | markdownlint rules listed in [`.markdownlint-cli2.jsonc`](.markdownlint-cli2.jsonc), and every relative link between files |
 | [PowerShell](.github/workflows/powershell.yml) | PSScriptAnalyzer (errors and warnings), and parsing of every script by Windows PowerShell 5.1 |
+| [External links](.github/workflows/external-links.yml) | Every Monday, and on demand: each external link still answers. Not run on pull requests, so a slow vendor site never blocks a fix |
 
 To run the Markdown checks locally (Node.js required):
 

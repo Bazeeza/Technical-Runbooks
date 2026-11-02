@@ -144,12 +144,13 @@ Writing principles:
 
 ## Quality checks
 
-Every push and pull request is checked automatically by GitHub Actions:
+Every push and pull request is checked automatically by GitHub Actions, and external links are checked once a week:
 
 | Check | What it catches |
 |---|---|
 | **markdownlint** | Skipped heading levels, code blocks without a language, trailing spaces, several top-level titles ([rules](.markdownlint-cli2.jsonc)) |
 | **lychee** (offline) | Relative links that point to a missing file |
+| **lychee** (weekly, online) | Vendor documentation links that moved or disappeared ([workflow](.github/workflows/external-links.yml)) |
 | **PSScriptAnalyzer** | PowerShell errors and warnings, such as unapproved verbs or unused variables ([settings](PSScriptAnalyzerSettings.psd1)) |
 | **Windows PowerShell 5.1** | Scripts that would not parse in the default shell of Windows 11 |
 
