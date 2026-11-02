@@ -13,7 +13,7 @@
   <br>
   <a href="https://github.com/Bazeeza/Technical-Runbooks/actions/workflows/markdown.yml"><img src="https://img.shields.io/github/actions/workflow/status/Bazeeza/Technical-Runbooks/markdown.yml?branch=main&style=flat-square&label=Markdown" alt="Markdown CI status"/></a>
   <a href="https://github.com/Bazeeza/Technical-Runbooks/actions/workflows/powershell.yml"><img src="https://img.shields.io/github/actions/workflow/status/Bazeeza/Technical-Runbooks/powershell.yml?branch=main&style=flat-square&label=PowerShell" alt="PowerShell CI status"/></a>
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-0.1.0-ffb454?style=flat-square" alt="Changelog version 0.1.0"/></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/Version-1.0.0-ffb454?style=flat-square" alt="Version 1.0.0"/></a>
 </p>
 
 > **En bref (français) :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.md), avec leur source.
