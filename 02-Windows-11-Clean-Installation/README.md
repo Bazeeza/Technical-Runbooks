@@ -3,7 +3,7 @@
 ![Level](https://img.shields.io/badge/Level-Beginner-3fe0a0?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-60%E2%80%9390%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-0078D6?style=flat-square)
-![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--10-555?style=flat-square)
+![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--11-555?style=flat-square)
 
 | Element | Content |
 |---|---|
@@ -106,6 +106,22 @@ Follow the full [post-installation checklist](POST-INSTALL-CHECKLIST.md): update
 
 ---
 
+## Verification
+
+Before handing over the PC, prove that the installation itself is correct:
+
+```powershell
+Get-ComputerInfo -Property OsName, OsVersion, BiosFirmwareType   # edition, build, and "Uefi"
+Get-Disk | Select-Object Number, PartitionStyle, Size              # the system disk shows GPT
+Confirm-SecureBootUEFI                                             # administrator; True
+slmgr /xpr                                                         # dialog box: "permanently activated"
+```
+
+- [ ] Edition matches the license, firmware type is **UEFI**, disk is **GPT**, Secure Boot returns `True`
+- [ ] Windows is activated (**Settings → System → Activation**)
+- [ ] **Device Manager** shows no device with a yellow warning sign
+- [ ] The [post-installation checklist](POST-INSTALL-CHECKLIST.md) is complete and attached to the ticket
+
 ## Troubleshooting
 
 | Symptom | Likely cause | Fix |
@@ -115,6 +131,13 @@ Follow the full [post-installation checklist](POST-INSTALL-CHECKLIST.md): update
 | No disk listed | Missing storage driver (Intel RST/VMD) | **Load driver** with the manufacturer's storage driver on a USB key, or switch SATA mode to AHCI on an **empty** disk |
 | Endless restart into setup | USB key still first in boot order | Remove the key, put Windows Boot Manager first |
 | No network during OOBE | Missing network driver | Install it from the second USB key (`Load driver` or through File Explorer once on the desktop) |
+
+## Rollback
+
+A clean installation cannot be undone: the old partitions are gone once step 5 is confirmed. This is why the backup is the first prerequisite.
+
+- **Before step 5:** nothing has been written yet. Close the installer and restart without the USB key: the old system starts as before.
+- **After step 5:** restore the user's data from the verified backup, or reimage the PC with the organization's standard image. A `Windows.old` folder exists only after an upgrade or a reinstall **without** deleting partitions, not after this procedure.
 
 ---
 
