@@ -132,6 +132,8 @@ Every runbook follows the same [template](TEMPLATE.md), so a technician always k
 | **Procedure** | Numbered steps with the exact command, **why** it is done, and the expected result |
 | **Verification** | How to prove the job is done |
 | **Troubleshooting** | Symptom → likely cause → fix |
+| **Rollback** | How to undo each change, or why it cannot be undone |
+| *Escalation block* (optional) | The facts the next support level needs, ready to paste into the ticket |
 
 Writing principles:
 
