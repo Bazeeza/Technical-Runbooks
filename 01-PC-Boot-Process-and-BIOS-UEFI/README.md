@@ -13,7 +13,7 @@
 | **Receiver** | Help desk and field technicians, IT students. |
 | **Channel** | GitHub repository `Bazeeza/Technical-Runbooks` |
 | **Code** | English, technical writing |
-| **Reference** | [Microsoft: Boot and UEFI](https://learn.microsoft.com/en-us/windows-hardware/drivers/bringup/boot-and-uefi) · [Microsoft: Secure Boot](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot) · Manufacturer manuals (Dell, HP, Lenovo) |
+| **Reference** | [Microsoft: Boot and UEFI](https://learn.microsoft.com/en-us/windows-hardware/drivers/bringup/boot-and-uefi) · [Microsoft: Secure Boot](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot) · [Suspend-BitLocker](https://learn.microsoft.com/en-us/powershell/module/bitlocker/suspend-bitlocker) · Manufacturer manuals (Dell, HP, Lenovo) |
 
 ---
 

@@ -13,7 +13,7 @@
 | **Receiver** | Help desk technicians, junior system administrators. |
 | **Channel** | GitHub repository `Bazeeza/Technical-Runbooks` |
 | **Code** | English, technical writing · PowerShell |
-| **Reference** | [Microsoft: winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) · [msiexec](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/msiexec) · [MSI error codes](https://learn.microsoft.com/en-us/windows/win32/msi/error-codes) |
+| **Reference** | [Microsoft: winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) · [winget pin](https://learn.microsoft.com/en-us/windows/package-manager/winget/pinning) · [msiexec](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/msiexec) · [MSI error codes](https://learn.microsoft.com/en-us/windows/win32/msi/error-codes) |
 
 ---
 

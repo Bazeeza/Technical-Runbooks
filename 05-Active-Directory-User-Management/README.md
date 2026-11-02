@@ -13,7 +13,7 @@
 | **Receiver** | Help desk technicians with delegated rights on user accounts. |
 | **Channel** | GitHub repository `Bazeeza/Technical-Runbooks` |
 | **Code** | English, technical writing · PowerShell (ActiveDirectory module) |
-| **Reference** | [ActiveDirectory PowerShell module](https://learn.microsoft.com/en-us/powershell/module/activedirectory/) · [Event 4740: account locked out](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4740) |
+| **Reference** | [ActiveDirectory PowerShell module](https://learn.microsoft.com/en-us/powershell/module/activedirectory/) · [Event 4740: account locked out](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4740) · [Active Directory Recycle Bin](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/adac/active-directory-recycle-bin) |
 
 ---
 
@@ -184,7 +184,7 @@ Everything above can also be done in **Active Directory Users and Computers** (`
 | Account disabled by mistake | `Enable-ADAccount -Identity jdoe`, then clear the description |
 | Groups removed at a departure | Re-add them from the CSV file saved in case 4: `Import-Csv <file> \| Where-Object Name -ne 'Domain Users' \| ForEach-Object { Add-ADGroupMember -Identity $_.DistinguishedName -Members jdoe }` |
 | Account moved to the *Disabled* OU | `Move-ADObject` back to the original OU (recorded in the ticket) |
-| Account deleted | Only possible if the **AD Recycle Bin** is enabled: `Get-ADObject -Filter 'SamAccountName -eq "jdoe"' -IncludeDeletedObjects \| Restore-ADObject`; otherwise escalate (authoritative restore from backup) |
+| Account deleted | Only possible if the **AD Recycle Bin** was enabled **before** the deletion; the restored account gets its groups back: `Get-ADObject -Filter 'SamAccountName -eq "jdoe"' -IncludeDeletedObjects \| Restore-ADObject`; otherwise escalate (authoritative restore from backup) |
 | Password reset | Cannot be undone: the old password is not stored. Give the user a new temporary password through a secure channel |
 
 ## Useful searches
