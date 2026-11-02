@@ -3,7 +3,7 @@
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-15%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6?style=flat-square)
-![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--10-555?style=flat-square)
+![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--11-555?style=flat-square)
 
 | Element | Content |
 |---|---|
@@ -162,6 +162,20 @@ The script [`Install-StandardApps.ps1`](Install-StandardApps.ps1) reads a list o
 | Installation hangs | A license or a prompt is waiting for an answer | Add `--accept-package-agreements --accept-source-agreements` and `--silent` |
 | `Installer hash does not match` | The vendor changed the file, repository not yet updated | Run `winget source update` and retry later; never bypass the hash check |
 | MSI code `1603` | Insufficient rights, older version present, missing prerequisite | Read the `/l*v` log, run as administrator, remove the old version |
+| MSI code `1618` again and again | Windows Update or another installer holds the Windows Installer lock | Wait for it to finish, or restart the PC, then retry |
+| `winget` works in your session but not in a script run as SYSTEM | winget is installed per user with App Installer | Run the script in an administrator user session, or deploy with the MSI method |
+| Several packages match the name | Search by name instead of ID | Use `--id <Id> --exact`, copied from the **Id** column |
+
+## Rollback
+
+| What was done | How to undo it |
+|---|---|
+| winget installation | `winget uninstall --id <Id> --exact --silent`, then `winget list --id <Id> --exact` returns nothing |
+| winget upgrade that broke an application | Uninstall, then reinstall the previous version: `winget show --id <Id> --versions` lists them, `winget install --id <Id> --exact --version <x.y.z>` installs one, and `winget pin add --id <Id>` stops `upgrade --all` from updating it again |
+| MSI installation | `msiexec /x "{PRODUCT-CODE-GUID}" /qn /norestart /l*v "C:\Temp\app-uninstall.log"` (product code found as shown above) |
+| Standard application set | Uninstall only the IDs the script's log marks `installed and verified`; lines marked `already installed, skipped` were there before and stay |
+
+Keep the uninstall log with the ticket, like the installation log.
 
 ---
 
