@@ -3,7 +3,7 @@
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-5%E2%80%9320%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20Server%20AD%20DS-0078D6?style=flat-square)
-![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--10-555?style=flat-square)
+![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--11-555?style=flat-square)
 
 | Element | Content |
 |---|---|
@@ -140,7 +140,12 @@ $date = Get-Date -Format 'yyyy-MM-dd'
 Disable-ADAccount -Identity jdoe
 Set-ADUser -Identity jdoe -Description "Disabled $date - ticket #12345"
 
-# Remove group memberships (except Domain Users) after recording them in the ticket
+# Record the group memberships first: this file is what makes a rollback possible
+New-Item -ItemType Directory -Force C:\Temp | Out-Null
+Get-ADPrincipalGroupMembership jdoe | Select-Object Name, DistinguishedName |
+    Export-Csv "C:\Temp\jdoe-groups-$date.csv" -NoTypeInformation
+
+# Then remove them (except Domain Users) and attach the CSV file to the ticket
 Get-ADPrincipalGroupMembership jdoe | Where-Object Name -ne 'Domain Users' |
     ForEach-Object { Remove-ADGroupMember -Identity $_ -Members jdoe -Confirm:$false }
 
@@ -160,6 +165,27 @@ Everything above can also be done in **Active Directory Users and Computers** (`
 - [ ] The user logs in successfully (or the departed account can no longer log in)
 - [ ] `Get-ADUser jdoe -Properties LockedOut, Enabled` shows the expected state
 - [ ] The ticket records: identity verification method, actions taken, groups changed
+
+## Troubleshooting
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| `Get-ADUser` is not recognized | RSAT tools missing or module not loaded | Install the RSAT capability (prerequisites), then `Import-Module ActiveDirectory` |
+| `Access is denied` on reset or unlock | The technician account has no delegated right on that OU | Escalate to the AD administrators; do not use a Domain Admin account to get around it |
+| The account locks again a few minutes after the unlock | An old password saved on a phone, a mapped drive or another PC | Find the source computer with event 4740 (case 1), clear the saved password there |
+| The new password is refused | It does not meet the password policy (length, complexity, history) | `Get-ADDefaultDomainPasswordPolicy` shows the rules; choose a compliant temporary password |
+| The user still cannot log in on a laptop off site | The PC has not contacted a domain controller since the reset | Connect the PC to the office network or the VPN, then log in with the new password |
+| A change does not appear on another domain controller | Replication between domain controllers takes time | Wait, or run the command against the same server with `-Server <DC>` |
+
+## Rollback
+
+| Action | How to undo it |
+|---|---|
+| Account disabled by mistake | `Enable-ADAccount -Identity jdoe`, then clear the description |
+| Groups removed at a departure | Re-add them from the CSV file saved in case 4: `Import-Csv <file> \| Where-Object Name -ne 'Domain Users' \| ForEach-Object { Add-ADGroupMember -Identity $_.DistinguishedName -Members jdoe }` |
+| Account moved to the *Disabled* OU | `Move-ADObject` back to the original OU (recorded in the ticket) |
+| Account deleted | Only possible if the **AD Recycle Bin** is enabled: `Get-ADObject -Filter 'SamAccountName -eq "jdoe"' -IncludeDeletedObjects \| Restore-ADObject`; otherwise escalate (authoritative restore from backup) |
+| Password reset | Cannot be undone: the old password is not stored. Give the user a new temporary password through a secure channel |
 
 ## Useful searches
 
