@@ -46,7 +46,7 @@ Reinstall Windows 11 on a workstation (new disk, malware, corrupted system, chan
 | TPM | Version 2.0 | `tpm.msc` → Specification Version |
 | Graphics | DirectX 12 / WDDM 2.0 | `dxdiag` |
 
-If UEFI, Secure Boot or TPM is disabled, enable it in the firmware: see [runbook 01](../01-PC-Boot-Process-and-BIOS-UEFI/README.md#5-check-uefi-mode-and-secure-boot). TPM is often called **Intel PTT** or **AMD fTPM** in the firmware menus.
+If UEFI, Secure Boot or TPM is disabled, enable it in the firmware: see [runbook 01](../01-PC-Boot-Process-and-BIOS-UEFI/README.md#step-4--check-uefi-mode-and-secure-boot). TPM is often called **Intel PTT** or **AMD fTPM** in the firmware menus.
 
 ## Step 2 — Create the installation USB key
 
@@ -64,7 +64,7 @@ On the working PC:
 ## Step 3 — Boot the target PC from the key
 
 1. Plug the key into the target PC.
-2. Open the **one-time boot menu** (`F12` on Dell and Lenovo, `Esc` then `F9` on HP; full table in [runbook 01](../01-PC-Boot-Process-and-BIOS-UEFI/README.md#2-enter-the-firmware-setup)).
+2. Open the **one-time boot menu** (`F12` on Dell and Lenovo, `Esc` then `F9` on HP; full table in [runbook 01](../01-PC-Boot-Process-and-BIOS-UEFI/README.md#step-1--enter-the-firmware-setup)).
 3. Choose the entry starting with **UEFI:** followed by the key's name.
 
 **Expected result:** the *Windows Setup* screen appears. Choosing an entry without `UEFI:` would start the installer in legacy mode and create an MBR disk incompatible with Windows 11.
