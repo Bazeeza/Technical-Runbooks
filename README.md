@@ -98,7 +98,23 @@ flowchart LR
     R07 -.->|scam call, same reflexes| R14
     R02 --> R15
     R04 -.->|Outlook offline| R15
+
+    classDef workstation fill:#070d1c,stroke:#3fe0a0,color:#3fe0a0
+    classDef network fill:#070d1c,stroke:#2b9dff,color:#2b9dff
+    classDef server fill:#070d1c,stroke:#ffb454,color:#ffb454
+    classDef identity fill:#070d1c,stroke:#c792ea,color:#c792ea
+    class R01,R02,R03,R06,R07 workstation
+    class R04,R08,R09,R10,R11 network
+    class R12,R13 server
+    class R05,R14,R15 identity
 ```
+
+| Colour | Area | Runbooks |
+|---|---|---|
+| 🟩 Green | Workstation and user support | 01, 02, 03, 06, 07 |
+| 🟦 Blue | Network, cabling and telephony | 04, 08, 09, 10, 11 |
+| 🟧 Orange | Servers and data protection | 12, 13 |
+| 🟪 Purple | Identity, e-mail and security | 05, 14, 15 |
 
 A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account. Printers come last, often deployed by Group Policy, and remote support is the way most of these procedures are carried out from the help desk. Cabling and Wi-Fi sit underneath the network runbook: when step 1 of runbook 04 finds no link, they are the next stop. The switch baseline defines the access ports and VLANs that every wired device, including the IP phones of runbook 10, depends on. On the server side, runbook 12 hardens a Linux server before it hosts anything, and runbook 13 makes sure every machine in the chain, workstation or server, has a backup that has really been restored. On the user side, runbook 15 covers the Microsoft 365 account, MFA and Outlook that every new workstation needs, and runbook 14 reuses the same admin centers when a password has been stolen by a phishing e-mail.
 
