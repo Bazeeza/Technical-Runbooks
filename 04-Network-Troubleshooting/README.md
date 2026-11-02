@@ -3,7 +3,7 @@
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-10%E2%80%9330%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-555?style=flat-square)
-![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--10-555?style=flat-square)
+![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--11-555?style=flat-square)
 
 | Element | Content |
 |---|---|
@@ -147,12 +147,54 @@ For a printer that does not answer, continue with [06 Printer Troubleshooting](.
 
 Use these only after identifying the problem; they reset the network stack and require a restart.
 
+> [!WARNING]
+> A network reset rewrites the TCP/IP settings: a **static** address, gateway or DNS can be lost, and **Network reset** in Settings also removes VPN clients and virtual switches. Save the current configuration first:
+>
+> ```cmd
+> ipconfig /all > "%USERPROFILE%\Desktop\ipconfig-before-reset.txt"
+> ```
+
 ```cmd
 netsh winsock reset
 netsh int ip reset
 ```
 
 Or **Settings → Network & internet → Advanced network settings → Network reset**.
+
+---
+
+## Verification
+
+Run the same tests as the diagnosis, in the same order: the fix is proven only when every step passes.
+
+```powershell
+Get-NetAdapter | Where-Object Status -eq 'Up' | Select-Object Name, LinkSpeed
+Test-NetConnection 1.1.1.1                          # PingSucceeded : True
+Resolve-DnsName www.microsoft.com                   # one or more addresses
+Test-NetConnection www.microsoft.com -Port 443      # TcpTestSucceeded : True
+```
+
+- [ ] The adapter is `Up` at the expected speed
+- [ ] The gateway, a public IP and a name all answer
+- [ ] The user confirms that the application that failed now works
+- [ ] The ticket records the failing layer, the cause and the fix
+
+## Troubleshooting
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| Address `169.254.x.x` after `/renew` | DHCP request does not reach a server | Escalate with the switch port and VLAN (step 2) |
+| Gateway answers, `1.1.1.1` does not | Routing, firewall or Internet provider | `tracert 1.1.1.1`, escalate with the last hop that answers |
+| `1.1.1.1` answers, names do not resolve | DNS server unreachable or wrong | Compare with `nslookup <name> 1.1.1.1`, escalate the DNS server |
+| Internal names fail, public names work | VPN down or wrong DNS suffix | Reconnect the VPN, check `ipconfig /all` → *DNS Suffix Search List* |
+| Everything works by IP, one site fails | Proxy setting, certificate or site down | Test from a second PC, check **Settings → Network & internet → Proxy** |
+| Works on Wi-Fi, not on cable (or the opposite) | The failing path only | [08 Cabling](../08-Network-Cabling-and-Termination/README.md) or [09 Wi-Fi](../09-WiFi-Troubleshooting/README.md) |
+
+## Rollback
+
+- **Static configuration lost after a reset:** re-enter the address, mask, gateway and DNS from the file saved before the reset (**Settings → Network & internet → Ethernet → IP assignment → Edit**).
+- **Adapter disabled by mistake:** `Enable-NetAdapter -Name "Ethernet"`.
+- **VPN client removed by Network reset:** reinstall it from the organization's software source ([runbook 03](../03-Software-Deployment/README.md)).
 
 ## Information to give when escalating
 

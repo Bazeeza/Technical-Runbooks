@@ -1,5 +1,10 @@
 # Network Command Cheat Sheet (Windows · Linux · Cisco IOS)
 
+![Level](https://img.shields.io/badge/Level-Beginner-3fe0a0?style=flat-square)
+![Type](https://img.shields.io/badge/Type-Reference%20sheet-2b9dff?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Cisco%20IOS-555?style=flat-square)
+![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--11-555?style=flat-square)
+
 | Element | Content |
 |---|---|
 | **Referent** | Equivalent network diagnostic commands on Windows, Linux and Cisco IOS. |
@@ -8,7 +13,7 @@
 | **Receiver** | Help desk and network technicians. |
 | **Channel** | GitHub repository `Bazeeza/Technical-Runbooks` |
 | **Code** | English, technical writing |
-| **Reference** | [Windows commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands) · `man ip`, `man ss` · Cisco IOS command references |
+| **Reference** | [Windows commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands) · [Packet Monitor (pktmon)](https://learn.microsoft.com/en-us/windows-server/networking/technologies/pktmon/pktmon) · `man ip`, `man ss` · Cisco IOS command references |
 
 ---
 
@@ -74,7 +79,7 @@ The configuration behind these Cisco commands is explained in [11 Cisco Switch B
 |---|---|---|
 | Capture packets | Wireshark | `sudo tcpdump -i eth0 -n` |
 | Capture only one host and port | Wireshark filter `ip.addr==10.0.0.5 && tcp.port==443` | `sudo tcpdump -i eth0 host 10.0.0.5 and port 443` |
-| Save to a file for Wireshark | — | `sudo tcpdump -i eth0 -w capture.pcap` |
+| Save to a file for Wireshark | `pktmon start --capture --pkt-size 0 --file-name capture.etl`, then `pktmon stop` and `pktmon etl2pcap capture.etl --out capture.pcapng` (built in, administrator; `--pkt-size 0` keeps whole packets instead of the first 128 bytes) | `sudo tcpdump -i eth0 -w capture.pcap` |
 
 > [!WARNING]
 > Capture traffic only on networks you are authorized to analyze: captures can contain passwords and personal data.
