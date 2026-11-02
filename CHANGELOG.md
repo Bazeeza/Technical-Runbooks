@@ -5,6 +5,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+Nothing yet.
+
+## [1.0.0] - 2026-11-02
+
+First complete release: 15 runbooks that all follow the same template, with automatic checks on every change.
+
 ### Added
 
 - 06 Printer Troubleshooting: queue, Print Spooler, network ports 9100/631/515, port and driver checks, with `Reset-PrintQueue.ps1` and a guide to deploy printers with Group Policy Preferences.
@@ -18,12 +24,22 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - 14 Phishing Report and First Response: recognize, report with the built-in Outlook **Report** button, contain according to what the user did, escalate and record; a first response checklist (password reset, `Revoke-MgUserSignInSession`, MFA method review, forwarding and `Get-InboxRule -IncludeHidden` checks, device isolation), a guide to reading SPF, DKIM, DMARC, compauth and the Received chain, and `Get-EmailHeaderSummary.ps1` with a fictional sample.
 - 15 Microsoft 365 and Outlook Basics: account checks in order (sign-in, license with `Get-MgUserLicenseDetail`, mailbox, MFA with an identity check before any reset), a guide to Outlook profiles, Cached Exchange Mode and `.ost` rebuilds, a guide to shared mailboxes (Full Access, Send As, Send on Behalf, auto-mapping), and `Get-OutlookClientInfo.ps1`.
 - Continuous integration: markdownlint, relative link check, PSScriptAnalyzer, and a Windows PowerShell 5.1 parse check of every script.
+- Weekly external link check of the vendor documentation references (`external-links.yml`), kept out of pull requests.
 - `CONTRIBUTING.md` with the writing rules, the script rules and the local checks.
 - Issue form **Report an error in a runbook**.
 - This changelog.
 
 ### Changed
 
+- Release review of runbooks 01 to 05, so the first five match the template like the later ones:
+  - 01 Boot and BIOS / UEFI: procedure numbered Step 1 to 4, BitLocker suspend prerequisite, troubleshooting and rollback sections; the no-boot guide gains a verification checklist.
+  - 02 Windows 11 Clean Installation: verification commands (UEFI, GPT, Secure Boot, activation) and a rollback section that explains why only the backup can undo a clean install.
+  - 03 Software Deployment: rollback for winget, bad upgrades (previous version and `winget pin`) and MSI, and three more troubleshooting rows.
+  - 04 Network Troubleshooting: warning that a network reset can erase a static IP configuration, verification, troubleshooting and rollback sections; the cheat sheet gains its badges and a built-in Windows capture with `pktmon`.
+  - 05 Active Directory User Management: group memberships exported to CSV before a departure, troubleshooting and rollback sections (including AD Recycle Bin restores).
+- README: index levels now match each document's badge (with a legend), the connection diagram is coloured by area, and the standard table lists the Rollback section.
+- `TEMPLATE.md`: optional escalation block and related work list, and what to write when a step cannot be undone.
+- "Last reviewed" badge on every document reviewed for this release.
 - 04 Network Troubleshooting: printing ports added to the common port list, with links to runbooks 06 and 07; the physical layer step links to runbooks 08 and 09; the port check links to runbook 10, and the cheat sheet gains Cisco switchport, trunk, err-disabled and PoE commands with a link to runbook 11; it also gains a TCP port test and a container port command, with a link to runbook 12.
 - 02 Windows 11 Clean Installation: the post-installation checklist links to the restore test and to File History.
 - 05 Active Directory User Management and the 07 remote support security checklist link to the phishing first response (runbook 14); account departures link to removing shared mailbox permissions (runbook 15).

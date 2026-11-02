@@ -13,7 +13,7 @@
   <br>
   <a href="https://github.com/Bazeeza/Technical-Runbooks/actions/workflows/markdown.yml"><img src="https://img.shields.io/github/actions/workflow/status/Bazeeza/Technical-Runbooks/markdown.yml?branch=main&style=flat-square&label=Markdown" alt="Markdown CI status"/></a>
   <a href="https://github.com/Bazeeza/Technical-Runbooks/actions/workflows/powershell.yml"><img src="https://img.shields.io/github/actions/workflow/status/Bazeeza/Technical-Runbooks/powershell.yml?branch=main&style=flat-square&label=PowerShell" alt="PowerShell CI status"/></a>
-  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/Changelog-0.1.0-ffb454?style=flat-square" alt="Changelog version 0.1.0"/></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/Version-1.0.0-ffb454?style=flat-square" alt="Version 1.0.0"/></a>
 </p>
 
 > **En bref (français) :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.md), avec leur source.
@@ -25,24 +25,24 @@
 | # | Runbook | What you will be able to do | Level | Time |
 |---|---|---|---|---|
 | 01 | [**PC Boot Process and BIOS / UEFI**](01-PC-Boot-Process-and-BIOS-UEFI/README.md) | Explain every boot stage, enter the firmware, set the boot order, check Secure Boot and TPM | 🟢 Beginner | 20 min |
-| | ↳ [Troubleshooting: the PC does not start](01-PC-Boot-Process-and-BIOS-UEFI/TROUBLESHOOTING.md) | Locate the failing stage with a decision tree, repair with WinRE | 🟡 Intermediate | 15–60 min |
+| | ↳ [Troubleshooting: the PC does not start](01-PC-Boot-Process-and-BIOS-UEFI/TROUBLESHOOTING.md) | Locate the failing stage with a decision tree, repair with WinRE | 🟢🟡 Beginner–Intermediate | 15–60 min |
 | 02 | [**Windows 11 Clean Installation**](02-Windows-11-Clean-Installation/README.md) | Check compatibility, create the USB key, install on GPT/UEFI | 🟢 Beginner | 60–90 min |
 | | ↳ [Post-installation checklist](02-Windows-11-Clean-Installation/POST-INSTALL-CHECKLIST.md) | Deliver an updated, secured, named and verified workstation | 🟢 Beginner | 30–45 min |
-| 03 | [**Software Deployment (winget and MSI)**](03-Software-Deployment/README.md) | Install, verify, update and remove software silently, read exit codes | 🟡 Intermediate | 15 min |
+| 03 | [**Software Deployment (winget and MSI)**](03-Software-Deployment/README.md) | Install, verify, update and remove software silently, read exit codes | 🟢🟡 Beginner–Intermediate | 15 min |
 | | ↳ [`Install-StandardApps.ps1`](03-Software-Deployment/Install-StandardApps.ps1) | Install a standard application list with verification and logging | 🟡 Intermediate | 5 min |
-| 04 | [**Network Troubleshooting**](04-Network-Troubleshooting/README.md) | Diagnose "no Internet" layer by layer, from the cable to the port | 🟡 Intermediate | 10–30 min |
+| 04 | [**Network Troubleshooting**](04-Network-Troubleshooting/README.md) | Diagnose "no Internet" layer by layer, from the cable to the port | 🟢🟡 Beginner–Intermediate | 10–30 min |
 | | ↳ [Command cheat sheet](04-Network-Troubleshooting/COMMAND-CHEATSHEET.md) | Equivalent commands on Windows, Linux and Cisco IOS | 🟢 Beginner | — |
-| 05 | [**Active Directory User Management**](05-Active-Directory-User-Management/README.md) | Unlock, reset, create and disable accounts safely, find lockout sources | 🟡 Intermediate | 5–20 min |
-| 06 | [**Printer Troubleshooting**](06-Printer-Troubleshooting/README.md) | Find the failing link from the device to the spooler, test ports 9100/631, fix the port or driver | 🟡 Intermediate | 10–30 min |
+| 05 | [**Active Directory User Management**](05-Active-Directory-User-Management/README.md) | Unlock, reset, create and disable accounts safely, find lockout sources | 🟢🟡 Beginner–Intermediate | 5–20 min |
+| 06 | [**Printer Troubleshooting**](06-Printer-Troubleshooting/README.md) | Find the failing link from the device to the spooler, test ports 9100/631, fix the port or driver | 🟢🟡 Beginner–Intermediate | 10–30 min |
 | | ↳ [`Reset-PrintQueue.ps1`](06-Printer-Troubleshooting/Reset-PrintQueue.ps1) | Clear a stuck queue: stop the spooler, empty the spool folder, restart and verify | 🟢 Beginner | 2 min |
 | | ↳ [Deploying printers with Group Policy](06-Printer-Troubleshooting/GPO-DEPLOYMENT.md) | Connect a shared printer for a department at logon, with targeting and clean removal | 🟡 Intermediate | 20 min |
 | 07 | [**Remote Support with Quick Assist**](07-Remote-Support/README.md) | Choose the right remote tool, connect with consent, work and close the session safely | 🟢 Beginner | 5 min |
 | | ↳ [Remote Desktop with NLA](07-Remote-Support/RDP.md) | Enable RDP on port 3389 with NLA, limit accounts and source addresses | 🟡 Intermediate | 15 min |
 | | ↳ [Security checklist](07-Remote-Support/SECURITY-CHECKLIST.md) | Apply the same consent and record rules to every session, react to a scam | 🟢 Beginner | 2 min |
 | 08 | [**Network Cabling and Termination**](08-Network-Cabling-and-Termination/README.md) | Crimp an RJ45 cable to T568A or T568B, choose Cat 5e, 6 or 6A, work safely | 🟢 Beginner | 10–15 min |
-| | ↳ [Cable testing and wire map faults](08-Network-Cabling-and-Termination/CABLE-TESTING.md) | Test every cable, read opens, shorts, crossed and split pairs, and fix them | 🟢 Beginner | 2–10 min |
+| | ↳ [Cable testing and wire map faults](08-Network-Cabling-and-Termination/CABLE-TESTING.md) | Test every cable, read opens, shorts, crossed and split pairs, and fix them | 🟢🟡 Beginner–Intermediate | 2–10 min |
 | | ↳ [Patch panels and labeling](08-Network-Cabling-and-Termination/PATCH-PANEL-AND-LABELING.md) | Punch down a panel or keystone jack and label both ends with a TIA-606 identifier | 🟢 Beginner | 5 min per port |
-| 09 | [**Wi-Fi Troubleshooting**](09-WiFi-Troubleshooting/README.md) | Read band, channel and signal with `netsh wlan`, tell coverage from interference from a PC fault | 🟡 Intermediate | 10–30 min |
+| 09 | [**Wi-Fi Troubleshooting**](09-WiFi-Troubleshooting/README.md) | Read band, channel and signal with `netsh wlan`, tell coverage from interference from a PC fault | 🟢🟡 Beginner–Intermediate | 10–30 min |
 | | ↳ [`Export-WifiDiagnostics.ps1`](09-WiFi-Troubleshooting/Export-WifiDiagnostics.ps1) | Save every Wi-Fi diagnostic output in one folder for the ticket, read-only | 🟢 Beginner | 1 min |
 | | ↳ [Reading the wireless network report](09-WiFi-Troubleshooting/WLAN-REPORT.md) | Turn three days of Wi-Fi history into dated disconnections with a reason | 🟡 Intermediate | 10 min |
 | 10 | [**VoIP / SIP Phone Troubleshooting**](10-VoIP-SIP-Phone-Troubleshooting/README.md) | Walk the chain PoE → voice VLAN → registration → SIP → RTP, fix one-way audio caused by NAT and SIP ALG | 🟡 Intermediate | 10–30 min |
@@ -65,6 +65,8 @@
 | | ↳ [Outlook profiles and Cached Exchange Mode](15-Microsoft-365-Outlook-Basics/OUTLOOK-PROFILE-AND-CACHE.md) | Start in safe mode, create a clean profile, set the offline period, rebuild an `.ost` file safely | 🟢 Beginner | 15–45 min |
 | | ↳ [Shared mailboxes and permissions](15-Microsoft-365-Outlook-Basics/SHARED-MAILBOXES-AND-PERMISSIONS.md) | Grant, verify and remove Full Access, Send As and Send on Behalf, control auto-mapping | 🟡 Intermediate | 10–20 min |
 | | ↳ [`Get-OutlookClientInfo.ps1`](15-Microsoft-365-Outlook-Basics/Get-OutlookClientInfo.ps1) | Report the Outlook clients, profiles, data files and free space for the ticket, read-only | 🟢 Beginner | 1 min |
+
+**Levels** match the badge at the top of each document. 🟢 **Beginner**: first-line help desk, no administrator rights beyond the workstation. 🟢🟡 **Beginner–Intermediate**: the first steps are first-line, the later ones need admin rights or deeper knowledge. 🟡 **Intermediate**: server, network device or tenant administration.
 
 ---
 
@@ -96,7 +98,23 @@ flowchart LR
     R07 -.->|scam call, same reflexes| R14
     R02 --> R15
     R04 -.->|Outlook offline| R15
+
+    classDef workstation fill:#070d1c,stroke:#3fe0a0,color:#3fe0a0
+    classDef network fill:#070d1c,stroke:#2b9dff,color:#2b9dff
+    classDef server fill:#070d1c,stroke:#ffb454,color:#ffb454
+    classDef identity fill:#070d1c,stroke:#c792ea,color:#c792ea
+    class R01,R02,R03,R06,R07 workstation
+    class R04,R08,R09,R10,R11 network
+    class R12,R13 server
+    class R05,R14,R15 identity
 ```
+
+| Colour | Area | Runbooks |
+|---|---|---|
+| 🟩 Green | Workstation and user support | 01, 02, 03, 06, 07 |
+| 🟦 Blue | Network, cabling and telephony | 04, 08, 09, 10, 11 |
+| 🟧 Orange | Servers and data protection | 12, 13 |
+| 🟪 Purple | Identity, e-mail and security | 05, 14, 15 |
 
 A new workstation follows the chain from left to right: firmware settings, operating system, applications, network check, user account. Printers come last, often deployed by Group Policy, and remote support is the way most of these procedures are carried out from the help desk. Cabling and Wi-Fi sit underneath the network runbook: when step 1 of runbook 04 finds no link, they are the next stop. The switch baseline defines the access ports and VLANs that every wired device, including the IP phones of runbook 10, depends on. On the server side, runbook 12 hardens a Linux server before it hosts anything, and runbook 13 makes sure every machine in the chain, workstation or server, has a backup that has really been restored. On the user side, runbook 15 covers the Microsoft 365 account, MFA and Outlook that every new workstation needs, and runbook 14 reuses the same admin centers when a password has been stolen by a phishing e-mail.
 
@@ -114,6 +132,8 @@ Every runbook follows the same [template](TEMPLATE.md), so a technician always k
 | **Procedure** | Numbered steps with the exact command, **why** it is done, and the expected result |
 | **Verification** | How to prove the job is done |
 | **Troubleshooting** | Symptom → likely cause → fix |
+| **Rollback** | How to undo each change, or why it cannot be undone |
+| *Escalation block* (optional) | The facts the next support level needs, ready to paste into the ticket |
 
 Writing principles:
 
@@ -126,12 +146,13 @@ Writing principles:
 
 ## Quality checks
 
-Every push and pull request is checked automatically by GitHub Actions:
+Every push and pull request is checked automatically by GitHub Actions, and external links are checked once a week:
 
 | Check | What it catches |
 |---|---|
 | **markdownlint** | Skipped heading levels, code blocks without a language, trailing spaces, several top-level titles ([rules](.markdownlint-cli2.jsonc)) |
 | **lychee** (offline) | Relative links that point to a missing file |
+| **lychee** (weekly, online) | Vendor documentation links that moved or disappeared ([workflow](.github/workflows/external-links.yml)) |
 | **PSScriptAnalyzer** | PowerShell errors and warnings, such as unapproved verbs or unused variables ([settings](PSScriptAnalyzerSettings.psd1)) |
 | **Windows PowerShell 5.1** | Scripts that would not parse in the default shell of Windows 11 |
 

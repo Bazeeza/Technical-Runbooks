@@ -3,6 +3,7 @@
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-15%E2%80%9360%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6?style=flat-square)
+![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--11-555?style=flat-square)
 
 | Element | Content |
 |---|---|
@@ -18,7 +19,7 @@
 
 ## Objective
 
-Bring the PC back to a working startup **without losing user data**, by identifying the exact stage where the boot stops (see the [boot sequence](README.md#1-the-boot-sequence)) and escalating with precise information when a hardware repair is needed.
+Bring the PC back to a working startup **without losing user data**, by identifying the exact stage where the boot stops (see the [boot sequence](README.md#the-boot-sequence)) and escalating with precise information when a hardware repair is needed.
 
 ## Golden rules
 
@@ -75,7 +76,7 @@ POST passed: the firmware cannot find a disk to start from.
 1. Remove USB keys and external disks, then restart.
 2. In the firmware setup, check that the **internal disk is detected**.
    - Not detected → likely disk or connection failure. Run the manufacturer's built-in hardware diagnostics (Dell: `F12` → Diagnostics; HP: `F2`; Lenovo: `F10` on many models). **Escalate.**
-   - Detected → put **Windows Boot Manager** first in the boot order ([README, step 4](README.md#4-change-the-permanent-boot-order-if-needed)).
+   - Detected → put **Windows Boot Manager** first in the boot order ([README, step 3](README.md#step-3--change-the-permanent-boot-order-if-needed)).
 3. Check that the firmware mode has not changed (UEFI vs Legacy) and that the SATA mode has not been switched (e.g. from RAID/RST to AHCI): changing it makes the disk unreadable for Windows.
 
 ## 4. Windows starts loading, then fails
@@ -116,6 +117,13 @@ If BitLocker is enabled, WinRE asks for the **recovery key** (48 digits). It is 
 Note the **stop code** (for example `INACCESSIBLE_BOOT_DEVICE`, `CRITICAL_PROCESS_DIED`) and the file name if one is shown. Search the code in Microsoft's [bug check reference](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference2). Recurring BSODs after a driver update → Safe Mode, then roll back the driver in Device Manager.
 
 ---
+
+## Verification
+
+- [ ] The PC reaches the logon screen **twice in a row** (a single good start can hide an intermittent fault)
+- [ ] The user opens their files and the network works
+- [ ] BitLocker protection is on again: `manage-bde -status C:` shows `Protection On`
+- [ ] No new critical error after the repair: **Event Viewer → Windows Logs → System**, level *Critical* (event 41 = unexpected shutdown)
 
 ## Information to give when escalating
 

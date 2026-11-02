@@ -3,6 +3,7 @@
 ![Level](https://img.shields.io/badge/Level-Beginner-3fe0a0?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-30%E2%80%9345%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-0078D6?style=flat-square)
+![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--11-555?style=flat-square)
 
 | Element | Content |
 |---|---|
@@ -85,7 +86,8 @@ manage-bde -status C:
 ## 5. Applications and user setup
 
 - [ ] Install the standard applications: see [runbook 03 — Software Deployment](../03-Software-Deployment/README.md).
-- [ ] Printers, mapped drives and VPN as required by the user's department.
+- [ ] Printers, mapped drives and VPN as required by the user's department (printers deployed by Group Policy: see [runbook 06](../06-Printer-Troubleshooting/GPO-DEPLOYMENT.md)).
+- [ ] Outlook opens the user's mailbox and MFA is registered: see [runbook 15 — Microsoft 365 and Outlook Basics](../15-Microsoft-365-Outlook-Basics/README.md).
 - [ ] Restore the user's data from the backup, then let the user confirm their files are there (to prove the restore file by file, see [runbook 13 — Backup and Restore](../13-Backup-and-Restore/README.md#step-5--test-the-restore-mandatory)).
 - [ ] Turn on the workstation's own backup (File History or the site's tool): see [Windows backups](../13-Backup-and-Restore/WINDOWS-BACKUP.md#option-a--file-history-workstation).
 

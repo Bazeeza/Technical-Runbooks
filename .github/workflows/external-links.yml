@@ -1,0 +1,31 @@
+name: External links
+
+# Vendor documentation moves often. This check visits every external link once a week,
+# so a dead reference is found by the schedule instead of by a reader.
+# It is not run on pull requests: a slow vendor site must never block a correction.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # every Monday at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  external-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # 429 = "too many requests": the site is up but rate-limits the checker
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-retries 3
+            --accept "200..=299,429"
+            --exclude-path "archive/"
+            "./**/*.md"
+          fail: true

@@ -3,7 +3,7 @@
 ![Level](https://img.shields.io/badge/Level-Beginner-3fe0a0?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-20%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Any%20x86%20PC-555?style=flat-square)
-![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--10-555?style=flat-square)
+![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--11-555?style=flat-square)
 
 | Element | Content |
 |---|---|
@@ -13,7 +13,7 @@
 | **Receiver** | Help desk and field technicians, IT students. |
 | **Channel** | GitHub repository `Bazeeza/Technical-Runbooks` |
 | **Code** | English, technical writing |
-| **Reference** | [Microsoft: Boot and UEFI](https://learn.microsoft.com/en-us/windows-hardware/drivers/bringup/boot-and-uefi) · [Microsoft: Secure Boot](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot) · Manufacturer manuals (Dell, HP, Lenovo) |
+| **Reference** | [Microsoft: Boot and UEFI](https://learn.microsoft.com/en-us/windows-hardware/drivers/bringup/boot-and-uefi) · [Microsoft: Secure Boot](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot) · [Suspend-BitLocker](https://learn.microsoft.com/en-us/powershell/module/bitlocker/suspend-bitlocker) · Manufacturer manuals (Dell, HP, Lenovo) |
 
 ---
 
@@ -26,10 +26,16 @@ A technician who knows the boot sequence can say **where** a PC stops ("no POST"
 - [ ] Physical access to the PC and its power supply
 - [ ] The firmware (BIOS) password, if the organization sets one
 - [ ] Permission to change settings: on a managed fleet, firmware changes may be controlled centrally
+- [ ] If the disk is encrypted with BitLocker: protection **suspended** before any firmware change, and the recovery key available
+
+```powershell
+manage-bde -status C:                                   # "Protection On" means BitLocker is active
+Suspend-BitLocker -MountPoint 'C:' -RebootCount 1       # administrator; resumes after one restart
+```
 
 ---
 
-## 1. The boot sequence
+## The boot sequence
 
 ```mermaid
 flowchart TD
@@ -71,9 +77,9 @@ flowchart TD
 
 ---
 
-## 2. Enter the firmware setup
+## Step 1 — Enter the firmware setup
 
-### Method A: from Windows (most reliable)
+### Option A — From Windows (most reliable)
 
 Fast Startup often skips the keyboard detection window, so pressing a key at power-on may not work. From Windows:
 
@@ -86,7 +92,7 @@ Or, in an **administrator** terminal:
 shutdown /r /fw /t 0   # restart directly into the firmware setup
 ```
 
-### Method B: key at power-on
+### Option B — Key at power-on
 
 Turn the PC on and tap the key repeatedly as soon as the logo appears.
 
@@ -103,13 +109,13 @@ Turn the PC on and tap the key repeatedly as soon as the logo appears.
 
 ---
 
-## 3. Boot once from a USB key (preferred)
+## Step 2 — Boot once from a USB key (preferred)
 
 Use the **one-time boot menu** (table above) and pick the USB key. This avoids changing the permanent boot order, so the PC returns to normal on the next restart.
 
 **Expected result:** the installer or tool on the USB key starts.
 
-## 4. Change the permanent boot order (if needed)
+## Step 3 — Change the permanent boot order (if needed)
 
 1. Enter the firmware setup.
 2. Find **Boot**, **Boot Sequence** or **Boot Priority**.
@@ -119,7 +125,7 @@ Use the **one-time boot menu** (table above) and pick the USB key. This avoids c
 > [!WARNING]
 > Once the job is done, put **Windows Boot Manager** back in first place. A forgotten USB key at the top of the list can block the next startup or start an unwanted installation.
 
-## 5. Check UEFI mode and Secure Boot
+## Step 4 — Check UEFI mode and Secure Boot
 
 In Windows, run `msinfo32` and read the **System Summary**:
 
@@ -149,9 +155,22 @@ If Secure Boot is `Off`, enable it in the firmware under **Security** or **Boot 
 - [ ] Windows Boot Manager is first in the boot order
 - [ ] BitLocker protection is resumed (`manage-bde -status`)
 
-## Next step
+## Troubleshooting
 
-When the PC does not start at all, follow [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| The setup key does nothing, Windows starts normally | Fast Startup skips the keyboard window | Use option A (`shutdown /r /fw /t 0`) |
+| The USB key is not listed in the boot menu | Key created for legacy BIOS only, or USB boot disabled | Recreate the key in GPT/UEFI mode; enable USB boot in the firmware |
+| The PC asks for the BitLocker recovery key after the change | Firmware setting changed while BitLocker was active | Enter the 48-digit key, then suspend BitLocker before the next change |
+| `Confirm-SecureBootUEFI` returns `False` | UEFI mode, but Secure Boot is off | Turn Secure Boot on in the firmware (step 4) |
+| `Confirm-SecureBootUEFI` returns an error | Legacy BIOS mode, or a PC without UEFI | Convert the disk with `mbr2gpt` before switching to UEFI (see the caution in step 4) |
+| The PC does not start at all | Power, POST, disk or Windows fault | Follow the [no-boot troubleshooting guide](TROUBLESHOOTING.md) |
+
+## Rollback
+
+- **Boot order:** put **Windows Boot Manager** back in first place and save (`F10`).
+- **Any other firmware setting:** most firmware setups offer **Load Optimized Defaults** or **Restore Defaults**; note the original values first, because defaults may disable settings the organization requires (TPM, Secure Boot, virtualization).
+- **BitLocker:** if it was suspended without a restart count, resume it with `Resume-BitLocker -MountPoint 'C:'`.
 
 ---
 

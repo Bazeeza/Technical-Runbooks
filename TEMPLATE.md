@@ -3,7 +3,7 @@
 ![Level](https://img.shields.io/badge/Level-Beginner-3fe0a0?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-30%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-0078D6?style=flat-square)
-![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--10-555?style=flat-square)
+![Reviewed](https://img.shields.io/badge/Last%20reviewed-2026--11-555?style=flat-square)
 
 | Element | Content |
 |---|---|
@@ -49,7 +49,22 @@ How to prove the job is done (a command, a test, a screenshot to take).
 
 ## Rollback
 
-How to undo the change if something goes wrong.
+How to undo the change if something goes wrong. If a step cannot be undone (a disk wipe, a password reset), say so and point to the backup or the safe alternative.
+
+<!-- Optional sections, in this order, only when they help the reader: -->
+
+## Information to give when escalating
+
+```text
+User / device / location :
+Symptom (exact)          :
+Last step that worked    :
+Actions already done     :
+```
+
+## Related work
+
+- Links to the runbooks that come before or after this one.
 
 ---
 
