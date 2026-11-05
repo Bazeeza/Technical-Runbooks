@@ -5,7 +5,9 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
-Nothing yet.
+### Added
+
+- 04 Network Troubleshooting: section *Automated check* that runs steps 1 to 6 with `Test-NetworkHealth` from the Helpdesk Toolkit module.
 
 ## [1.0.0] - 2026-11-02
 
