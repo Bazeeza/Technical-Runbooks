@@ -143,6 +143,20 @@ For a printer that does not answer, continue with [06 Printer Troubleshooting](.
 
 ---
 
+## Automated check: Test-NetworkHealth
+
+Steps 1 to 6 are automated by the `Test-NetworkHealth` command of the [Helpdesk Toolkit](https://github.com/Bazeeza/helpdesk-toolkit) PowerShell module (Windows PowerShell 5.1 or PowerShell 7, read-only, no administrator rights):
+
+```powershell
+Import-Module .\HelpdeskToolkit\HelpdeskToolkit.psd1
+Test-NetworkHealth | Select-Object -ExpandProperty Checks      # Pass, Warning, Fail or Skipped per step
+Test-NetworkHealth -TargetHost 'print01.corp.example.com' -Port 9100
+```
+
+The result gives the first step that failed (`FailedStep`) and its likely cause (`Diagnosis`), ready for the ticket. A gateway that ignores ping is shown as a `Warning` when the Internet still answers, which matches the note of step 3. The command only diagnoses: the repairs below stay manual. Details: [Test-NetworkHealth reference](https://github.com/Bazeeza/helpdesk-toolkit/blob/main/docs/commands/Test-NetworkHealth.md).
+
+---
+
 ## Quick repair (after diagnosis)
 
 Use these only after identifying the problem; they reset the network stack and require a restart.
