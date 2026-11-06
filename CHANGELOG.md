@@ -8,6 +8,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 ### Added
 
 - 04 Network Troubleshooting: section *Automated check* that runs steps 1 to 6 with `Test-NetworkHealth` from the Helpdesk Toolkit module.
+- 03 Software Deployment: section *Automated check* that lists installed software from the 64-bit, 32-bit and per-user registry keys with `Get-InstalledSoftware` from the Helpdesk Toolkit module.
 
 ## [1.0.0] - 2026-11-02
 

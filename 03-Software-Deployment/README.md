@@ -148,6 +148,21 @@ The script [`Install-StandardApps.ps1`](Install-StandardApps.ps1) reads a list o
 
 ---
 
+## Automated check: Get-InstalledSoftware
+
+The `Get-InstalledSoftware` command of the [Helpdesk Toolkit](https://github.com/Bazeeza/helpdesk-toolkit) PowerShell module does the registry lookup of the *Uninstall* section in one command (Windows PowerShell 5.1 or PowerShell 7, read-only, no administrator rights). It reads the same three lists as *Installed apps*: 64-bit, 32-bit (`WOW6432Node`) and the programs installed for the current user only (`HKCU`), which the `HKLM` command above does not see.
+
+```powershell
+Import-Module .\HelpdeskToolkit\HelpdeskToolkit.psd1
+Get-InstalledSoftware -Name '*Firefox*'                     # name, version, publisher, install date, scope, architecture
+Get-InstalledSoftware -Name '*App Name*' | Select-Object Name, Version, ProductCode, QuietUninstallString
+Get-InstalledSoftware | Export-Csv -Path .\software.csv -NoTypeInformation -Encoding UTF8   # before/after list for the ticket
+```
+
+It never queries `Win32_Product` (see the warning above). It also works for software that winget does not manage, such as MSI packages deployed by GPO. Details: [Get-InstalledSoftware reference](https://github.com/Bazeeza/helpdesk-toolkit/blob/main/docs/commands/Get-InstalledSoftware.md).
+
+---
+
 ## Verification
 
 - [ ] Each application appears in `winget list` or in **Settings → Apps → Installed apps**
