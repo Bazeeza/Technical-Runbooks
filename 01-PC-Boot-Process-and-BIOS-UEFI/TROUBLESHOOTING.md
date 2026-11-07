@@ -116,6 +116,19 @@ If BitLocker is enabled, WinRE asks for the **recovery key** (48 digits). It is 
 
 Note the **stop code** (for example `INACCESSIBLE_BOOT_DEVICE`, `CRITICAL_PROCESS_DIED`) and the file name if one is shown. Search the code in Microsoft's [bug check reference](https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference2). Recurring BSODs after a driver update → Safe Mode, then roll back the driver in Device Manager.
 
+### Automated check: Get-DiskHealth
+
+A failing drive causes several symptoms of this page: *No bootable device*, file system errors that `chkdsk` keeps finding, freezes during startup. Once Windows starts again, the `Get-DiskHealth` command of the [Helpdesk Toolkit](https://github.com/Bazeeza/helpdesk-toolkit) PowerShell module checks the drive and the free space in one command (Windows PowerShell 5.1 or PowerShell 7, read-only):
+
+```powershell
+Import-Module .\HelpdeskToolkit\HelpdeskToolkit.psd1
+Get-DiskHealth                                              # overall status: OK, Unknown, Warning or Critical
+Get-DiskHealth | Select-Object -ExpandProperty Issues       # one line per problem, for the ticket
+Get-DiskHealth | Select-Object -ExpandProperty PhysicalDisks | Format-List *
+```
+
+A physical disk in `Warning` or `Critical` is reported by the drive itself (`HealthStatus`): back up the user's data first and plan the replacement before any other repair. Run PowerShell **as administrator** to also see the temperature, the wear and the uncorrected read and write errors. Details: [Get-DiskHealth reference](https://github.com/Bazeeza/helpdesk-toolkit/blob/main/docs/commands/Get-DiskHealth.md).
+
 ---
 
 ## Verification
@@ -123,6 +136,7 @@ Note the **stop code** (for example `INACCESSIBLE_BOOT_DEVICE`, `CRITICAL_PROCES
 - [ ] The PC reaches the logon screen **twice in a row** (a single good start can hide an intermittent fault)
 - [ ] The user opens their files and the network works
 - [ ] BitLocker protection is on again: `manage-bde -status C:` shows `Protection On`
+- [ ] The drive reports no health problem: `Get-DiskHealth` shows no physical disk in `Warning` or `Critical`
 - [ ] No new critical error after the repair: **Event Viewer → Windows Logs → System**, level *Critical* (event 41 = unexpected shutdown)
 
 ## Information to give when escalating
