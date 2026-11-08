@@ -223,6 +223,14 @@ tracert output              : (attached)
 Actions already done        :
 ```
 
+Instead of screenshots, the `Export-HelpdeskReport` command of the [Helpdesk Toolkit](https://github.com/Bazeeza/helpdesk-toolkit) writes the six steps, the diagnosis and the adapter configuration into one HTML file to attach to the ticket (read-only checks, no script in the file):
+
+```powershell
+Export-HelpdeskReport -Section Network -TicketNumber 'INC-0042' -Path "$env:USERPROFILE\Desktop"
+```
+
+The file contains the MAC and IP addresses of the PC: attach it to the ticket only. Details: [Export-HelpdeskReport reference](https://github.com/Bazeeza/helpdesk-toolkit/blob/main/docs/commands/Export-HelpdeskReport.md).
+
 ---
 
 <sub>Written by bazeeza · Found an error? <a href="https://github.com/Bazeeza/Technical-Runbooks/issues/new?template=runbook-error.yml">Report it here</a>.</sub>
