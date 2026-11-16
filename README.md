@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/Runbooks-15-3fe0a0?style=flat-square" alt="15 runbooks"/>
   <img src="https://img.shields.io/badge/Language-English-2b9dff?style=flat-square" alt="English"/>
   <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20Linux%20%7C%20Cisco-555?style=flat-square" alt="Windows, Linux, Cisco"/>
-  <img src="https://img.shields.io/badge/Author-bazeeza%20Bazeeza-c792ea?style=flat-square" alt="Author: bazeeza"/>
+  <img src="https://img.shields.io/badge/Author-bazeeza-c792ea?style=flat-square" alt="Author: bazeeza"/>
   <br>
   <a href="https://github.com/Bazeeza/Technical-Runbooks/actions/workflows/markdown.yml"><img src="https://img.shields.io/github/actions/workflow/status/Bazeeza/Technical-Runbooks/markdown.yml?branch=main&style=flat-square&label=Markdown" alt="Markdown CI status"/></a>
   <a href="https://github.com/Bazeeza/Technical-Runbooks/actions/workflows/powershell.yml"><img src="https://img.shields.io/github/actions/workflow/status/Bazeeza/Technical-Runbooks/powershell.yml?branch=main&style=flat-square&label=PowerShell" alt="PowerShell CI status"/></a>
