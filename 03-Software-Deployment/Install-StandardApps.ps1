@@ -40,7 +40,7 @@ param(
     [string] $LogPath = "C:\Temp\Install-StandardApps-$(Get-Date -Format 'yyyyMMdd-HHmmss').log"
 )
 
-function Write-Log {
+function Write-InstallLog {
     param([string] $Message, [string] $Level = 'INFO')
     $line = '{0} [{1}] {2}' -f (Get-Date -Format 'yyyy-MM-dd HH:mm:ss'), $Level, $Message
     Add-Content -Path $LogPath -Value $line -WhatIf:$false
@@ -62,11 +62,11 @@ if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
 }
 
 New-Item -ItemType Directory -Force -Path (Split-Path $LogPath) -WhatIf:$false | Out-Null
-Write-Log "Start on $env:COMPUTERNAME by $env:USERNAME - $($Apps.Count) application(s)"
+Write-InstallLog "Start on $env:COMPUTERNAME by $env:USERNAME - $($Apps.Count) application(s)"
 
 $results = foreach ($id in $Apps) {
     if (Test-AppInstalled -Id $id) {
-        Write-Log "$id is already installed, skipped" 'OK'
+        Write-InstallLog "$id is already installed, skipped" 'OK'
         [pscustomobject]@{ Application = $id; Result = 'Already installed' }
         continue
     }
@@ -76,21 +76,21 @@ $results = foreach ($id in $Apps) {
         continue
     }
 
-    Write-Log "Installing $id ..."
+    Write-InstallLog "Installing $id ..."
     winget install --id $id --exact --silent --accept-package-agreements --accept-source-agreements --disable-interactivity *> $null
     $code = $LASTEXITCODE
 
     if (Test-AppInstalled -Id $id) {
-        Write-Log "$id installed and verified (exit code $code)" 'OK'
+        Write-InstallLog "$id installed and verified (exit code $code)" 'OK'
         [pscustomobject]@{ Application = $id; Result = 'Installed' }
     }
     else {
-        Write-Log "$id FAILED (exit code $code)" 'ERROR'
+        Write-InstallLog "$id FAILED (exit code $code)" 'ERROR'
         [pscustomobject]@{ Application = $id; Result = "FAILED ($code)" }
     }
 }
 
 $results | Format-Table -AutoSize
 $failed = @($results | Where-Object Result -like 'FAILED*').Count
-Write-Log "End - $failed failure(s). Log: $LogPath" ($(if ($failed) { 'WARN' } else { 'OK' }))
+Write-InstallLog "End - $failed failure(s). Log: $LogPath" ($(if ($failed) { 'WARN' } else { 'OK' }))
 exit $failed
