@@ -12,6 +12,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - 01 PC Boot Process, troubleshooting: section *Automated check* that checks the drive health and free space with `Get-DiskHealth` from the Helpdesk Toolkit module, and a matching line in the verification checklist.
 - 04 Network Troubleshooting: the escalation section shows how to attach the network steps as one HTML file with `Export-HelpdeskReport` from the Helpdesk Toolkit module.
 
+### Changed
+
+- README: levels and area colours are plain text (the colour table gives the hex code used by the diagram) instead of emoji, which screen readers announce one by one and which render differently on each platform.
+
 ## [1.0.0] - 2026-11-02
 
 First complete release: 15 runbooks that all follow the same template, with automatic checks on every change.
