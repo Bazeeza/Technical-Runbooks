@@ -3,9 +3,9 @@ name: Markdown
 on:
   push:
     branches: [main]
-    paths: ["**/*.md", ".markdownlint-cli2.jsonc", ".github/workflows/markdown.yml"]
+    paths: ["**/*.md", ".markdownlint-cli2.jsonc", ".github/workflows/markdown.yml", "scripts/Test-ReadmePair.ps1"]
   pull_request:
-    paths: ["**/*.md", ".markdownlint-cli2.jsonc", ".github/workflows/markdown.yml"]
+    paths: ["**/*.md", ".markdownlint-cli2.jsonc", ".github/workflows/markdown.yml", "scripts/Test-ReadmePair.ps1"]
   workflow_dispatch:
 
 permissions:
@@ -35,3 +35,20 @@ jobs:
         with:
           args: --offline --no-progress "./**/*.md"
           fail: true
+
+  language-pairs:
+    # Rules of docs/STYLE.md: each translated document has its twin and its
+    # language buttons, and every relative link points to an existing file
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+
+      - name: Check language pairs and relative links
+        shell: pwsh
+        run: |
+          $problems = @(./scripts/Test-ReadmePair.ps1 -Path . -Verbose)
+          $problems | Format-Table -AutoSize -Wrap File, Rule, Detail | Out-String -Width 200
+          if ($problems.Count -gt 0) {
+              Write-Error "$($problems.Count) problem(s) found by Test-ReadmePair.ps1"
+              exit 1
+          }
