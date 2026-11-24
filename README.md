@@ -155,6 +155,8 @@ Every push and pull request is checked automatically by GitHub Actions, and exte
 | **lychee** (weekly, online) | Vendor documentation links that moved or disappeared ([workflow](.github/workflows/external-links.yml)) |
 | **PSScriptAnalyzer** | PowerShell errors and warnings, such as unapproved verbs or unused variables ([settings](PSScriptAnalyzerSettings.psd1)) |
 | **Windows PowerShell 5.1** | Scripts that would not parse in the default shell of Windows 11 |
+| **Test-ReadmePair** | Translated documents without their twin or their language buttons, and relative links to a missing file ([script](scripts/Test-ReadmePair.ps1), [style guide](docs/STYLE.md)) |
+| **Pester** | Regressions in the repository scripts, tested on PowerShell 7 and Windows PowerShell 5.1 ([tests](scripts/tests/Test-ReadmePair.Tests.ps1)) |
 
 ## Contributing
 
