@@ -11,6 +11,9 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - 03 Software Deployment: section *Automated check* that lists installed software from the 64-bit, 32-bit and per-user registry keys with `Get-InstalledSoftware` from the Helpdesk Toolkit module.
 - 01 PC Boot Process, troubleshooting: section *Automated check* that checks the drive health and free space with `Get-DiskHealth` from the Helpdesk Toolkit module, and a matching line in the verification checklist.
 - 04 Network Troubleshooting: the escalation section shows how to attach the network steps as one HTML file with `Export-HelpdeskReport` from the Helpdesk Toolkit module.
+- Documentation style guide in English and French (`docs/STYLE.md`, `docs/STYLE.fr.md`): language buttons, "at a glance" table, repository tree, layout, translation and privacy rules.
+- `scripts/Test-ReadmePair.ps1`: checks that each translated document has its twin and its language buttons, and that every relative link points to an existing file; run by the Markdown workflow.
+- Pester tests for `Test-ReadmePair.ps1`, run on PowerShell 7 and Windows PowerShell 5.1 by the PowerShell workflow.
 
 ### Changed
 
