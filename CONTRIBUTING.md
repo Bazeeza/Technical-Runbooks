@@ -47,8 +47,8 @@ Every pull request runs the same checks as the `main` branch:
 
 | Workflow | What it checks |
 |---|---|
-| [Markdown](.github/workflows/markdown.yml) | markdownlint rules listed in [`.markdownlint-cli2.jsonc`](.markdownlint-cli2.jsonc), and every relative link between files |
-| [PowerShell](.github/workflows/powershell.yml) | PSScriptAnalyzer (errors and warnings), and parsing of every script by Windows PowerShell 5.1 |
+| [Markdown](.github/workflows/markdown.yml) | markdownlint rules listed in [`.markdownlint-cli2.jsonc`](.markdownlint-cli2.jsonc), every relative link between files, and the language pairs of [`docs/STYLE.md`](docs/STYLE.md) with [`Test-ReadmePair.ps1`](scripts/Test-ReadmePair.ps1) |
+| [PowerShell](.github/workflows/powershell.yml) | PSScriptAnalyzer (errors and warnings), parsing of every script by Windows PowerShell 5.1, and the Pester tests in [`scripts/tests/`](scripts/tests/) on PowerShell 7 and Windows PowerShell 5.1 |
 | [External links](.github/workflows/external-links.yml) | Every Monday, and on demand: each external link still answers. Not run on pull requests, so a slow vendor site never blocks a fix |
 
 To run the Markdown checks locally (Node.js required):
@@ -56,6 +56,18 @@ To run the Markdown checks locally (Node.js required):
 ```bash
 npx markdownlint-cli2 "**/*.md"
 ```
+
+To check the language pairs and run the script tests locally (Pester 5 required):
+
+```powershell
+.\scripts\Test-ReadmePair.ps1 -Path .
+Install-Module Pester -MinimumVersion 5.5.0 -Scope CurrentUser -SkipPublisherCheck
+Invoke-Pester -Path .\scripts\tests -Output Detailed
+```
+
+## Translations
+
+Each runbook is written in English (`X.md`) and gets a French twin (`X.fr.md`). The [documentation style guide](docs/STYLE.md) gives the rules: the language buttons under the title, the same sections, links and commands in both versions, and code, commands and file names never translated. A change to one version is made to the other in the same pull request.
 
 ## Changelog
 
