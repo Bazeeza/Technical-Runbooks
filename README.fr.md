@@ -48,7 +48,7 @@
 | 03 | [**Déploiement de logiciels (winget et MSI)**](03-Software-Deployment/README.fr.md) | Installer, vérifier, mettre à jour et désinstaller des logiciels en mode silencieux, lire les codes de sortie | Beginner–Intermediate | 15 min |
 | | ↳ [`Install-StandardApps.ps1`](03-Software-Deployment/Install-StandardApps.ps1) | Installer une liste d'applications standard avec vérification et journalisation | Intermediate | 5 min |
 | 04 | [**Network Troubleshooting**](04-Network-Troubleshooting/README.md) | Diagnostiquer un « pas d'Internet » couche par couche, du câble jusqu'au port | Beginner–Intermediate | 10–30 min |
-| | ↳ [Command cheat sheet](04-Network-Troubleshooting/COMMAND-CHEATSHEET.md) | Les commandes équivalentes sous Windows, Linux et Cisco IOS | Beginner | — |
+| | ↳ [Aide-mémoire des commandes](04-Network-Troubleshooting/COMMAND-CHEATSHEET.fr.md) | Les commandes équivalentes sous Windows, Linux et Cisco IOS | Beginner | — |
 | 05 | [**Active Directory User Management**](05-Active-Directory-User-Management/README.md) | Déverrouiller, réinitialiser, créer et désactiver des comptes en sécurité, trouver la source d'un verrouillage | Beginner–Intermediate | 5–20 min |
 | 06 | [**Printer Troubleshooting**](06-Printer-Troubleshooting/README.md) | Trouver le maillon en panne, de l'appareil jusqu'au spouleur, tester les ports 9100/631, corriger le port ou le pilote | Beginner–Intermediate | 10–30 min |
 | | ↳ [`Reset-PrintQueue.ps1`](06-Printer-Troubleshooting/Reset-PrintQueue.ps1) | Vider une file bloquée : arrêter le spouleur, vider le dossier spool, redémarrer et vérifier | Beginner | 2 min |
