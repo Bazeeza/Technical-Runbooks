@@ -41,7 +41,7 @@
 
 | # | Runbook | Ce que vous saurez faire | Niveau | Durée |
 |---|---|---|---|---|
-| 01 | [**PC Boot Process and BIOS / UEFI**](01-PC-Boot-Process-and-BIOS-UEFI/README.md) | Expliquer chaque étape du démarrage, entrer dans le firmware, régler l'ordre de démarrage, vérifier Secure Boot et le TPM | Beginner | 20 min |
+| 01 | [**Démarrage du PC et BIOS / UEFI**](01-PC-Boot-Process-and-BIOS-UEFI/README.fr.md) | Expliquer chaque étape du démarrage, entrer dans le firmware, régler l'ordre de démarrage, vérifier Secure Boot et le TPM | Beginner | 20 min |
 | | ↳ [Troubleshooting: the PC does not start](01-PC-Boot-Process-and-BIOS-UEFI/TROUBLESHOOTING.md) | Trouver l'étape qui échoue avec un arbre de décision, réparer avec WinRE | Beginner–Intermediate | 15–60 min |
 | 02 | [**Windows 11 Clean Installation**](02-Windows-11-Clean-Installation/README.md) | Vérifier la compatibilité, créer la clé USB, installer en GPT/UEFI | Beginner | 60–90 min |
 | | ↳ [Post-installation checklist](02-Windows-11-Clean-Installation/POST-INSTALL-CHECKLIST.md) | Livrer un poste à jour, sécurisé, nommé et vérifié | Beginner | 30–45 min |
@@ -197,7 +197,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 
 | Dossier | README |
 |---|---|
-| `01-PC-Boot-Process-and-BIOS-UEFI/` | [README.md](01-PC-Boot-Process-and-BIOS-UEFI/README.md) |
+| `01-PC-Boot-Process-and-BIOS-UEFI/` | [README.fr.md](01-PC-Boot-Process-and-BIOS-UEFI/README.fr.md) |
 | `02-Windows-11-Clean-Installation/` | [README.md](02-Windows-11-Clean-Installation/README.md) |
 | `03-Software-Deployment/` | [README.md](03-Software-Deployment/README.md) |
 | `04-Network-Troubleshooting/` | [README.md](04-Network-Troubleshooting/README.md) |
