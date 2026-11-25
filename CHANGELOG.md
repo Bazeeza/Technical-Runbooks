@@ -19,6 +19,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Pester tests for `Test-ReadmePair.ps1`, run on PowerShell 7 and Windows PowerShell 5.1 by the PowerShell workflow.
 - README: language buttons, an "at a glance" table and the repository structure with a link to every folder README.
 - French versions of the README, the runbook template, the contributing guide, this changelog and the archive README (`*.fr.md`). The copied study notes in `archive/` stay in English only.
+- French versions of runbooks 01 (boot process and no-boot troubleshooting) and 02 (clean installation and post-installation checklist).
 
 ### Changed
 
