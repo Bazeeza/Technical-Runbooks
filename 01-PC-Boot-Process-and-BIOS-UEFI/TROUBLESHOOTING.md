@@ -1,5 +1,8 @@
 # Troubleshooting: the PC Does Not Start
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](TROUBLESHOOTING.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](TROUBLESHOOTING.md)
+
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-15%E2%80%9360%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6?style=flat-square)

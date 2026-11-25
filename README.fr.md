@@ -42,7 +42,7 @@
 | # | Runbook | Ce que vous saurez faire | Niveau | Durée |
 |---|---|---|---|---|
 | 01 | [**Démarrage du PC et BIOS / UEFI**](01-PC-Boot-Process-and-BIOS-UEFI/README.fr.md) | Expliquer chaque étape du démarrage, entrer dans le firmware, régler l'ordre de démarrage, vérifier Secure Boot et le TPM | Beginner | 20 min |
-| | ↳ [Troubleshooting: the PC does not start](01-PC-Boot-Process-and-BIOS-UEFI/TROUBLESHOOTING.md) | Trouver l'étape qui échoue avec un arbre de décision, réparer avec WinRE | Beginner–Intermediate | 15–60 min |
+| | ↳ [Dépannage : le PC ne démarre pas](01-PC-Boot-Process-and-BIOS-UEFI/TROUBLESHOOTING.fr.md) | Trouver l'étape qui échoue avec un arbre de décision, réparer avec WinRE | Beginner–Intermediate | 15–60 min |
 | 02 | [**Windows 11 Clean Installation**](02-Windows-11-Clean-Installation/README.md) | Vérifier la compatibilité, créer la clé USB, installer en GPT/UEFI | Beginner | 60–90 min |
 | | ↳ [Post-installation checklist](02-Windows-11-Clean-Installation/POST-INSTALL-CHECKLIST.md) | Livrer un poste à jour, sécurisé, nommé et vérifié | Beginner | 30–45 min |
 | 03 | [**Software Deployment (winget and MSI)**](03-Software-Deployment/README.md) | Installer, vérifier, mettre à jour et désinstaller des logiciels en mode silencieux, lire les codes de sortie | Beginner–Intermediate | 15 min |

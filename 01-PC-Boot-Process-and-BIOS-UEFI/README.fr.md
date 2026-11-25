@@ -173,7 +173,7 @@ Si Secure Boot est `Off`, activez-le dans le firmware sous **Security** ou **Boo
 | Le PC demande la clé de récupération BitLocker après le changement | Réglage du firmware modifié alors que BitLocker était actif | Saisir la clé de 48 chiffres, puis suspendre BitLocker avant le prochain changement |
 | `Confirm-SecureBootUEFI` renvoie `False` | Mode UEFI, mais Secure Boot désactivé | Activer Secure Boot dans le firmware (étape 4) |
 | `Confirm-SecureBootUEFI` renvoie une erreur | Mode BIOS hérité, ou PC sans UEFI | Convertir le disque avec `mbr2gpt` avant de passer en UEFI (voir la mise en garde de l'étape 4) |
-| Le PC ne démarre pas du tout | Panne d'alimentation, de POST, de disque ou de Windows | Suivre le [guide de dépannage « le PC ne démarre pas »](TROUBLESHOOTING.md) |
+| Le PC ne démarre pas du tout | Panne d'alimentation, de POST, de disque ou de Windows | Suivre le [guide de dépannage « le PC ne démarre pas »](TROUBLESHOOTING.fr.md) |
 
 ## Retour arrière
 
