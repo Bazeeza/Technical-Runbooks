@@ -17,6 +17,8 @@ Le format suit [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), et les 
 - Guide de style de la documentation en anglais et en français (`docs/STYLE.md`, `docs/STYLE.fr.md`) : boutons de langue, tableau « en un coup d'œil », arborescence du dépôt, mise en page, règles de traduction et de confidentialité.
 - `scripts/Test-ReadmePair.ps1` : vérifie que chaque document traduit a sa jumelle et ses boutons de langue, et que chaque lien relatif pointe vers un fichier existant ; lancé par le workflow Markdown.
 - Tests Pester pour `Test-ReadmePair.ps1`, lancés sous PowerShell 7 et Windows PowerShell 5.1 par le workflow PowerShell.
+- README : boutons de langue, tableau « en un coup d'œil » et structure du dépôt avec un lien vers le README de chaque dossier.
+- Versions françaises du README, du modèle de runbook, du guide de contribution, de ce journal et du README de l'archive (`*.fr.md`). Les notes d'étude copiées dans `archive/` restent en anglais seulement.
 
 ### Modifié
 
