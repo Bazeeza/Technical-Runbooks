@@ -1,6 +1,11 @@
 <h1 align="center">Technical Runbooks</h1>
 
 <p align="center">
+  <a href="README.fr.md"><img src="https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge" alt="Français"/></a>
+  <a href="README.md"><img src="https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge" alt="English"/></a>
+</p>
+
+<p align="center">
   <b>Step-by-step IT procedures, written to be followed under pressure and reproduced by any technician.</b><br>
   Help desk · Workstations · Networking · Cabling · Wi-Fi · VoIP · Cisco switching · Linux servers · Backup · Active Directory · Microsoft 365 · Phishing response · Printing · Remote support
 </p>
@@ -178,11 +183,14 @@ Technical-Runbooks/
 ├── .github/                                 CI workflows, issue form, Dependabot
 ├── .markdownlint-cli2.jsonc                 markdownlint rules
 ├── PSScriptAnalyzerSettings.psd1            PowerShell analysis rules
-├── TEMPLATE.md                              the runbook template
+├── TEMPLATE.md                              the runbook template (TEMPLATE.fr.md in French)
 ├── CONTRIBUTING.md                          writing rules, script rules and local checks
 ├── CHANGELOG.md                             version history
-└── README.md                                this file
+├── README.md                                English version (this file)
+└── README.fr.md                             French version
 ```
+
+Every translated `.md` file has its `.fr.md` twin in the same folder (`TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md`, `archive/README.fr.md`).
 
 | Folder | README |
 |---|---|
