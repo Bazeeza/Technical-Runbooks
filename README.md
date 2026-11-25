@@ -153,6 +153,58 @@ Writing principles:
 
 ---
 
+## Repository structure
+
+```text
+Technical-Runbooks/
+├── 01-PC-Boot-Process-and-BIOS-UEFI/        boot stages, firmware settings, no-boot troubleshooting
+├── 02-Windows-11-Clean-Installation/        clean install on GPT/UEFI, post-installation checklist
+├── 03-Software-Deployment/                  winget and MSI, Install-StandardApps.ps1
+├── 04-Network-Troubleshooting/              layer-by-layer diagnosis, command cheat sheet
+├── 05-Active-Directory-User-Management/     unlock, reset, create and disable accounts
+├── 06-Printer-Troubleshooting/              spooler and ports, Reset-PrintQueue.ps1, printers by GPO
+├── 07-Remote-Support/                       Quick Assist, Remote Desktop with NLA, security checklist
+├── 08-Network-Cabling-and-Termination/      T568A/T568B, cable testing, patch panels, pinout diagram
+├── 09-WiFi-Troubleshooting/                 netsh wlan, Export-WifiDiagnostics.ps1, wireless report
+├── 10-VoIP-SIP-Phone-Troubleshooting/       PoE, voice VLAN, SIP call flow, voice readiness
+├── 11-Cisco-Switch-Baseline/                access switch baseline, port security and err-disabled
+├── 12-Linux-Server-Hardening/               SSH keys, ufw, fail2ban, Docker ports and the firewall
+├── 13-Backup-and-Restore/                   3-2-1, Windows and restic backups, Test-RestoredFiles.ps1
+├── 14-Phishing-Report-and-First-Response/   report, contain, read headers, Get-EmailHeaderSummary.ps1
+├── 15-Microsoft-365-Outlook-Basics/         account checks, Outlook profiles, shared mailboxes
+├── archive/                                 early study notes from external sources, credited
+├── docs/                                    documentation style guide (English and French)
+├── scripts/                                 Test-ReadmePair.ps1 and its Pester tests (tests/)
+├── .github/                                 CI workflows, issue form, Dependabot
+├── .markdownlint-cli2.jsonc                 markdownlint rules
+├── PSScriptAnalyzerSettings.psd1            PowerShell analysis rules
+├── TEMPLATE.md                              the runbook template
+├── CONTRIBUTING.md                          writing rules, script rules and local checks
+├── CHANGELOG.md                             version history
+└── README.md                                this file
+```
+
+| Folder | README |
+|---|---|
+| `01-PC-Boot-Process-and-BIOS-UEFI/` | [README.md](01-PC-Boot-Process-and-BIOS-UEFI/README.md) |
+| `02-Windows-11-Clean-Installation/` | [README.md](02-Windows-11-Clean-Installation/README.md) |
+| `03-Software-Deployment/` | [README.md](03-Software-Deployment/README.md) |
+| `04-Network-Troubleshooting/` | [README.md](04-Network-Troubleshooting/README.md) |
+| `05-Active-Directory-User-Management/` | [README.md](05-Active-Directory-User-Management/README.md) |
+| `06-Printer-Troubleshooting/` | [README.md](06-Printer-Troubleshooting/README.md) |
+| `07-Remote-Support/` | [README.md](07-Remote-Support/README.md) |
+| `08-Network-Cabling-and-Termination/` | [README.md](08-Network-Cabling-and-Termination/README.md) |
+| `09-WiFi-Troubleshooting/` | [README.md](09-WiFi-Troubleshooting/README.md) |
+| `10-VoIP-SIP-Phone-Troubleshooting/` | [README.md](10-VoIP-SIP-Phone-Troubleshooting/README.md) |
+| `11-Cisco-Switch-Baseline/` | [README.md](11-Cisco-Switch-Baseline/README.md) |
+| `12-Linux-Server-Hardening/` | [README.md](12-Linux-Server-Hardening/README.md) |
+| `13-Backup-and-Restore/` | [README.md](13-Backup-and-Restore/README.md) |
+| `14-Phishing-Report-and-First-Response/` | [README.md](14-Phishing-Report-and-First-Response/README.md) |
+| `15-Microsoft-365-Outlook-Basics/` | [README.md](15-Microsoft-365-Outlook-Basics/README.md) |
+| `archive/` | [README.md](archive/README.md) |
+
+---
+
 ## Quality checks
 
 Every push and pull request is checked automatically by GitHub Actions, and external links are checked once a week:
