@@ -16,6 +16,15 @@
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/Version-1.0.0-ffb454?style=flat-square" alt="Version 1.0.0"/></a>
 </p>
 
+| Item | Details |
+|---|---|
+| Goal | Give any technician step-by-step IT procedures that can be followed under pressure and give the same result every time |
+| Technologies | Windows 11, Windows Server and Active Directory, PowerShell, Microsoft 365 and Exchange Online, Cisco IOS, Linux (OpenSSH, ufw, fail2ban, restic), Asterisk/FreePBX, Markdown, GitHub Actions |
+| Level | Beginner to Intermediate (given for each runbook in the [index](#runbooks)) |
+| Contents | 15 runbooks with companion guides, PowerShell scripts and configuration files, a runbook [template](TEMPLATE.md), a [style guide](docs/STYLE.md) and automatic quality checks |
+| Status | Maintained: version 1.0.0 released on 2026-11-02, later changes in the [changelog](CHANGELOG.md) |
+| Start here | [04 Network Troubleshooting](04-Network-Troubleshooting/README.md), the runbook most of the others connect to |
+
 > **En bref (français) :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.md), avec leur source.
 
 ---
