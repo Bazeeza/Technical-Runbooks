@@ -45,7 +45,7 @@
 | | ↳ [Dépannage : le PC ne démarre pas](01-PC-Boot-Process-and-BIOS-UEFI/TROUBLESHOOTING.fr.md) | Trouver l'étape qui échoue avec un arbre de décision, réparer avec WinRE | Beginner–Intermediate | 15–60 min |
 | 02 | [**Installation propre de Windows 11**](02-Windows-11-Clean-Installation/README.fr.md) | Vérifier la compatibilité, créer la clé USB, installer en GPT/UEFI | Beginner | 60–90 min |
 | | ↳ [Liste de vérification après installation](02-Windows-11-Clean-Installation/POST-INSTALL-CHECKLIST.fr.md) | Livrer un poste à jour, sécurisé, nommé et vérifié | Beginner | 30–45 min |
-| 03 | [**Software Deployment (winget and MSI)**](03-Software-Deployment/README.md) | Installer, vérifier, mettre à jour et désinstaller des logiciels en mode silencieux, lire les codes de sortie | Beginner–Intermediate | 15 min |
+| 03 | [**Déploiement de logiciels (winget et MSI)**](03-Software-Deployment/README.fr.md) | Installer, vérifier, mettre à jour et désinstaller des logiciels en mode silencieux, lire les codes de sortie | Beginner–Intermediate | 15 min |
 | | ↳ [`Install-StandardApps.ps1`](03-Software-Deployment/Install-StandardApps.ps1) | Installer une liste d'applications standard avec vérification et journalisation | Intermediate | 5 min |
 | 04 | [**Network Troubleshooting**](04-Network-Troubleshooting/README.md) | Diagnostiquer un « pas d'Internet » couche par couche, du câble jusqu'au port | Beginner–Intermediate | 10–30 min |
 | | ↳ [Command cheat sheet](04-Network-Troubleshooting/COMMAND-CHEATSHEET.md) | Les commandes équivalentes sous Windows, Linux et Cisco IOS | Beginner | — |
@@ -199,7 +199,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 |---|---|
 | `01-PC-Boot-Process-and-BIOS-UEFI/` | [README.fr.md](01-PC-Boot-Process-and-BIOS-UEFI/README.fr.md) |
 | `02-Windows-11-Clean-Installation/` | [README.fr.md](02-Windows-11-Clean-Installation/README.fr.md) |
-| `03-Software-Deployment/` | [README.md](03-Software-Deployment/README.md) |
+| `03-Software-Deployment/` | [README.fr.md](03-Software-Deployment/README.fr.md) |
 | `04-Network-Troubleshooting/` | [README.md](04-Network-Troubleshooting/README.md) |
 | `05-Active-Directory-User-Management/` | [README.md](05-Active-Directory-User-Management/README.md) |
 | `06-Printer-Troubleshooting/` | [README.md](06-Printer-Troubleshooting/README.md) |
