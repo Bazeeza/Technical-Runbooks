@@ -1,5 +1,8 @@
 # Changelog
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](CHANGELOG.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](CHANGELOG.md)
+
 All notable changes to these runbooks are listed here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions follow [Semantic Versioning](https://semver.org/): a new runbook is a minor version, a correction is a patch.
 
@@ -14,6 +17,10 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - Documentation style guide in English and French (`docs/STYLE.md`, `docs/STYLE.fr.md`): language buttons, "at a glance" table, repository tree, layout, translation and privacy rules.
 - `scripts/Test-ReadmePair.ps1`: checks that each translated document has its twin and its language buttons, and that every relative link points to an existing file; run by the Markdown workflow.
 - Pester tests for `Test-ReadmePair.ps1`, run on PowerShell 7 and Windows PowerShell 5.1 by the PowerShell workflow.
+- README: language buttons, an "at a glance" table and the repository structure with a link to every folder README.
+- French versions of the README, the runbook template, the contributing guide, this changelog and the archive README (`*.fr.md`). The copied study notes in `archive/` stay in English only.
+- French versions of runbooks 01 (boot process and no-boot troubleshooting) and 02 (clean installation and post-installation checklist).
+- French versions of runbook 03 (software deployment) and of the runbook 04 command cheat sheet.
 
 ### Changed
 

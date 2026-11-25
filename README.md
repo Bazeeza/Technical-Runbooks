@@ -1,6 +1,11 @@
 <h1 align="center">Technical Runbooks</h1>
 
 <p align="center">
+  <a href="README.fr.md"><img src="https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge" alt="Français"/></a>
+  <a href="README.md"><img src="https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge" alt="English"/></a>
+</p>
+
+<p align="center">
   <b>Step-by-step IT procedures, written to be followed under pressure and reproduced by any technician.</b><br>
   Help desk · Workstations · Networking · Cabling · Wi-Fi · VoIP · Cisco switching · Linux servers · Backup · Active Directory · Microsoft 365 · Phishing response · Printing · Remote support
 </p>
@@ -15,6 +20,15 @@
   <a href="https://github.com/Bazeeza/Technical-Runbooks/actions/workflows/powershell.yml"><img src="https://img.shields.io/github/actions/workflow/status/Bazeeza/Technical-Runbooks/powershell.yml?branch=main&style=flat-square&label=PowerShell" alt="PowerShell CI status"/></a>
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/Version-1.0.0-ffb454?style=flat-square" alt="Version 1.0.0"/></a>
 </p>
+
+| Item | Details |
+|---|---|
+| Goal | Give any technician step-by-step IT procedures that can be followed under pressure and give the same result every time |
+| Technologies | Windows 11, Windows Server and Active Directory, PowerShell, Microsoft 365 and Exchange Online, Cisco IOS, Linux (OpenSSH, ufw, fail2ban, restic), Asterisk/FreePBX, Markdown, GitHub Actions |
+| Level | Beginner to Intermediate (given for each runbook in the [index](#runbooks)) |
+| Contents | 15 runbooks with companion guides, PowerShell scripts and configuration files, a runbook [template](TEMPLATE.md), a [style guide](docs/STYLE.md) and automatic quality checks |
+| Status | Maintained: version 1.0.0 released on 2026-11-02, later changes in the [changelog](CHANGELOG.md) |
+| Start here | [04 Network Troubleshooting](04-Network-Troubleshooting/README.md), the runbook most of the others connect to |
 
 > **En bref (français) :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.md), avec leur source.
 
@@ -141,6 +155,61 @@ Writing principles:
 2. **Safe**: risky steps carry a warning, data protection and rollback come first.
 3. **Explained**: each command says *why*, not only *how*.
 4. **Sourced**: commands are checked against official vendor documentation.
+
+---
+
+## Repository structure
+
+```text
+Technical-Runbooks/
+├── 01-PC-Boot-Process-and-BIOS-UEFI/        boot stages, firmware settings, no-boot troubleshooting
+├── 02-Windows-11-Clean-Installation/        clean install on GPT/UEFI, post-installation checklist
+├── 03-Software-Deployment/                  winget and MSI, Install-StandardApps.ps1
+├── 04-Network-Troubleshooting/              layer-by-layer diagnosis, command cheat sheet
+├── 05-Active-Directory-User-Management/     unlock, reset, create and disable accounts
+├── 06-Printer-Troubleshooting/              spooler and ports, Reset-PrintQueue.ps1, printers by GPO
+├── 07-Remote-Support/                       Quick Assist, Remote Desktop with NLA, security checklist
+├── 08-Network-Cabling-and-Termination/      T568A/T568B, cable testing, patch panels, pinout diagram
+├── 09-WiFi-Troubleshooting/                 netsh wlan, Export-WifiDiagnostics.ps1, wireless report
+├── 10-VoIP-SIP-Phone-Troubleshooting/       PoE, voice VLAN, SIP call flow, voice readiness
+├── 11-Cisco-Switch-Baseline/                access switch baseline, port security and err-disabled
+├── 12-Linux-Server-Hardening/               SSH keys, ufw, fail2ban, Docker ports and the firewall
+├── 13-Backup-and-Restore/                   3-2-1, Windows and restic backups, Test-RestoredFiles.ps1
+├── 14-Phishing-Report-and-First-Response/   report, contain, read headers, Get-EmailHeaderSummary.ps1
+├── 15-Microsoft-365-Outlook-Basics/         account checks, Outlook profiles, shared mailboxes
+├── archive/                                 early study notes from external sources, credited
+├── docs/                                    documentation style guide (English and French)
+├── scripts/                                 Test-ReadmePair.ps1 and its Pester tests (tests/)
+├── .github/                                 CI workflows, issue form, Dependabot
+├── .markdownlint-cli2.jsonc                 markdownlint rules
+├── PSScriptAnalyzerSettings.psd1            PowerShell analysis rules
+├── TEMPLATE.md                              the runbook template (TEMPLATE.fr.md in French)
+├── CONTRIBUTING.md                          writing rules, script rules and local checks
+├── CHANGELOG.md                             version history
+├── README.md                                English version (this file)
+└── README.fr.md                             French version
+```
+
+Every translated `.md` file has its `.fr.md` twin in the same folder (`TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md`, `archive/README.fr.md`).
+
+| Folder | README |
+|---|---|
+| `01-PC-Boot-Process-and-BIOS-UEFI/` | [README.md](01-PC-Boot-Process-and-BIOS-UEFI/README.md) |
+| `02-Windows-11-Clean-Installation/` | [README.md](02-Windows-11-Clean-Installation/README.md) |
+| `03-Software-Deployment/` | [README.md](03-Software-Deployment/README.md) |
+| `04-Network-Troubleshooting/` | [README.md](04-Network-Troubleshooting/README.md) |
+| `05-Active-Directory-User-Management/` | [README.md](05-Active-Directory-User-Management/README.md) |
+| `06-Printer-Troubleshooting/` | [README.md](06-Printer-Troubleshooting/README.md) |
+| `07-Remote-Support/` | [README.md](07-Remote-Support/README.md) |
+| `08-Network-Cabling-and-Termination/` | [README.md](08-Network-Cabling-and-Termination/README.md) |
+| `09-WiFi-Troubleshooting/` | [README.md](09-WiFi-Troubleshooting/README.md) |
+| `10-VoIP-SIP-Phone-Troubleshooting/` | [README.md](10-VoIP-SIP-Phone-Troubleshooting/README.md) |
+| `11-Cisco-Switch-Baseline/` | [README.md](11-Cisco-Switch-Baseline/README.md) |
+| `12-Linux-Server-Hardening/` | [README.md](12-Linux-Server-Hardening/README.md) |
+| `13-Backup-and-Restore/` | [README.md](13-Backup-and-Restore/README.md) |
+| `14-Phishing-Report-and-First-Response/` | [README.md](14-Phishing-Report-and-First-Response/README.md) |
+| `15-Microsoft-365-Outlook-Basics/` | [README.md](15-Microsoft-365-Outlook-Basics/README.md) |
+| `archive/` | [README.md](archive/README.md) |
 
 ---
 

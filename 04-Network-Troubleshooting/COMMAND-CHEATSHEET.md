@@ -1,5 +1,8 @@
 # Network Command Cheat Sheet (Windows · Linux · Cisco IOS)
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](COMMAND-CHEATSHEET.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](COMMAND-CHEATSHEET.md)
+
 ![Level](https://img.shields.io/badge/Level-Beginner-3fe0a0?style=flat-square)
 ![Type](https://img.shields.io/badge/Type-Reference%20sheet-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20Cisco%20IOS-555?style=flat-square)

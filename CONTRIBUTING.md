@@ -1,5 +1,8 @@
 # Contributing
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](CONTRIBUTING.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](CONTRIBUTING.md)
+
 Thank you for helping keep these runbooks accurate. A runbook is followed by someone under pressure, so a wrong command costs real time: every correction counts.
 
 ## Report an error

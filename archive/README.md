@@ -1,5 +1,8 @@
 # Archive: study notes from external sources
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](README.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](README.md)
+
 > [!NOTE]
 > **These files are not runbooks and not original work.** They are personal study notes copied from external sources while learning, before this repository adopted the [runbook template](../TEMPLATE.md). They are kept for reference, with their source credited as precisely as possible. They are **not** checked by the Markdown lint rules and are **not** maintained.
 
