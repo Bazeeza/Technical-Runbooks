@@ -20,6 +20,7 @@ Le format suit [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), et les 
 - README : boutons de langue, tableau « en un coup d'œil » et structure du dépôt avec un lien vers le README de chaque dossier.
 - Versions françaises du README, du modèle de runbook, du guide de contribution, de ce journal et du README de l'archive (`*.fr.md`). Les notes d'étude copiées dans `archive/` restent en anglais seulement.
 - Versions françaises des runbooks 01 (démarrage et dépannage d'un PC qui ne démarre pas) et 02 (installation propre et liste de vérification après installation).
+- Versions françaises du runbook 03 (déploiement de logiciels) et de l'aide-mémoire des commandes du runbook 04.
 
 ### Modifié
 
