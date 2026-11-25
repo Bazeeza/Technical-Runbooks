@@ -105,7 +105,7 @@ Sur l'écran de sélection du disque :
 
 ## Étape 7 — Terminer le poste
 
-Suivez la [liste de vérification après installation](POST-INSTALL-CHECKLIST.md) complète : mises à jour, pilotes, activation, sécurité, nommage, jonction au domaine.
+Suivez la [liste de vérification après installation](POST-INSTALL-CHECKLIST.fr.md) complète : mises à jour, pilotes, activation, sécurité, nommage, jonction au domaine.
 
 ---
 
@@ -125,7 +125,7 @@ Les commentaires signifient, dans l'ordre : l'édition, la version et « Uefi »
 - [ ] L'édition correspond à la licence, le type de firmware est **UEFI**, le disque est **GPT**, Secure Boot renvoie `True`
 - [ ] Windows est activé (**Paramètres → Système → Activation**)
 - [ ] Le **Gestionnaire de périphériques** n'affiche aucun appareil avec un triangle jaune d'avertissement
-- [ ] La [liste de vérification après installation](POST-INSTALL-CHECKLIST.md) est complète et jointe au billet
+- [ ] La [liste de vérification après installation](POST-INSTALL-CHECKLIST.fr.md) est complète et jointe au billet
 
 ## Dépannage
 
