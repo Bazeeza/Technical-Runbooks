@@ -59,7 +59,7 @@
 | 08 | [**Câblage réseau et terminaison**](08-Network-Cabling-and-Termination/README.fr.md) | Sertir un câble RJ45 en T568A ou T568B, choisir Cat 5e, 6 ou 6A, travailler en sécurité | Beginner | 10–15 min |
 | | ↳ [Test des câbles et défauts du schéma de câblage](08-Network-Cabling-and-Termination/CABLE-TESTING.fr.md) | Tester chaque câble, lire les coupures, courts-circuits, paires croisées et séparées, et les corriger | Beginner–Intermediate | 2–10 min |
 | | ↳ [Panneaux de brassage et étiquetage](08-Network-Cabling-and-Termination/PATCH-PANEL-AND-LABELING.fr.md) | Raccorder un panneau de brassage ou une prise keystone et étiqueter les deux extrémités avec un identifiant TIA-606 | Beginner | 5 min par port |
-| 09 | [**Wi-Fi Troubleshooting**](09-WiFi-Troubleshooting/README.md) | Lire la bande, le canal et le signal avec `netsh wlan`, distinguer un problème de couverture, une interférence et une panne du PC | Beginner–Intermediate | 10–30 min |
+| 09 | [**Dépannage Wi-Fi**](09-WiFi-Troubleshooting/README.fr.md) | Lire la bande, le canal et le signal avec `netsh wlan`, distinguer un problème de couverture, une interférence et une panne du PC | Beginner–Intermediate | 10–30 min |
 | | ↳ [`Export-WifiDiagnostics.ps1`](09-WiFi-Troubleshooting/Export-WifiDiagnostics.ps1) | Enregistrer toutes les sorties de diagnostic Wi-Fi dans un seul dossier pour le billet, en lecture seule | Beginner | 1 min |
 | | ↳ [Reading the wireless network report](09-WiFi-Troubleshooting/WLAN-REPORT.md) | Transformer trois jours d'historique Wi-Fi en déconnexions datées avec leur raison | Intermediate | 10 min |
 | 10 | [**Dépannage des téléphones VoIP / SIP**](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) | Suivre la chaîne PoE → VLAN voix → enregistrement → SIP → RTP, corriger l'audio à sens unique causé par le NAT et le SIP ALG | Intermediate | 10–30 min |
@@ -205,7 +205,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `06-Printer-Troubleshooting/` | [README.fr.md](06-Printer-Troubleshooting/README.fr.md) |
 | `07-Remote-Support/` | [README.fr.md](07-Remote-Support/README.fr.md) |
 | `08-Network-Cabling-and-Termination/` | [README.fr.md](08-Network-Cabling-and-Termination/README.fr.md) |
-| `09-WiFi-Troubleshooting/` | [README.md](09-WiFi-Troubleshooting/README.md) |
+| `09-WiFi-Troubleshooting/` | [README.fr.md](09-WiFi-Troubleshooting/README.fr.md) |
 | `10-VoIP-SIP-Phone-Troubleshooting/` | [README.fr.md](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) |
 | `11-Cisco-Switch-Baseline/` | [README.fr.md](11-Cisco-Switch-Baseline/README.fr.md) |
 | `12-Linux-Server-Hardening/` | [README.fr.md](12-Linux-Server-Hardening/README.fr.md) |
