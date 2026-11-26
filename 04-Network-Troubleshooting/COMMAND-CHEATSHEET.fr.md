@@ -74,7 +74,7 @@ La configuration derrière ces commandes Cisco est expliquée dans [11 Cisco Swi
 | Ports publiés par des conteneurs | — | `docker ps --format 'table {{.Names}}\t{{.Ports}}'` | — |
 
 > [!TIP]
-> Sur un serveur Linux, un port de conteneur que `ss` affiche sur `0.0.0.0` est joignable même quand `ufw` le refuse : voir [Docker ports and the firewall](../12-Linux-Server-Hardening/DOCKER-PORT-BINDING.md).
+> Sur un serveur Linux, un port de conteneur que `ss` affiche sur `0.0.0.0` est joignable même quand `ufw` le refuse : voir [Docker ports and the firewall](../12-Linux-Server-Hardening/DOCKER-PORT-BINDING.fr.md).
 
 ## Capture
 
