@@ -12,7 +12,7 @@
 | Statut | En cours |
 | Lire en premier | [1. Boutons de langue](#1-boutons-de-langue) |
 
-Ce guide s'applique aux fichiers `README.md` et aux autres documents `.md` des dépôts. Il complète le [modèle de runbook](../TEMPLATE.md), qui décrit l'**intérieur** d'un runbook (objectif, procédure, vérification, retour arrière) ; ce guide décrit ce qui l'entoure : la langue, le premier écran et la présentation.
+Ce guide s'applique aux fichiers `README.md` et aux autres documents `.md` des dépôts. Il complète le [modèle de runbook](../TEMPLATE.fr.md), qui décrit l'**intérieur** d'un runbook (objectif, procédure, vérification, retour arrière) ; ce guide décrit ce qui l'entoure : la langue, le premier écran et la présentation.
 
 > [!NOTE]
 > **Règle d'or : on ajoute, on ne change pas.** Le texte, les fichiers, les dossiers et les liens existants restent tels quels. Une traduction, un tableau ou une arborescence est **ajouté**. Les seules exceptions sont le retrait des noms de personnes et la réorganisation d'un README difficile à lire, sans perdre aucune information.
