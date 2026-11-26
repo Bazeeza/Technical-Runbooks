@@ -23,6 +23,7 @@ Le format suit [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), et les 
 - Versions françaises du runbook 03 (déploiement de logiciels) et de l'aide-mémoire des commandes du runbook 04.
 - Versions françaises des runbooks 04 (dépannage réseau) et 05 (gestion des comptes Active Directory).
 - Versions françaises des runbooks 06 (dépannage d'imprimante et déploiement par stratégie de groupe), 07 (Assistance rapide, Bureau à distance avec NLA et liste de contrôle de sécurité) et 10 (téléphones VoIP / SIP, déroulement d'un appel SIP et préparation du réseau pour la voix).
+- Versions françaises des runbooks 11 (configuration de base d'un commutateur Cisco, sécurité des ports et ports err-disabled) et 12 (renforcement de base d'un serveur Linux, ports Docker et pare-feu).
 
 ### Modifié
 
