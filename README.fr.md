@@ -56,7 +56,7 @@
 | 07 | [**Soutien à distance avec Assistance rapide**](07-Remote-Support/README.fr.md) | Choisir le bon outil à distance, se connecter avec le consentement de l'utilisateur, travailler et fermer la session en sécurité | Beginner | 5 min |
 | | ↳ [Bureau à distance avec NLA](07-Remote-Support/RDP.fr.md) | Activer RDP sur le port 3389 avec NLA, limiter les comptes et les adresses sources | Intermediate | 15 min |
 | | ↳ [Liste de contrôle de sécurité](07-Remote-Support/SECURITY-CHECKLIST.fr.md) | Appliquer les mêmes règles de consentement et de traçabilité à chaque session, réagir à une arnaque | Beginner | 2 min |
-| 08 | [**Network Cabling and Termination**](08-Network-Cabling-and-Termination/README.md) | Sertir un câble RJ45 en T568A ou T568B, choisir Cat 5e, 6 ou 6A, travailler en sécurité | Beginner | 10–15 min |
+| 08 | [**Câblage réseau et terminaison**](08-Network-Cabling-and-Termination/README.fr.md) | Sertir un câble RJ45 en T568A ou T568B, choisir Cat 5e, 6 ou 6A, travailler en sécurité | Beginner | 10–15 min |
 | | ↳ [Cable testing and wire map faults](08-Network-Cabling-and-Termination/CABLE-TESTING.md) | Tester chaque câble, lire les coupures, courts-circuits, paires croisées et séparées, et les corriger | Beginner–Intermediate | 2–10 min |
 | | ↳ [Patch panels and labeling](08-Network-Cabling-and-Termination/PATCH-PANEL-AND-LABELING.md) | Raccorder un panneau de brassage ou une prise keystone et étiqueter les deux extrémités avec un identifiant TIA-606 | Beginner | 5 min par port |
 | 09 | [**Wi-Fi Troubleshooting**](09-WiFi-Troubleshooting/README.md) | Lire la bande, le canal et le signal avec `netsh wlan`, distinguer un problème de couverture, une interférence et une panne du PC | Beginner–Intermediate | 10–30 min |
@@ -204,7 +204,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `05-Active-Directory-User-Management/` | [README.fr.md](05-Active-Directory-User-Management/README.fr.md) |
 | `06-Printer-Troubleshooting/` | [README.fr.md](06-Printer-Troubleshooting/README.fr.md) |
 | `07-Remote-Support/` | [README.fr.md](07-Remote-Support/README.fr.md) |
-| `08-Network-Cabling-and-Termination/` | [README.md](08-Network-Cabling-and-Termination/README.md) |
+| `08-Network-Cabling-and-Termination/` | [README.fr.md](08-Network-Cabling-and-Termination/README.fr.md) |
 | `09-WiFi-Troubleshooting/` | [README.md](09-WiFi-Troubleshooting/README.md) |
 | `10-VoIP-SIP-Phone-Troubleshooting/` | [README.fr.md](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) |
 | `11-Cisco-Switch-Baseline/` | [README.fr.md](11-Cisco-Switch-Baseline/README.fr.md) |
