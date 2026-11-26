@@ -1,5 +1,8 @@
 # Port Security and Err-Disabled Ports: Read, Recover, Prevent
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](PORT-SECURITY-AND-ERR-DISABLED.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](PORT-SECURITY-AND-ERR-DISABLED.md)
+
 ![Level](https://img.shields.io/badge/Level-Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-5%E2%80%9315%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Cisco%20IOS%20%7C%20IOS%20XE-1BA0D7?style=flat-square)
