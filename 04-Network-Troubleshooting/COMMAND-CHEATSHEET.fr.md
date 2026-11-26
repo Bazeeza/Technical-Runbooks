@@ -41,7 +41,7 @@ Garder une seule page ouverte pendant un diagnostic au lieu de chercher la synta
 | Afficher les ports bloqués et la raison | — | — | `show interfaces status err-disabled` |
 | Afficher la puissance PoE par port | — | — | `show power inline` |
 
-La configuration derrière ces commandes Cisco est expliquée dans [11 Cisco Switch Baseline](../11-Cisco-Switch-Baseline/README.md).
+La configuration derrière ces commandes Cisco est expliquée dans [11 Cisco Switch Baseline](../11-Cisco-Switch-Baseline/README.fr.md).
 
 ## Connectivité
 

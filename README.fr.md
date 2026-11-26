@@ -65,7 +65,7 @@
 | 10 | [**Dépannage des téléphones VoIP / SIP**](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) | Suivre la chaîne PoE → VLAN voix → enregistrement → SIP → RTP, corriger l'audio à sens unique causé par le NAT et le SIP ALG | Intermediate | 10–30 min |
 | | ↳ [Lire un appel SIP](10-VoIP-SIP-Phone-Troubleshooting/SIP-CALL-FLOW.fr.md) | Suivre un enregistrement et un appel, lire le SDP et les codes de réponse SIP | Intermediate | 15 min |
 | | ↳ [Préparation du réseau pour la voix](10-VoIP-SIP-Phone-Troubleshooting/VOICE-NETWORK-READINESS.fr.md) | Calculer la bande passante des codecs, vérifier DSCP EF 46, le VLAN voix et le budget PoE | Intermediate | 20 min |
-| 11 | [**Cisco Switch Baseline**](11-Cisco-Switch-Baseline/README.md) | Configurer un commutateur d'accès de façon sécurisée : SSH v2 seulement, VLAN, sécurité des ports, portfast, VLAN « trou noir », trunk restreint | Intermediate | 30–45 min |
+| 11 | [**Configuration de base d'un commutateur Cisco**](11-Cisco-Switch-Baseline/README.fr.md) | Configurer un commutateur d'accès de façon sécurisée : SSH v2 seulement, VLAN, sécurité des ports, portfast, VLAN « trou noir », trunk restreint | Intermediate | 30–45 min |
 | | ↳ [`access-switch-baseline.cfg`](11-Cisco-Switch-Baseline/access-switch-baseline.cfg) | La configuration de base complète, commentée section par section | Intermediate | — |
 | | ↳ [Port security and err-disabled ports](11-Cisco-Switch-Baseline/PORT-SECURITY-AND-ERR-DISABLED.md) | Trouver pourquoi un port utilisateur est bloqué, identifier l'appareil et rétablir le port en sécurité | Intermediate | 5–15 min |
 | 12 | [**Linux Server Hardening Basics**](12-Linux-Server-Hardening/README.md) | Se connecter avec des clés SSH seulement, bloquer root et les mots de passe, régler ufw pour refuser les connexions entrantes, bannir les tentatives avec fail2ban, appliquer les correctifs automatiquement | Intermediate | 45–60 min |
@@ -207,7 +207,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `08-Network-Cabling-and-Termination/` | [README.md](08-Network-Cabling-and-Termination/README.md) |
 | `09-WiFi-Troubleshooting/` | [README.md](09-WiFi-Troubleshooting/README.md) |
 | `10-VoIP-SIP-Phone-Troubleshooting/` | [README.fr.md](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) |
-| `11-Cisco-Switch-Baseline/` | [README.md](11-Cisco-Switch-Baseline/README.md) |
+| `11-Cisco-Switch-Baseline/` | [README.fr.md](11-Cisco-Switch-Baseline/README.fr.md) |
 | `12-Linux-Server-Hardening/` | [README.md](12-Linux-Server-Hardening/README.md) |
 | `13-Backup-and-Restore/` | [README.md](13-Backup-and-Restore/README.md) |
 | `14-Phishing-Report-and-First-Response/` | [README.md](14-Phishing-Report-and-First-Response/README.md) |
