@@ -142,7 +142,7 @@ Test-NetConnection www.microsoft.com -Port 443
 
 Ports courants : `80` HTTP · `443` HTTPS · `53` DNS · `22` SSH · `3389` RDP · `445` SMB (partages de fichiers) · `5060` SIP (VoIP) · `9100` et `631` impression (raw et IPP).
 
-Pour une imprimante qui ne répond pas, continuez avec [06 Dépannage d'imprimantes](../06-Printer-Troubleshooting/README.fr.md#étape-4--imprimante-réseau--est-elle-joignable-sur-son-port-). Pour RDP, voir [07 Bureau à distance avec NLA](../07-Remote-Support/RDP.fr.md). Pour un téléphone IP qui sonne mais sans son, SIP sur 5060 ne suffit pas : la voix utilise une plage distincte de ports UDP, voir [10 Dépannage des téléphones VoIP / SIP](../10-VoIP-SIP-Phone-Troubleshooting/README.fr.md#étape-5--pas-de-son-ou-son-dans-un-seul-sens).
+Pour une imprimante qui ne répond pas, continuez avec [06 Dépannage d'imprimantes](../06-Printer-Troubleshooting/README.fr.md#étape-4--imprimante-réseau--est-elle-joignable-sur-son-port-). Pour RDP, voir [07 Bureau à distance avec NLA](../07-Remote-Support/RDP.fr.md). Pour un téléphone IP qui sonne mais sans son, SIP sur 5060 ne suffit pas : la voix utilise une plage distincte de ports UDP, voir [10 Dépannage des téléphones VoIP / SIP](../10-VoIP-SIP-Phone-Troubleshooting/README.fr.md#étape-5--aucun-audio-ou-audio-à-sens-unique).
 
 ---
 
