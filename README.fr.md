@@ -61,7 +61,7 @@
 | | ↳ [Panneaux de brassage et étiquetage](08-Network-Cabling-and-Termination/PATCH-PANEL-AND-LABELING.fr.md) | Raccorder un panneau de brassage ou une prise keystone et étiqueter les deux extrémités avec un identifiant TIA-606 | Beginner | 5 min par port |
 | 09 | [**Dépannage Wi-Fi**](09-WiFi-Troubleshooting/README.fr.md) | Lire la bande, le canal et le signal avec `netsh wlan`, distinguer un problème de couverture, une interférence et une panne du PC | Beginner–Intermediate | 10–30 min |
 | | ↳ [`Export-WifiDiagnostics.ps1`](09-WiFi-Troubleshooting/Export-WifiDiagnostics.ps1) | Enregistrer toutes les sorties de diagnostic Wi-Fi dans un seul dossier pour le billet, en lecture seule | Beginner | 1 min |
-| | ↳ [Reading the wireless network report](09-WiFi-Troubleshooting/WLAN-REPORT.md) | Transformer trois jours d'historique Wi-Fi en déconnexions datées avec leur raison | Intermediate | 10 min |
+| | ↳ [Lire le rapport de réseau sans fil](09-WiFi-Troubleshooting/WLAN-REPORT.fr.md) | Transformer trois jours d'historique Wi-Fi en déconnexions datées avec leur raison | Intermediate | 10 min |
 | 10 | [**Dépannage des téléphones VoIP / SIP**](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) | Suivre la chaîne PoE → VLAN voix → enregistrement → SIP → RTP, corriger l'audio à sens unique causé par le NAT et le SIP ALG | Intermediate | 10–30 min |
 | | ↳ [Lire un appel SIP](10-VoIP-SIP-Phone-Troubleshooting/SIP-CALL-FLOW.fr.md) | Suivre un enregistrement et un appel, lire le SDP et les codes de réponse SIP | Intermediate | 15 min |
 | | ↳ [Préparation du réseau pour la voix](10-VoIP-SIP-Phone-Troubleshooting/VOICE-NETWORK-READINESS.fr.md) | Calculer la bande passante des codecs, vérifier DSCP EF 46, le VLAN voix et le budget PoE | Intermediate | 20 min |

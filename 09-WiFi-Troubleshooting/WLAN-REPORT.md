@@ -1,5 +1,8 @@
 # Reading the Windows Wireless Network Report
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](WLAN-REPORT.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](WLAN-REPORT.md)
+
 ![Level](https://img.shields.io/badge/Level-Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-10%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011-0078D6?style=flat-square)
