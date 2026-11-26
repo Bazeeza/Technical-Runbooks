@@ -22,6 +22,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - French versions of runbooks 01 (boot process and no-boot troubleshooting) and 02 (clean installation and post-installation checklist).
 - French versions of runbook 03 (software deployment) and of the runbook 04 command cheat sheet.
 - French versions of runbooks 04 (network troubleshooting) and 05 (Active Directory user management).
+- French versions of runbooks 06 (printer troubleshooting and Group Policy deployment), 07 (Quick Assist, Remote Desktop with NLA and security checklist) and 10 (VoIP / SIP phones, SIP call flow and voice network readiness).
 
 ### Changed
 
