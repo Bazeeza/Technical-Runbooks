@@ -1,5 +1,8 @@
 # Remote Support Security Checklist
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](SECURITY-CHECKLIST.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](SECURITY-CHECKLIST.md)
+
 ![Level](https://img.shields.io/badge/Level-Beginner-3fe0a0?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-2%20min%20per%20session-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Any%20remote%20tool-555?style=flat-square)

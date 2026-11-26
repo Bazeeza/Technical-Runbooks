@@ -55,7 +55,7 @@
 | | ↳ [Déployer des imprimantes par stratégie de groupe](06-Printer-Troubleshooting/GPO-DEPLOYMENT.fr.md) | Connecter une imprimante partagée pour un service à l'ouverture de session, avec ciblage et retrait propre | Intermediate | 20 min |
 | 07 | [**Soutien à distance avec Assistance rapide**](07-Remote-Support/README.fr.md) | Choisir le bon outil à distance, se connecter avec le consentement de l'utilisateur, travailler et fermer la session en sécurité | Beginner | 5 min |
 | | ↳ [Bureau à distance avec NLA](07-Remote-Support/RDP.fr.md) | Activer RDP sur le port 3389 avec NLA, limiter les comptes et les adresses sources | Intermediate | 15 min |
-| | ↳ [Security checklist](07-Remote-Support/SECURITY-CHECKLIST.md) | Appliquer les mêmes règles de consentement et de traçabilité à chaque session, réagir à une arnaque | Beginner | 2 min |
+| | ↳ [Liste de contrôle de sécurité](07-Remote-Support/SECURITY-CHECKLIST.fr.md) | Appliquer les mêmes règles de consentement et de traçabilité à chaque session, réagir à une arnaque | Beginner | 2 min |
 | 08 | [**Network Cabling and Termination**](08-Network-Cabling-and-Termination/README.md) | Sertir un câble RJ45 en T568A ou T568B, choisir Cat 5e, 6 ou 6A, travailler en sécurité | Beginner | 10–15 min |
 | | ↳ [Cable testing and wire map faults](08-Network-Cabling-and-Termination/CABLE-TESTING.md) | Tester chaque câble, lire les coupures, courts-circuits, paires croisées et séparées, et les corriger | Beginner–Intermediate | 2–10 min |
 | | ↳ [Patch panels and labeling](08-Network-Cabling-and-Termination/PATCH-PANEL-AND-LABELING.md) | Raccorder un panneau de brassage ou une prise keystone et étiqueter les deux extrémités avec un identifiant TIA-606 | Beginner | 5 min par port |
