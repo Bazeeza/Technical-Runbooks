@@ -24,6 +24,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - French versions of runbooks 04 (network troubleshooting) and 05 (Active Directory user management).
 - French versions of runbooks 06 (printer troubleshooting and Group Policy deployment), 07 (Quick Assist, Remote Desktop with NLA and security checklist) and 10 (VoIP / SIP phones, SIP call flow and voice network readiness).
 - French versions of runbooks 11 (Cisco switch baseline, port security and err-disabled ports) and 12 (Linux server hardening, Docker ports and the firewall).
+- French versions of runbooks 08 (cabling and termination, cable testing, patch panels and labeling) and 09 (Wi-Fi troubleshooting and the wireless network report).
 
 ### Changed
 
