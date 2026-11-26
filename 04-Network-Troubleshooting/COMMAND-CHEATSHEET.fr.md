@@ -22,7 +22,7 @@
 
 ## Objectif
 
-Garder une seule page ouverte pendant un diagnostic au lieu de chercher la syntaxe. À utiliser avec le [runbook de dépannage](README.md) (en anglais pour l'instant).
+Garder une seule page ouverte pendant un diagnostic au lieu de chercher la syntaxe. À utiliser avec le [runbook de dépannage](README.fr.md).
 
 ## Configuration et adressage
 

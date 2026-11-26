@@ -28,7 +28,7 @@
 | Niveau | Débutant à intermédiaire (indiqué pour chaque runbook dans l'[index](#runbooks)) |
 | Contenu | 15 runbooks avec des guides complémentaires, des scripts PowerShell et des fichiers de configuration, un [modèle](TEMPLATE.fr.md) de runbook, un [guide de style](docs/STYLE.fr.md) et des vérifications automatiques de qualité |
 | Statut | Maintenu : version 1.0.0 publiée le 2026-11-02, changements suivants dans le [journal des modifications](CHANGELOG.fr.md) |
-| Lire en premier | [04 Network Troubleshooting](04-Network-Troubleshooting/README.md), le runbook auquel la plupart des autres se rattachent |
+| Lire en premier | [04 Dépannage réseau](04-Network-Troubleshooting/README.fr.md), le runbook auquel la plupart des autres se rattachent |
 
 > **En bref :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.fr.md), avec leur source.
 
@@ -47,7 +47,7 @@
 | | ↳ [Liste de vérification après installation](02-Windows-11-Clean-Installation/POST-INSTALL-CHECKLIST.fr.md) | Livrer un poste à jour, sécurisé, nommé et vérifié | Beginner | 30–45 min |
 | 03 | [**Déploiement de logiciels (winget et MSI)**](03-Software-Deployment/README.fr.md) | Installer, vérifier, mettre à jour et désinstaller des logiciels en mode silencieux, lire les codes de sortie | Beginner–Intermediate | 15 min |
 | | ↳ [`Install-StandardApps.ps1`](03-Software-Deployment/Install-StandardApps.ps1) | Installer une liste d'applications standard avec vérification et journalisation | Intermediate | 5 min |
-| 04 | [**Network Troubleshooting**](04-Network-Troubleshooting/README.md) | Diagnostiquer un « pas d'Internet » couche par couche, du câble jusqu'au port | Beginner–Intermediate | 10–30 min |
+| 04 | [**Dépannage réseau**](04-Network-Troubleshooting/README.fr.md) | Diagnostiquer un « pas d'Internet » couche par couche, du câble jusqu'au port | Beginner–Intermediate | 10–30 min |
 | | ↳ [Aide-mémoire des commandes](04-Network-Troubleshooting/COMMAND-CHEATSHEET.fr.md) | Les commandes équivalentes sous Windows, Linux et Cisco IOS | Beginner | — |
 | 05 | [**Active Directory User Management**](05-Active-Directory-User-Management/README.md) | Déverrouiller, réinitialiser, créer et désactiver des comptes en sécurité, trouver la source d'un verrouillage | Beginner–Intermediate | 5–20 min |
 | 06 | [**Printer Troubleshooting**](06-Printer-Troubleshooting/README.md) | Trouver le maillon en panne, de l'appareil jusqu'au spouleur, tester les ports 9100/631, corriger le port ou le pilote | Beginner–Intermediate | 10–30 min |
@@ -200,7 +200,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `01-PC-Boot-Process-and-BIOS-UEFI/` | [README.fr.md](01-PC-Boot-Process-and-BIOS-UEFI/README.fr.md) |
 | `02-Windows-11-Clean-Installation/` | [README.fr.md](02-Windows-11-Clean-Installation/README.fr.md) |
 | `03-Software-Deployment/` | [README.fr.md](03-Software-Deployment/README.fr.md) |
-| `04-Network-Troubleshooting/` | [README.md](04-Network-Troubleshooting/README.md) |
+| `04-Network-Troubleshooting/` | [README.fr.md](04-Network-Troubleshooting/README.fr.md) |
 | `05-Active-Directory-User-Management/` | [README.md](05-Active-Directory-User-Management/README.md) |
 | `06-Printer-Troubleshooting/` | [README.md](06-Printer-Troubleshooting/README.md) |
 | `07-Remote-Support/` | [README.md](07-Remote-Support/README.md) |

@@ -103,7 +103,7 @@ manage-bde -status C:
 ## 6. Vérification finale
 
 - [ ] Redémarrer une dernière fois : le PC démarre sans erreur
-- [ ] Réseau, Internet et ressources internes accessibles (voir le [runbook 04](../04-Network-Troubleshooting/README.md))
+- [ ] Réseau, Internet et ressources internes accessibles (voir le [runbook 04](../04-Network-Troubleshooting/README.fr.md))
 - [ ] Son, caméra, Wi-Fi, Bluetooth et station d'accueil testés
 - [ ] Billet mis à jour avec le travail fait, puis fermé avec la confirmation de l'utilisateur
 
