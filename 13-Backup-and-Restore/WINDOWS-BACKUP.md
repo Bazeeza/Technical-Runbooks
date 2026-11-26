@@ -1,5 +1,8 @@
 # Windows Backups: File History, Windows Server Backup and robocopy
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](WINDOWS-BACKUP.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](WINDOWS-BACKUP.md)
+
 ![Level](https://img.shields.io/badge/Level-Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-20%E2%80%9340%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2011%20%7C%20Windows%20Server%202019%2B-0078D4?style=flat-square)

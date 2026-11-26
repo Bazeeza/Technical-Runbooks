@@ -12,7 +12,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Runbooks-15-3fe0a0?style=flat-square" alt="15 runbooks"/>
-  <img src="https://img.shields.io/badge/Language-English-2b9dff?style=flat-square" alt="English"/>
+  <img src="https://img.shields.io/badge/Langues-English%20%7C%20Fran%C3%A7ais-2b9dff?style=flat-square" alt="Anglais et français"/>
   <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20Linux%20%7C%20Cisco-555?style=flat-square" alt="Windows, Linux, Cisco"/>
   <img src="https://img.shields.io/badge/Author-bazeeza-c792ea?style=flat-square" alt="Author: bazeeza"/>
   <br>
@@ -28,12 +28,12 @@
 | Niveau | Débutant à intermédiaire (indiqué pour chaque runbook dans l'[index](#runbooks)) |
 | Contenu | 15 runbooks avec des guides complémentaires, des scripts PowerShell et des fichiers de configuration, un [modèle](TEMPLATE.fr.md) de runbook, un [guide de style](docs/STYLE.fr.md) et des vérifications automatiques de qualité |
 | Statut | Maintenu : version 1.0.0 publiée le 2026-11-02, changements suivants dans le [journal des modifications](CHANGELOG.fr.md) |
-| Lire en premier | [04 Network Troubleshooting](04-Network-Troubleshooting/README.md), le runbook auquel la plupart des autres se rattachent |
+| Lire en premier | [04 Dépannage réseau](04-Network-Troubleshooting/README.fr.md), le runbook auquel la plupart des autres se rattachent |
 
 > **En bref :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.fr.md), avec leur source.
 
 > [!NOTE]
-> Les runbooks sont traduits en français un par un (`X.fr.md` à côté de `X.md`). Tant qu'un runbook n'a pas sa version française, les liens de cette page pointent vers l'original en anglais.
+> Chaque runbook et chaque guide complémentaire a sa version française (`X.fr.md` à côté de `X.md`), avec les mêmes sections, les mêmes commandes et les mêmes liens. Les liens de cette page pointent vers les versions françaises ; l'original anglais reste la référence, et les blocs de code ne sont jamais traduits. Le bouton **English** en haut de chaque page permet de changer de langue.
 
 ---
 
@@ -47,40 +47,40 @@
 | | ↳ [Liste de vérification après installation](02-Windows-11-Clean-Installation/POST-INSTALL-CHECKLIST.fr.md) | Livrer un poste à jour, sécurisé, nommé et vérifié | Beginner | 30–45 min |
 | 03 | [**Déploiement de logiciels (winget et MSI)**](03-Software-Deployment/README.fr.md) | Installer, vérifier, mettre à jour et désinstaller des logiciels en mode silencieux, lire les codes de sortie | Beginner–Intermediate | 15 min |
 | | ↳ [`Install-StandardApps.ps1`](03-Software-Deployment/Install-StandardApps.ps1) | Installer une liste d'applications standard avec vérification et journalisation | Intermediate | 5 min |
-| 04 | [**Network Troubleshooting**](04-Network-Troubleshooting/README.md) | Diagnostiquer un « pas d'Internet » couche par couche, du câble jusqu'au port | Beginner–Intermediate | 10–30 min |
+| 04 | [**Dépannage réseau**](04-Network-Troubleshooting/README.fr.md) | Diagnostiquer un « pas d'Internet » couche par couche, du câble jusqu'au port | Beginner–Intermediate | 10–30 min |
 | | ↳ [Aide-mémoire des commandes](04-Network-Troubleshooting/COMMAND-CHEATSHEET.fr.md) | Les commandes équivalentes sous Windows, Linux et Cisco IOS | Beginner | — |
-| 05 | [**Active Directory User Management**](05-Active-Directory-User-Management/README.md) | Déverrouiller, réinitialiser, créer et désactiver des comptes en sécurité, trouver la source d'un verrouillage | Beginner–Intermediate | 5–20 min |
-| 06 | [**Printer Troubleshooting**](06-Printer-Troubleshooting/README.md) | Trouver le maillon en panne, de l'appareil jusqu'au spouleur, tester les ports 9100/631, corriger le port ou le pilote | Beginner–Intermediate | 10–30 min |
+| 05 | [**Gestion des comptes Active Directory**](05-Active-Directory-User-Management/README.fr.md) | Déverrouiller, réinitialiser, créer et désactiver des comptes en sécurité, trouver la source d'un verrouillage | Beginner–Intermediate | 5–20 min |
+| 06 | [**Dépannage d'imprimante**](06-Printer-Troubleshooting/README.fr.md) | Trouver le maillon en panne, de l'appareil jusqu'au spouleur, tester les ports 9100/631, corriger le port ou le pilote | Beginner–Intermediate | 10–30 min |
 | | ↳ [`Reset-PrintQueue.ps1`](06-Printer-Troubleshooting/Reset-PrintQueue.ps1) | Vider une file bloquée : arrêter le spouleur, vider le dossier spool, redémarrer et vérifier | Beginner | 2 min |
-| | ↳ [Deploying printers with Group Policy](06-Printer-Troubleshooting/GPO-DEPLOYMENT.md) | Connecter une imprimante partagée pour un service à l'ouverture de session, avec ciblage et retrait propre | Intermediate | 20 min |
-| 07 | [**Remote Support with Quick Assist**](07-Remote-Support/README.md) | Choisir le bon outil à distance, se connecter avec le consentement de l'utilisateur, travailler et fermer la session en sécurité | Beginner | 5 min |
-| | ↳ [Remote Desktop with NLA](07-Remote-Support/RDP.md) | Activer RDP sur le port 3389 avec NLA, limiter les comptes et les adresses sources | Intermediate | 15 min |
-| | ↳ [Security checklist](07-Remote-Support/SECURITY-CHECKLIST.md) | Appliquer les mêmes règles de consentement et de traçabilité à chaque session, réagir à une arnaque | Beginner | 2 min |
-| 08 | [**Network Cabling and Termination**](08-Network-Cabling-and-Termination/README.md) | Sertir un câble RJ45 en T568A ou T568B, choisir Cat 5e, 6 ou 6A, travailler en sécurité | Beginner | 10–15 min |
-| | ↳ [Cable testing and wire map faults](08-Network-Cabling-and-Termination/CABLE-TESTING.md) | Tester chaque câble, lire les coupures, courts-circuits, paires croisées et séparées, et les corriger | Beginner–Intermediate | 2–10 min |
-| | ↳ [Patch panels and labeling](08-Network-Cabling-and-Termination/PATCH-PANEL-AND-LABELING.md) | Raccorder un panneau de brassage ou une prise keystone et étiqueter les deux extrémités avec un identifiant TIA-606 | Beginner | 5 min par port |
-| 09 | [**Wi-Fi Troubleshooting**](09-WiFi-Troubleshooting/README.md) | Lire la bande, le canal et le signal avec `netsh wlan`, distinguer un problème de couverture, une interférence et une panne du PC | Beginner–Intermediate | 10–30 min |
+| | ↳ [Déployer des imprimantes par stratégie de groupe](06-Printer-Troubleshooting/GPO-DEPLOYMENT.fr.md) | Connecter une imprimante partagée pour un service à l'ouverture de session, avec ciblage et retrait propre | Intermediate | 20 min |
+| 07 | [**Soutien à distance avec Assistance rapide**](07-Remote-Support/README.fr.md) | Choisir le bon outil à distance, se connecter avec le consentement de l'utilisateur, travailler et fermer la session en sécurité | Beginner | 5 min |
+| | ↳ [Bureau à distance avec NLA](07-Remote-Support/RDP.fr.md) | Activer RDP sur le port 3389 avec NLA, limiter les comptes et les adresses sources | Intermediate | 15 min |
+| | ↳ [Liste de contrôle de sécurité](07-Remote-Support/SECURITY-CHECKLIST.fr.md) | Appliquer les mêmes règles de consentement et de traçabilité à chaque session, réagir à une arnaque | Beginner | 2 min |
+| 08 | [**Câblage réseau et terminaison**](08-Network-Cabling-and-Termination/README.fr.md) | Sertir un câble RJ45 en T568A ou T568B, choisir Cat 5e, 6 ou 6A, travailler en sécurité | Beginner | 10–15 min |
+| | ↳ [Test des câbles et défauts du schéma de câblage](08-Network-Cabling-and-Termination/CABLE-TESTING.fr.md) | Tester chaque câble, lire les coupures, courts-circuits, paires croisées et séparées, et les corriger | Beginner–Intermediate | 2–10 min |
+| | ↳ [Panneaux de brassage et étiquetage](08-Network-Cabling-and-Termination/PATCH-PANEL-AND-LABELING.fr.md) | Raccorder un panneau de brassage ou une prise keystone et étiqueter les deux extrémités avec un identifiant TIA-606 | Beginner | 5 min par port |
+| 09 | [**Dépannage Wi-Fi**](09-WiFi-Troubleshooting/README.fr.md) | Lire la bande, le canal et le signal avec `netsh wlan`, distinguer un problème de couverture, une interférence et une panne du PC | Beginner–Intermediate | 10–30 min |
 | | ↳ [`Export-WifiDiagnostics.ps1`](09-WiFi-Troubleshooting/Export-WifiDiagnostics.ps1) | Enregistrer toutes les sorties de diagnostic Wi-Fi dans un seul dossier pour le billet, en lecture seule | Beginner | 1 min |
-| | ↳ [Reading the wireless network report](09-WiFi-Troubleshooting/WLAN-REPORT.md) | Transformer trois jours d'historique Wi-Fi en déconnexions datées avec leur raison | Intermediate | 10 min |
-| 10 | [**VoIP / SIP Phone Troubleshooting**](10-VoIP-SIP-Phone-Troubleshooting/README.md) | Suivre la chaîne PoE → VLAN voix → enregistrement → SIP → RTP, corriger l'audio à sens unique causé par le NAT et le SIP ALG | Intermediate | 10–30 min |
-| | ↳ [Reading a SIP call](10-VoIP-SIP-Phone-Troubleshooting/SIP-CALL-FLOW.md) | Suivre un enregistrement et un appel, lire le SDP et les codes de réponse SIP | Intermediate | 15 min |
-| | ↳ [Voice network readiness](10-VoIP-SIP-Phone-Troubleshooting/VOICE-NETWORK-READINESS.md) | Calculer la bande passante des codecs, vérifier DSCP EF 46, le VLAN voix et le budget PoE | Intermediate | 20 min |
-| 11 | [**Cisco Switch Baseline**](11-Cisco-Switch-Baseline/README.md) | Configurer un commutateur d'accès de façon sécurisée : SSH v2 seulement, VLAN, sécurité des ports, portfast, VLAN « trou noir », trunk restreint | Intermediate | 30–45 min |
+| | ↳ [Lire le rapport de réseau sans fil](09-WiFi-Troubleshooting/WLAN-REPORT.fr.md) | Transformer trois jours d'historique Wi-Fi en déconnexions datées avec leur raison | Intermediate | 10 min |
+| 10 | [**Dépannage des téléphones VoIP / SIP**](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) | Suivre la chaîne PoE → VLAN voix → enregistrement → SIP → RTP, corriger l'audio à sens unique causé par le NAT et le SIP ALG | Intermediate | 10–30 min |
+| | ↳ [Lire un appel SIP](10-VoIP-SIP-Phone-Troubleshooting/SIP-CALL-FLOW.fr.md) | Suivre un enregistrement et un appel, lire le SDP et les codes de réponse SIP | Intermediate | 15 min |
+| | ↳ [Préparation du réseau pour la voix](10-VoIP-SIP-Phone-Troubleshooting/VOICE-NETWORK-READINESS.fr.md) | Calculer la bande passante des codecs, vérifier DSCP EF 46, le VLAN voix et le budget PoE | Intermediate | 20 min |
+| 11 | [**Configuration de base d'un commutateur Cisco**](11-Cisco-Switch-Baseline/README.fr.md) | Configurer un commutateur d'accès de façon sécurisée : SSH v2 seulement, VLAN, sécurité des ports, portfast, VLAN « trou noir », trunk restreint | Intermediate | 30–45 min |
 | | ↳ [`access-switch-baseline.cfg`](11-Cisco-Switch-Baseline/access-switch-baseline.cfg) | La configuration de base complète, commentée section par section | Intermediate | — |
-| | ↳ [Port security and err-disabled ports](11-Cisco-Switch-Baseline/PORT-SECURITY-AND-ERR-DISABLED.md) | Trouver pourquoi un port utilisateur est bloqué, identifier l'appareil et rétablir le port en sécurité | Intermediate | 5–15 min |
-| 12 | [**Linux Server Hardening Basics**](12-Linux-Server-Hardening/README.md) | Se connecter avec des clés SSH seulement, bloquer root et les mots de passe, régler ufw pour refuser les connexions entrantes, bannir les tentatives avec fail2ban, appliquer les correctifs automatiquement | Intermediate | 45–60 min |
+| | ↳ [Sécurité des ports et ports err-disabled](11-Cisco-Switch-Baseline/PORT-SECURITY-AND-ERR-DISABLED.fr.md) | Trouver pourquoi un port utilisateur est bloqué, identifier l'appareil et rétablir le port en sécurité | Intermediate | 5–15 min |
+| 12 | [**Renforcement de base d'un serveur Linux**](12-Linux-Server-Hardening/README.fr.md) | Se connecter avec des clés SSH seulement, bloquer root et les mots de passe, régler ufw pour refuser les connexions entrantes, bannir les tentatives avec fail2ban, appliquer les correctifs automatiquement | Intermediate | 45–60 min |
 | | ↳ [`10-hardening.conf`](12-Linux-Server-Hardening/10-hardening.conf) et [`jail.local`](12-Linux-Server-Hardening/jail.local) | Le fichier complémentaire du serveur SSH et la prison fail2ban, commentés ligne par ligne | Intermediate | — |
-| | ↳ [Docker ports and the firewall](12-Linux-Server-Hardening/DOCKER-PORT-BINDING.md) | Comprendre pourquoi un port de conteneur publié contourne ufw, le lier à 127.0.0.1 derrière un proxy inverse | Intermediate | 10–15 min |
-| 13 | [**Backup and Restore**](13-Backup-and-Restore/README.md) | Fixer le RPO et le RTO, appliquer la règle 3-2-1, automatiser les sauvegardes et faire un test de restauration consigné | Intermediate | 60 min + 30 min par test |
-| | ↳ [Windows backups](13-Backup-and-Restore/WINDOWS-BACKUP.md) | Historique des fichiers, Windows Server Backup (`wbadmin`) et robocopy, avec restauration dans un dossier séparé | Intermediate | 20–40 min |
-| | ↳ [Linux backups with restic](13-Backup-and-Restore/RESTIC-LINUX.md) | Instantanés chiffrés sur un minuteur systemd, rétention, vérification du dépôt et restaurations | Intermediate | 30–45 min |
+| | ↳ [Ports Docker et pare-feu](12-Linux-Server-Hardening/DOCKER-PORT-BINDING.fr.md) | Comprendre pourquoi un port de conteneur publié contourne ufw, le lier à 127.0.0.1 derrière un proxy inverse | Intermediate | 10–15 min |
+| 13 | [**Sauvegarde et restauration**](13-Backup-and-Restore/README.fr.md) | Fixer le RPO et le RTO, appliquer la règle 3-2-1, automatiser les sauvegardes et faire un test de restauration consigné | Intermediate | 60 min + 30 min par test |
+| | ↳ [Sauvegardes Windows](13-Backup-and-Restore/WINDOWS-BACKUP.fr.md) | Historique des fichiers, Windows Server Backup (`wbadmin`) et robocopy, avec restauration dans un dossier séparé | Intermediate | 20–40 min |
+| | ↳ [Sauvegardes Linux avec restic](13-Backup-and-Restore/RESTIC-LINUX.fr.md) | Instantanés chiffrés sur un minuteur systemd, rétention, vérification du dépôt et restaurations | Intermediate | 30–45 min |
 | | ↳ [`Test-RestoredFiles.ps1`](13-Backup-and-Restore/Test-RestoredFiles.ps1) | Prouver une restauration : comparer chaque fichier avec l'original par SHA-256, enregistrer un rapport CSV | Beginner | 2 min |
-| 14 | [**Phishing Report and First Response**](14-Phishing-Report-and-First-Response/README.md) | Reconnaître un courriel d'hameçonnage, le faire signaler avec le bouton **Report** d'Outlook, contenir selon ce que l'utilisateur a fait, escalader et consigner | Beginner | 10–30 min |
-| | ↳ [First response checklist](14-Phishing-Report-and-First-Response/FIRST-RESPONSE-CHECKLIST.md) | Réinitialiser le mot de passe, révoquer les sessions, revoir les méthodes MFA, trouver les règles de transfert, isoler le poste | Beginner | 5–30 min |
-| | ↳ [Reading e-mail headers](14-Phishing-Report-and-First-Response/READING-EMAIL-HEADERS.md) et [`Get-EmailHeaderSummary.ps1`](14-Phishing-Report-and-First-Response/Get-EmailHeaderSummary.ps1) | Lire From, Reply-To, Return-Path, SPF, DKIM, DMARC et la chaîne Received, avec un script de résumé en lecture seule | Intermediate | 10 min |
-| 15 | [**Microsoft 365 and Outlook Basics**](15-Microsoft-365-Outlook-Basics/README.md) | Vérifier dans l'ordre la connexion, la licence, la boîte aux lettres et la MFA, puis le client Outlook, puis l'accès aux boîtes partagées | Beginner | 10–45 min |
-| | ↳ [Outlook profiles and Cached Exchange Mode](15-Microsoft-365-Outlook-Basics/OUTLOOK-PROFILE-AND-CACHE.md) | Démarrer en mode sans échec, créer un profil propre, régler la période hors connexion, reconstruire un fichier `.ost` en sécurité | Beginner | 15–45 min |
-| | ↳ [Shared mailboxes and permissions](15-Microsoft-365-Outlook-Basics/SHARED-MAILBOXES-AND-PERMISSIONS.md) | Accorder, vérifier et retirer Full Access, Send As et Send on Behalf, contrôler le mappage automatique | Intermediate | 10–20 min |
+| 14 | [**Signalement d'hameçonnage et première intervention**](14-Phishing-Report-and-First-Response/README.fr.md) | Reconnaître un courriel d'hameçonnage, le faire signaler avec le bouton **Report** d'Outlook, contenir selon ce que l'utilisateur a fait, escalader et consigner | Beginner | 10–30 min |
+| | ↳ [Liste de vérification de première intervention](14-Phishing-Report-and-First-Response/FIRST-RESPONSE-CHECKLIST.fr.md) | Réinitialiser le mot de passe, révoquer les sessions, revoir les méthodes MFA, trouver les règles de transfert, isoler le poste | Beginner | 5–30 min |
+| | ↳ [Lire les en-têtes d'un courriel](14-Phishing-Report-and-First-Response/READING-EMAIL-HEADERS.fr.md) et [`Get-EmailHeaderSummary.ps1`](14-Phishing-Report-and-First-Response/Get-EmailHeaderSummary.ps1) | Lire From, Reply-To, Return-Path, SPF, DKIM, DMARC et la chaîne Received, avec un script de résumé en lecture seule | Intermediate | 10 min |
+| 15 | [**Notions de base de Microsoft 365 et d'Outlook**](15-Microsoft-365-Outlook-Basics/README.fr.md) | Vérifier dans l'ordre la connexion, la licence, la boîte aux lettres et la MFA, puis le client Outlook, puis l'accès aux boîtes partagées | Beginner | 10–45 min |
+| | ↳ [Profils Outlook et mode Exchange mis en cache](15-Microsoft-365-Outlook-Basics/OUTLOOK-PROFILE-AND-CACHE.fr.md) | Démarrer en mode sans échec, créer un profil propre, régler la période hors connexion, reconstruire un fichier `.ost` en sécurité | Beginner | 15–45 min |
+| | ↳ [Boîtes aux lettres partagées et permissions](15-Microsoft-365-Outlook-Basics/SHARED-MAILBOXES-AND-PERMISSIONS.fr.md) | Accorder, vérifier et retirer Full Access, Send As et Send on Behalf, contrôler le mappage automatique | Intermediate | 10–20 min |
 | | ↳ [`Get-OutlookClientInfo.ps1`](15-Microsoft-365-Outlook-Basics/Get-OutlookClientInfo.ps1) | Lister les clients Outlook, les profils, les fichiers de données et l'espace libre pour le billet, en lecture seule | Beginner | 1 min |
 
 Les **niveaux** correspondent au badge en haut de chaque document. **Beginner** (débutant) : soutien de premier niveau, sans droits d'administrateur au-delà du poste. **Beginner–Intermediate** : les premières étapes relèvent du premier niveau, les suivantes demandent des droits d'administrateur ou des connaissances plus poussées. **Intermediate** (intermédiaire) : administration d'un serveur, d'un équipement réseau ou d'un locataire (*tenant*).
@@ -193,25 +193,25 @@ Technical-Runbooks/
 └── README.fr.md                             version française (ce fichier)
 ```
 
-Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md`, `archive/README.fr.md`).
+Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier : les 15 runbooks et leurs guides complémentaires, ainsi que `TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md` et `archive/README.fr.md`.
 
 | Dossier | README |
 |---|---|
 | `01-PC-Boot-Process-and-BIOS-UEFI/` | [README.fr.md](01-PC-Boot-Process-and-BIOS-UEFI/README.fr.md) |
 | `02-Windows-11-Clean-Installation/` | [README.fr.md](02-Windows-11-Clean-Installation/README.fr.md) |
 | `03-Software-Deployment/` | [README.fr.md](03-Software-Deployment/README.fr.md) |
-| `04-Network-Troubleshooting/` | [README.md](04-Network-Troubleshooting/README.md) |
-| `05-Active-Directory-User-Management/` | [README.md](05-Active-Directory-User-Management/README.md) |
-| `06-Printer-Troubleshooting/` | [README.md](06-Printer-Troubleshooting/README.md) |
-| `07-Remote-Support/` | [README.md](07-Remote-Support/README.md) |
-| `08-Network-Cabling-and-Termination/` | [README.md](08-Network-Cabling-and-Termination/README.md) |
-| `09-WiFi-Troubleshooting/` | [README.md](09-WiFi-Troubleshooting/README.md) |
-| `10-VoIP-SIP-Phone-Troubleshooting/` | [README.md](10-VoIP-SIP-Phone-Troubleshooting/README.md) |
-| `11-Cisco-Switch-Baseline/` | [README.md](11-Cisco-Switch-Baseline/README.md) |
-| `12-Linux-Server-Hardening/` | [README.md](12-Linux-Server-Hardening/README.md) |
-| `13-Backup-and-Restore/` | [README.md](13-Backup-and-Restore/README.md) |
-| `14-Phishing-Report-and-First-Response/` | [README.md](14-Phishing-Report-and-First-Response/README.md) |
-| `15-Microsoft-365-Outlook-Basics/` | [README.md](15-Microsoft-365-Outlook-Basics/README.md) |
+| `04-Network-Troubleshooting/` | [README.fr.md](04-Network-Troubleshooting/README.fr.md) |
+| `05-Active-Directory-User-Management/` | [README.fr.md](05-Active-Directory-User-Management/README.fr.md) |
+| `06-Printer-Troubleshooting/` | [README.fr.md](06-Printer-Troubleshooting/README.fr.md) |
+| `07-Remote-Support/` | [README.fr.md](07-Remote-Support/README.fr.md) |
+| `08-Network-Cabling-and-Termination/` | [README.fr.md](08-Network-Cabling-and-Termination/README.fr.md) |
+| `09-WiFi-Troubleshooting/` | [README.fr.md](09-WiFi-Troubleshooting/README.fr.md) |
+| `10-VoIP-SIP-Phone-Troubleshooting/` | [README.fr.md](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) |
+| `11-Cisco-Switch-Baseline/` | [README.fr.md](11-Cisco-Switch-Baseline/README.fr.md) |
+| `12-Linux-Server-Hardening/` | [README.fr.md](12-Linux-Server-Hardening/README.fr.md) |
+| `13-Backup-and-Restore/` | [README.fr.md](13-Backup-and-Restore/README.fr.md) |
+| `14-Phishing-Report-and-First-Response/` | [README.fr.md](14-Phishing-Report-and-First-Response/README.fr.md) |
+| `15-Microsoft-365-Outlook-Basics/` | [README.fr.md](15-Microsoft-365-Outlook-Basics/README.fr.md) |
 | `archive/` | [README.fr.md](archive/README.fr.md) |
 
 ---

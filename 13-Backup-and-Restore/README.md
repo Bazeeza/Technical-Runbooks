@@ -1,5 +1,8 @@
 # Backup and Restore: the 3-2-1 Rule and a Tested Restore
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](README.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](README.md)
+
 ![Level](https://img.shields.io/badge/Level-Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-60%20min%20setup%20%2B%2030%20min%20per%20test-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-555?style=flat-square)

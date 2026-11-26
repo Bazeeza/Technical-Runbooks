@@ -1,5 +1,8 @@
 # Network Cabling and Termination: Building an RJ45 Cable That Passes the Test
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](README.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](README.md)
+
 ![Level](https://img.shields.io/badge/Level-Beginner-3fe0a0?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-10%E2%80%9315%20min%20per%20cable-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Copper%20cabling-555?style=flat-square)

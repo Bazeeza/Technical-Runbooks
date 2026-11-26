@@ -1,5 +1,8 @@
 # Voice Network Readiness: Codecs, Bandwidth, QoS, Voice VLAN and PoE
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](VOICE-NETWORK-READINESS.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](VOICE-NETWORK-READINESS.md)
+
 ![Level](https://img.shields.io/badge/Level-Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-20%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Cisco%20IOS%20%7C%20SIP-1BA0D7?style=flat-square)

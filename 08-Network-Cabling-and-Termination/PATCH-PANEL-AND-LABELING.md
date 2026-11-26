@@ -1,5 +1,8 @@
 # Patch Panels, Keystone Jacks and Labeling
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](PATCH-PANEL-AND-LABELING.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](PATCH-PANEL-AND-LABELING.md)
+
 ![Level](https://img.shields.io/badge/Level-Beginner-3fe0a0?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-5%20min%20per%20port-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Copper%20cabling-555?style=flat-square)

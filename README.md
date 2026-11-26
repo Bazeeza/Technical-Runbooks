@@ -12,7 +12,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Runbooks-15-3fe0a0?style=flat-square" alt="15 runbooks"/>
-  <img src="https://img.shields.io/badge/Language-English-2b9dff?style=flat-square" alt="English"/>
+  <img src="https://img.shields.io/badge/Languages-English%20%7C%20Fran%C3%A7ais-2b9dff?style=flat-square" alt="English and French"/>
   <img src="https://img.shields.io/badge/Platforms-Windows%20%7C%20Linux%20%7C%20Cisco-555?style=flat-square" alt="Windows, Linux, Cisco"/>
   <img src="https://img.shields.io/badge/Author-bazeeza-c792ea?style=flat-square" alt="Author: bazeeza"/>
   <br>
@@ -31,6 +31,9 @@
 | Start here | [04 Network Troubleshooting](04-Network-Troubleshooting/README.md), the runbook most of the others connect to |
 
 > **En bref (français) :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.md), avec leur source.
+
+> [!NOTE]
+> Every runbook and companion guide has a French version (`X.fr.md` next to `X.md`) with the same sections, commands and links. The English original stays the reference, and code blocks are never translated. Use the **Français** button at the top of any page to switch.
 
 ---
 
@@ -190,7 +193,7 @@ Technical-Runbooks/
 └── README.fr.md                             French version
 ```
 
-Every translated `.md` file has its `.fr.md` twin in the same folder (`TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md`, `archive/README.fr.md`).
+Every translated `.md` file has its `.fr.md` twin in the same folder: the 15 runbooks and their companion guides, plus `TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md` and `archive/README.fr.md`.
 
 | Folder | README |
 |---|---|

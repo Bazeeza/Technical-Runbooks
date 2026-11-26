@@ -1,5 +1,8 @@
 # Linux Server Hardening Basics: SSH Keys, ufw, fail2ban and Automatic Updates
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](README.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](README.md)
+
 ![Level](https://img.shields.io/badge/Level-Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-45%E2%80%9360%20min-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Debian%2012%20%7C%20Ubuntu%2022.04%2F24.04-E95420?style=flat-square)

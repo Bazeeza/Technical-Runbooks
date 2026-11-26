@@ -21,6 +21,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - French versions of the README, the runbook template, the contributing guide, this changelog and the archive README (`*.fr.md`). The copied study notes in `archive/` stay in English only.
 - French versions of runbooks 01 (boot process and no-boot troubleshooting) and 02 (clean installation and post-installation checklist).
 - French versions of runbook 03 (software deployment) and of the runbook 04 command cheat sheet.
+- French versions of runbooks 04 (network troubleshooting) and 05 (Active Directory user management).
+- French versions of runbooks 06 (printer troubleshooting and Group Policy deployment), 07 (Quick Assist, Remote Desktop with NLA and security checklist) and 10 (VoIP / SIP phones, SIP call flow and voice network readiness).
+- French versions of runbooks 11 (Cisco switch baseline, port security and err-disabled ports) and 12 (Linux server hardening, Docker ports and the firewall).
+- French versions of runbooks 08 (cabling and termination, cable testing, patch panels and labeling) and 09 (Wi-Fi troubleshooting and the wireless network report).
+- French versions of runbook 13 (backup and restore, Windows backups, Linux backups with restic).
+- French versions of runbooks 14 (phishing report, first response checklist, reading e-mail headers) and 15 (Microsoft 365 and Outlook, Outlook profiles and Cached Exchange Mode, shared mailboxes). Every runbook now has a French version.
 
 ### Changed
 

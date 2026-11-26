@@ -1,5 +1,8 @@
 # Testing a Copper Cable and Reading Wire Map Faults
 
+[![Français](https://img.shields.io/badge/Langue-Français-3fe0a0?style=for-the-badge)](CABLE-TESTING.fr.md)
+[![English](https://img.shields.io/badge/Language-English-2b9dff?style=for-the-badge)](CABLE-TESTING.md)
+
 ![Level](https://img.shields.io/badge/Level-Beginner%20to%20Intermediate-ffb454?style=flat-square)
 ![Time](https://img.shields.io/badge/Time-2%E2%80%9310%20min%20per%20cable-2b9dff?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Copper%20cabling-555?style=flat-square)
