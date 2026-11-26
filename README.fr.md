@@ -53,7 +53,7 @@
 | 06 | [**Dépannage d'imprimante**](06-Printer-Troubleshooting/README.fr.md) | Trouver le maillon en panne, de l'appareil jusqu'au spouleur, tester les ports 9100/631, corriger le port ou le pilote | Beginner–Intermediate | 10–30 min |
 | | ↳ [`Reset-PrintQueue.ps1`](06-Printer-Troubleshooting/Reset-PrintQueue.ps1) | Vider une file bloquée : arrêter le spouleur, vider le dossier spool, redémarrer et vérifier | Beginner | 2 min |
 | | ↳ [Déployer des imprimantes par stratégie de groupe](06-Printer-Troubleshooting/GPO-DEPLOYMENT.fr.md) | Connecter une imprimante partagée pour un service à l'ouverture de session, avec ciblage et retrait propre | Intermediate | 20 min |
-| 07 | [**Remote Support with Quick Assist**](07-Remote-Support/README.md) | Choisir le bon outil à distance, se connecter avec le consentement de l'utilisateur, travailler et fermer la session en sécurité | Beginner | 5 min |
+| 07 | [**Soutien à distance avec Assistance rapide**](07-Remote-Support/README.fr.md) | Choisir le bon outil à distance, se connecter avec le consentement de l'utilisateur, travailler et fermer la session en sécurité | Beginner | 5 min |
 | | ↳ [Remote Desktop with NLA](07-Remote-Support/RDP.md) | Activer RDP sur le port 3389 avec NLA, limiter les comptes et les adresses sources | Intermediate | 15 min |
 | | ↳ [Security checklist](07-Remote-Support/SECURITY-CHECKLIST.md) | Appliquer les mêmes règles de consentement et de traçabilité à chaque session, réagir à une arnaque | Beginner | 2 min |
 | 08 | [**Network Cabling and Termination**](08-Network-Cabling-and-Termination/README.md) | Sertir un câble RJ45 en T568A ou T568B, choisir Cat 5e, 6 ou 6A, travailler en sécurité | Beginner | 10–15 min |
@@ -203,7 +203,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `04-Network-Troubleshooting/` | [README.fr.md](04-Network-Troubleshooting/README.fr.md) |
 | `05-Active-Directory-User-Management/` | [README.fr.md](05-Active-Directory-User-Management/README.fr.md) |
 | `06-Printer-Troubleshooting/` | [README.fr.md](06-Printer-Troubleshooting/README.fr.md) |
-| `07-Remote-Support/` | [README.md](07-Remote-Support/README.md) |
+| `07-Remote-Support/` | [README.fr.md](07-Remote-Support/README.fr.md) |
 | `08-Network-Cabling-and-Termination/` | [README.md](08-Network-Cabling-and-Termination/README.md) |
 | `09-WiFi-Troubleshooting/` | [README.md](09-WiFi-Troubleshooting/README.md) |
 | `10-VoIP-SIP-Phone-Troubleshooting/` | [README.fr.md](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) |
