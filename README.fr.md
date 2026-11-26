@@ -71,7 +71,7 @@
 | 12 | [**Renforcement de base d'un serveur Linux**](12-Linux-Server-Hardening/README.fr.md) | Se connecter avec des clés SSH seulement, bloquer root et les mots de passe, régler ufw pour refuser les connexions entrantes, bannir les tentatives avec fail2ban, appliquer les correctifs automatiquement | Intermediate | 45–60 min |
 | | ↳ [`10-hardening.conf`](12-Linux-Server-Hardening/10-hardening.conf) et [`jail.local`](12-Linux-Server-Hardening/jail.local) | Le fichier complémentaire du serveur SSH et la prison fail2ban, commentés ligne par ligne | Intermediate | — |
 | | ↳ [Ports Docker et pare-feu](12-Linux-Server-Hardening/DOCKER-PORT-BINDING.fr.md) | Comprendre pourquoi un port de conteneur publié contourne ufw, le lier à 127.0.0.1 derrière un proxy inverse | Intermediate | 10–15 min |
-| 13 | [**Backup and Restore**](13-Backup-and-Restore/README.md) | Fixer le RPO et le RTO, appliquer la règle 3-2-1, automatiser les sauvegardes et faire un test de restauration consigné | Intermediate | 60 min + 30 min par test |
+| 13 | [**Sauvegarde et restauration**](13-Backup-and-Restore/README.fr.md) | Fixer le RPO et le RTO, appliquer la règle 3-2-1, automatiser les sauvegardes et faire un test de restauration consigné | Intermediate | 60 min + 30 min par test |
 | | ↳ [Windows backups](13-Backup-and-Restore/WINDOWS-BACKUP.md) | Historique des fichiers, Windows Server Backup (`wbadmin`) et robocopy, avec restauration dans un dossier séparé | Intermediate | 20–40 min |
 | | ↳ [Linux backups with restic](13-Backup-and-Restore/RESTIC-LINUX.md) | Instantanés chiffrés sur un minuteur systemd, rétention, vérification du dépôt et restaurations | Intermediate | 30–45 min |
 | | ↳ [`Test-RestoredFiles.ps1`](13-Backup-and-Restore/Test-RestoredFiles.ps1) | Prouver une restauration : comparer chaque fichier avec l'original par SHA-256, enregistrer un rapport CSV | Beginner | 2 min |
@@ -209,7 +209,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `10-VoIP-SIP-Phone-Troubleshooting/` | [README.fr.md](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) |
 | `11-Cisco-Switch-Baseline/` | [README.fr.md](11-Cisco-Switch-Baseline/README.fr.md) |
 | `12-Linux-Server-Hardening/` | [README.fr.md](12-Linux-Server-Hardening/README.fr.md) |
-| `13-Backup-and-Restore/` | [README.md](13-Backup-and-Restore/README.md) |
+| `13-Backup-and-Restore/` | [README.fr.md](13-Backup-and-Restore/README.fr.md) |
 | `14-Phishing-Report-and-First-Response/` | [README.md](14-Phishing-Report-and-First-Response/README.md) |
 | `15-Microsoft-365-Outlook-Basics/` | [README.md](15-Microsoft-365-Outlook-Basics/README.md) |
 | `archive/` | [README.fr.md](archive/README.fr.md) |

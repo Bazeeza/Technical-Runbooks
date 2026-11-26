@@ -97,7 +97,7 @@ manage-bde -status C:
 - [ ] Installer les applications standard : voir le [runbook 03 — Déploiement de logiciels](../03-Software-Deployment/README.fr.md).
 - [ ] Imprimantes, lecteurs réseau et VPN selon le service de l'utilisateur (imprimantes déployées par stratégie de groupe : voir le [runbook 06](../06-Printer-Troubleshooting/GPO-DEPLOYMENT.fr.md)).
 - [ ] Outlook ouvre la boîte aux lettres de l'utilisateur et la MFA est enregistrée : voir le [runbook 15 — Microsoft 365 and Outlook Basics](../15-Microsoft-365-Outlook-Basics/README.md).
-- [ ] Restaurer les données de l'utilisateur depuis la sauvegarde, puis laisser l'utilisateur confirmer que ses fichiers sont là (pour prouver la restauration fichier par fichier, voir le [runbook 13 — Backup and Restore](../13-Backup-and-Restore/README.md#step-5--test-the-restore-mandatory)).
+- [ ] Restaurer les données de l'utilisateur depuis la sauvegarde, puis laisser l'utilisateur confirmer que ses fichiers sont là (pour prouver la restauration fichier par fichier, voir le [runbook 13 — Sauvegarde et restauration](../13-Backup-and-Restore/README.fr.md#étape-5--tester-la-restauration-obligatoire)).
 - [ ] Activer la sauvegarde propre au poste (Historique des fichiers ou l'outil du site) : voir [Windows backups](../13-Backup-and-Restore/WINDOWS-BACKUP.md#option-a--file-history-workstation).
 
 ## 6. Vérification finale
