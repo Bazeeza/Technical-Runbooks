@@ -50,7 +50,7 @@
 | 04 | [**Dépannage réseau**](04-Network-Troubleshooting/README.fr.md) | Diagnostiquer un « pas d'Internet » couche par couche, du câble jusqu'au port | Beginner–Intermediate | 10–30 min |
 | | ↳ [Aide-mémoire des commandes](04-Network-Troubleshooting/COMMAND-CHEATSHEET.fr.md) | Les commandes équivalentes sous Windows, Linux et Cisco IOS | Beginner | — |
 | 05 | [**Gestion des comptes Active Directory**](05-Active-Directory-User-Management/README.fr.md) | Déverrouiller, réinitialiser, créer et désactiver des comptes en sécurité, trouver la source d'un verrouillage | Beginner–Intermediate | 5–20 min |
-| 06 | [**Printer Troubleshooting**](06-Printer-Troubleshooting/README.md) | Trouver le maillon en panne, de l'appareil jusqu'au spouleur, tester les ports 9100/631, corriger le port ou le pilote | Beginner–Intermediate | 10–30 min |
+| 06 | [**Dépannage d'imprimante**](06-Printer-Troubleshooting/README.fr.md) | Trouver le maillon en panne, de l'appareil jusqu'au spouleur, tester les ports 9100/631, corriger le port ou le pilote | Beginner–Intermediate | 10–30 min |
 | | ↳ [`Reset-PrintQueue.ps1`](06-Printer-Troubleshooting/Reset-PrintQueue.ps1) | Vider une file bloquée : arrêter le spouleur, vider le dossier spool, redémarrer et vérifier | Beginner | 2 min |
 | | ↳ [Deploying printers with Group Policy](06-Printer-Troubleshooting/GPO-DEPLOYMENT.md) | Connecter une imprimante partagée pour un service à l'ouverture de session, avec ciblage et retrait propre | Intermediate | 20 min |
 | 07 | [**Remote Support with Quick Assist**](07-Remote-Support/README.md) | Choisir le bon outil à distance, se connecter avec le consentement de l'utilisateur, travailler et fermer la session en sécurité | Beginner | 5 min |
@@ -202,7 +202,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `03-Software-Deployment/` | [README.fr.md](03-Software-Deployment/README.fr.md) |
 | `04-Network-Troubleshooting/` | [README.fr.md](04-Network-Troubleshooting/README.fr.md) |
 | `05-Active-Directory-User-Management/` | [README.fr.md](05-Active-Directory-User-Management/README.fr.md) |
-| `06-Printer-Troubleshooting/` | [README.md](06-Printer-Troubleshooting/README.md) |
+| `06-Printer-Troubleshooting/` | [README.fr.md](06-Printer-Troubleshooting/README.fr.md) |
 | `07-Remote-Support/` | [README.md](07-Remote-Support/README.md) |
 | `08-Network-Cabling-and-Termination/` | [README.md](08-Network-Cabling-and-Termination/README.md) |
 | `09-WiFi-Troubleshooting/` | [README.md](09-WiFi-Troubleshooting/README.md) |
