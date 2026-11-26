@@ -72,7 +72,7 @@ Ceci s'applique quand un utilisateur signale une session qu'il n'a pas demandée
 1. **Déconnecter** le réseau (débrancher le câble, désactiver le Wi-Fi) pour couper l'accès à distance.
 2. Ne rien supprimer : les preuves aident l'équipe de sécurité.
 3. **Escalader à l'équipe de sécurité** avec l'heure, le nom de l'outil et ce que l'utilisateur a vu ou tapé.
-4. Faire changer les mots de passe de l'utilisateur **depuis un autre appareil, sain**, en commençant par le courriel et la banque si des comptes personnels ont été utilisés. Pour un compte professionnel, révoquer aussi ses sessions et vérifier les règles de sa boîte aux lettres, comme dans [le runbook 14, liste C](../14-Phishing-Report-and-First-Response/FIRST-RESPONSE-CHECKLIST.fr.md#liste-c--mot-de-passe-saisi-ou-demande-mfa-inattendue-approuvée).
+4. Faire changer les mots de passe de l'utilisateur **depuis un autre appareil, sain**, en commençant par le courriel et la banque si des comptes personnels ont été utilisés. Pour un compte professionnel, révoquer aussi ses sessions et vérifier les règles de sa boîte aux lettres, comme dans [le runbook 14, liste C](../14-Phishing-Report-and-First-Response/FIRST-RESPONSE-CHECKLIST.fr.md#liste-c--a-tapé-un-mot-de-passe-ou-approuvé-une-demande-mfa-inattendue).
 5. Aider l'utilisateur à le signaler : au Canada, au [Centre antifraude du Canada](https://antifraudcentre-centreantifraude.ca/) ; pour les arnaques qui utilisent le nom de Microsoft, par le [formulaire Microsoft de signalement d'arnaque au soutien technique](https://support.microsoft.com/windows/cfa4609a-92cc-4808-95e8-392b4ffd0753).
 
 ---
