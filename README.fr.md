@@ -78,7 +78,7 @@
 | 14 | [**Signalement d'hameçonnage et première intervention**](14-Phishing-Report-and-First-Response/README.fr.md) | Reconnaître un courriel d'hameçonnage, le faire signaler avec le bouton **Report** d'Outlook, contenir selon ce que l'utilisateur a fait, escalader et consigner | Beginner | 10–30 min |
 | | ↳ [Liste de vérification de première intervention](14-Phishing-Report-and-First-Response/FIRST-RESPONSE-CHECKLIST.fr.md) | Réinitialiser le mot de passe, révoquer les sessions, revoir les méthodes MFA, trouver les règles de transfert, isoler le poste | Beginner | 5–30 min |
 | | ↳ [Lire les en-têtes d'un courriel](14-Phishing-Report-and-First-Response/READING-EMAIL-HEADERS.fr.md) et [`Get-EmailHeaderSummary.ps1`](14-Phishing-Report-and-First-Response/Get-EmailHeaderSummary.ps1) | Lire From, Reply-To, Return-Path, SPF, DKIM, DMARC et la chaîne Received, avec un script de résumé en lecture seule | Intermediate | 10 min |
-| 15 | [**Microsoft 365 and Outlook Basics**](15-Microsoft-365-Outlook-Basics/README.md) | Vérifier dans l'ordre la connexion, la licence, la boîte aux lettres et la MFA, puis le client Outlook, puis l'accès aux boîtes partagées | Beginner | 10–45 min |
+| 15 | [**Notions de base de Microsoft 365 et d'Outlook**](15-Microsoft-365-Outlook-Basics/README.fr.md) | Vérifier dans l'ordre la connexion, la licence, la boîte aux lettres et la MFA, puis le client Outlook, puis l'accès aux boîtes partagées | Beginner | 10–45 min |
 | | ↳ [Outlook profiles and Cached Exchange Mode](15-Microsoft-365-Outlook-Basics/OUTLOOK-PROFILE-AND-CACHE.md) | Démarrer en mode sans échec, créer un profil propre, régler la période hors connexion, reconstruire un fichier `.ost` en sécurité | Beginner | 15–45 min |
 | | ↳ [Shared mailboxes and permissions](15-Microsoft-365-Outlook-Basics/SHARED-MAILBOXES-AND-PERMISSIONS.md) | Accorder, vérifier et retirer Full Access, Send As et Send on Behalf, contrôler le mappage automatique | Intermediate | 10–20 min |
 | | ↳ [`Get-OutlookClientInfo.ps1`](15-Microsoft-365-Outlook-Basics/Get-OutlookClientInfo.ps1) | Lister les clients Outlook, les profils, les fichiers de données et l'espace libre pour le billet, en lecture seule | Beginner | 1 min |
@@ -211,7 +211,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `12-Linux-Server-Hardening/` | [README.fr.md](12-Linux-Server-Hardening/README.fr.md) |
 | `13-Backup-and-Restore/` | [README.fr.md](13-Backup-and-Restore/README.fr.md) |
 | `14-Phishing-Report-and-First-Response/` | [README.fr.md](14-Phishing-Report-and-First-Response/README.fr.md) |
-| `15-Microsoft-365-Outlook-Basics/` | [README.md](15-Microsoft-365-Outlook-Basics/README.md) |
+| `15-Microsoft-365-Outlook-Basics/` | [README.fr.md](15-Microsoft-365-Outlook-Basics/README.fr.md) |
 | `archive/` | [README.fr.md](archive/README.fr.md) |
 
 ---
