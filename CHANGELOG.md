@@ -21,6 +21,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 - French versions of the README, the runbook template, the contributing guide, this changelog and the archive README (`*.fr.md`). The copied study notes in `archive/` stay in English only.
 - French versions of runbooks 01 (boot process and no-boot troubleshooting) and 02 (clean installation and post-installation checklist).
 - French versions of runbook 03 (software deployment) and of the runbook 04 command cheat sheet.
+- French versions of runbooks 04 (network troubleshooting) and 05 (Active Directory user management).
 
 ### Changed
 
