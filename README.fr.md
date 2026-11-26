@@ -75,7 +75,7 @@
 | | ↳ [Sauvegardes Windows](13-Backup-and-Restore/WINDOWS-BACKUP.fr.md) | Historique des fichiers, Windows Server Backup (`wbadmin`) et robocopy, avec restauration dans un dossier séparé | Intermediate | 20–40 min |
 | | ↳ [Sauvegardes Linux avec restic](13-Backup-and-Restore/RESTIC-LINUX.fr.md) | Instantanés chiffrés sur un minuteur systemd, rétention, vérification du dépôt et restaurations | Intermediate | 30–45 min |
 | | ↳ [`Test-RestoredFiles.ps1`](13-Backup-and-Restore/Test-RestoredFiles.ps1) | Prouver une restauration : comparer chaque fichier avec l'original par SHA-256, enregistrer un rapport CSV | Beginner | 2 min |
-| 14 | [**Phishing Report and First Response**](14-Phishing-Report-and-First-Response/README.md) | Reconnaître un courriel d'hameçonnage, le faire signaler avec le bouton **Report** d'Outlook, contenir selon ce que l'utilisateur a fait, escalader et consigner | Beginner | 10–30 min |
+| 14 | [**Signalement d'hameçonnage et première intervention**](14-Phishing-Report-and-First-Response/README.fr.md) | Reconnaître un courriel d'hameçonnage, le faire signaler avec le bouton **Report** d'Outlook, contenir selon ce que l'utilisateur a fait, escalader et consigner | Beginner | 10–30 min |
 | | ↳ [First response checklist](14-Phishing-Report-and-First-Response/FIRST-RESPONSE-CHECKLIST.md) | Réinitialiser le mot de passe, révoquer les sessions, revoir les méthodes MFA, trouver les règles de transfert, isoler le poste | Beginner | 5–30 min |
 | | ↳ [Reading e-mail headers](14-Phishing-Report-and-First-Response/READING-EMAIL-HEADERS.md) et [`Get-EmailHeaderSummary.ps1`](14-Phishing-Report-and-First-Response/Get-EmailHeaderSummary.ps1) | Lire From, Reply-To, Return-Path, SPF, DKIM, DMARC et la chaîne Received, avec un script de résumé en lecture seule | Intermediate | 10 min |
 | 15 | [**Microsoft 365 and Outlook Basics**](15-Microsoft-365-Outlook-Basics/README.md) | Vérifier dans l'ordre la connexion, la licence, la boîte aux lettres et la MFA, puis le client Outlook, puis l'accès aux boîtes partagées | Beginner | 10–45 min |
@@ -210,7 +210,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `11-Cisco-Switch-Baseline/` | [README.fr.md](11-Cisco-Switch-Baseline/README.fr.md) |
 | `12-Linux-Server-Hardening/` | [README.fr.md](12-Linux-Server-Hardening/README.fr.md) |
 | `13-Backup-and-Restore/` | [README.fr.md](13-Backup-and-Restore/README.fr.md) |
-| `14-Phishing-Report-and-First-Response/` | [README.md](14-Phishing-Report-and-First-Response/README.md) |
+| `14-Phishing-Report-and-First-Response/` | [README.fr.md](14-Phishing-Report-and-First-Response/README.fr.md) |
 | `15-Microsoft-365-Outlook-Basics/` | [README.md](15-Microsoft-365-Outlook-Basics/README.md) |
 | `archive/` | [README.fr.md](archive/README.fr.md) |
 
