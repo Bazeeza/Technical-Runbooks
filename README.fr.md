@@ -68,7 +68,7 @@
 | 11 | [**Configuration de base d'un commutateur Cisco**](11-Cisco-Switch-Baseline/README.fr.md) | Configurer un commutateur d'accès de façon sécurisée : SSH v2 seulement, VLAN, sécurité des ports, portfast, VLAN « trou noir », trunk restreint | Intermediate | 30–45 min |
 | | ↳ [`access-switch-baseline.cfg`](11-Cisco-Switch-Baseline/access-switch-baseline.cfg) | La configuration de base complète, commentée section par section | Intermediate | — |
 | | ↳ [Sécurité des ports et ports err-disabled](11-Cisco-Switch-Baseline/PORT-SECURITY-AND-ERR-DISABLED.fr.md) | Trouver pourquoi un port utilisateur est bloqué, identifier l'appareil et rétablir le port en sécurité | Intermediate | 5–15 min |
-| 12 | [**Linux Server Hardening Basics**](12-Linux-Server-Hardening/README.md) | Se connecter avec des clés SSH seulement, bloquer root et les mots de passe, régler ufw pour refuser les connexions entrantes, bannir les tentatives avec fail2ban, appliquer les correctifs automatiquement | Intermediate | 45–60 min |
+| 12 | [**Renforcement de base d'un serveur Linux**](12-Linux-Server-Hardening/README.fr.md) | Se connecter avec des clés SSH seulement, bloquer root et les mots de passe, régler ufw pour refuser les connexions entrantes, bannir les tentatives avec fail2ban, appliquer les correctifs automatiquement | Intermediate | 45–60 min |
 | | ↳ [`10-hardening.conf`](12-Linux-Server-Hardening/10-hardening.conf) et [`jail.local`](12-Linux-Server-Hardening/jail.local) | Le fichier complémentaire du serveur SSH et la prison fail2ban, commentés ligne par ligne | Intermediate | — |
 | | ↳ [Docker ports and the firewall](12-Linux-Server-Hardening/DOCKER-PORT-BINDING.md) | Comprendre pourquoi un port de conteneur publié contourne ufw, le lier à 127.0.0.1 derrière un proxy inverse | Intermediate | 10–15 min |
 | 13 | [**Backup and Restore**](13-Backup-and-Restore/README.md) | Fixer le RPO et le RTO, appliquer la règle 3-2-1, automatiser les sauvegardes et faire un test de restauration consigné | Intermediate | 60 min + 30 min par test |
@@ -208,7 +208,7 @@ Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPL
 | `09-WiFi-Troubleshooting/` | [README.md](09-WiFi-Troubleshooting/README.md) |
 | `10-VoIP-SIP-Phone-Troubleshooting/` | [README.fr.md](10-VoIP-SIP-Phone-Troubleshooting/README.fr.md) |
 | `11-Cisco-Switch-Baseline/` | [README.fr.md](11-Cisco-Switch-Baseline/README.fr.md) |
-| `12-Linux-Server-Hardening/` | [README.md](12-Linux-Server-Hardening/README.md) |
+| `12-Linux-Server-Hardening/` | [README.fr.md](12-Linux-Server-Hardening/README.fr.md) |
 | `13-Backup-and-Restore/` | [README.md](13-Backup-and-Restore/README.md) |
 | `14-Phishing-Report-and-First-Response/` | [README.md](14-Phishing-Report-and-First-Response/README.md) |
 | `15-Microsoft-365-Outlook-Basics/` | [README.md](15-Microsoft-365-Outlook-Basics/README.md) |
