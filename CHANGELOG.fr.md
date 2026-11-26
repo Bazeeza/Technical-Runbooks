@@ -26,6 +26,7 @@ Le format suit [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), et les 
 - Versions françaises des runbooks 11 (configuration de base d'un commutateur Cisco, sécurité des ports et ports err-disabled) et 12 (renforcement de base d'un serveur Linux, ports Docker et pare-feu).
 - Versions françaises des runbooks 08 (câblage et terminaison, test des câbles, panneaux de brassage et étiquetage) et 09 (dépannage Wi-Fi et rapport de réseau sans fil).
 - Versions françaises du runbook 13 (sauvegarde et restauration, sauvegardes Windows, sauvegardes Linux avec restic).
+- Versions françaises des runbooks 14 (signalement d'hameçonnage, liste de vérification de première intervention, lecture des en-têtes) et 15 (Microsoft 365 et Outlook, profils Outlook et mode mis en cache, boîtes aux lettres partagées). Chaque runbook a maintenant sa version française.
 
 ### Modifié
 
