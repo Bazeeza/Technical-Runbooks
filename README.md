@@ -32,6 +32,9 @@
 
 > **En bref (français) :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.md), avec leur source.
 
+> [!NOTE]
+> Every runbook and companion guide has a French version (`X.fr.md` next to `X.md`) with the same sections, commands and links. The English original stays the reference, and code blocks are never translated. Use the **Français** button at the top of any page to switch.
+
 ---
 
 ## Runbooks
@@ -190,7 +193,7 @@ Technical-Runbooks/
 └── README.fr.md                             French version
 ```
 
-Every translated `.md` file has its `.fr.md` twin in the same folder (`TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md`, `archive/README.fr.md`).
+Every translated `.md` file has its `.fr.md` twin in the same folder: the 15 runbooks and their companion guides, plus `TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md` and `archive/README.fr.md`.
 
 | Folder | README |
 |---|---|

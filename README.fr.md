@@ -33,7 +33,7 @@
 > **En bref :** procédures TI pas à pas, rédigées en anglais selon un gabarit unique (objectif, prérequis, étapes avec résultat attendu, vérification, dépannage, sources officielles). Chaque modification est vérifiée automatiquement (markdownlint, liens, PSScriptAnalyzer). Les anciennes notes d'étude copiées de sources externes sont rangées dans [`archive/`](archive/README.fr.md), avec leur source.
 
 > [!NOTE]
-> Les runbooks sont traduits en français un par un (`X.fr.md` à côté de `X.md`). Tant qu'un runbook n'a pas sa version française, les liens de cette page pointent vers l'original en anglais.
+> Chaque runbook et chaque guide complémentaire a sa version française (`X.fr.md` à côté de `X.md`), avec les mêmes sections, les mêmes commandes et les mêmes liens. Les liens de cette page pointent vers les versions françaises ; l'original anglais reste la référence, et les blocs de code ne sont jamais traduits. Le bouton **English** en haut de chaque page permet de changer de langue.
 
 ---
 
@@ -193,7 +193,7 @@ Technical-Runbooks/
 └── README.fr.md                             version française (ce fichier)
 ```
 
-Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier (`TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md`, `archive/README.fr.md`).
+Chaque fichier `.md` traduit a sa jumelle `.fr.md` dans le même dossier : les 15 runbooks et leurs guides complémentaires, ainsi que `TEMPLATE.fr.md`, `CONTRIBUTING.fr.md`, `CHANGELOG.fr.md`, `docs/STYLE.fr.md` et `archive/README.fr.md`.
 
 | Dossier | README |
 |---|---|
